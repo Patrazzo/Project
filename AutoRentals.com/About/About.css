@@ -1,0 +1,86 @@
+.Heading{
+    color: #e0f74b;
+    margin-top: 10vh;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 40vh;
+}
+.Arrow{
+    display: flex;
+    margin-bottom: 17vh;
+    align-items: center;
+    justify-content: center;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.WholeTxt{
+    display: block;
+    color: #fff;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.WhoAreWe h2{
+    color:#e0f74b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhoAreWe{
+    background-color: #222222;
+    color: #ffffff;
+    padding: 50px;
+    padding-right: 58%;
+    font-size: 20px;
+}
+
+
+.OurMission h2{
+    color:#e0f74b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.OurMission{
+    background-color: #222222;
+    color: #ffffff;
+    padding: 50px;
+    padding-left: 58%;
+    font-size: 20px;
+}
+
+.OurTeam h2{
+    color:#e0f74b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.OurTeam{
+    background-color: #222222;
+    color: #ffffff;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.WhatWeOffer h2{
+    color:#e0f74b;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhatWeOffer{
+    text-align: left;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 50px;
+    padding-right: 58%;
+    font-size: 20px;
+    margin-bottom: 100px ;
+}
