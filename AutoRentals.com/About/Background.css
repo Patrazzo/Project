@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #222222;
+    background-color: #000000;
 }
 
 Header {
@@ -22,7 +22,7 @@ Header {
 
 .Links a {
     text-decoration: none;
-    color: #fff;
+    color: #d1c5c0;
     margin: 20px;
     font-size: 18px;
 

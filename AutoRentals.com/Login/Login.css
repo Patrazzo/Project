@@ -23,17 +23,17 @@ body {
     height: 400px;
     background: transparent;
     backdrop-filter: blur(5px);
-    background-color: rgba(69, 69, 69, 0.5);
+    background-color: rgba(3, 27, 48, 0.9);
     border-radius: 10px;
-    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 2s ease-in-out forwards;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease-in-out forwards;
 
 }
 
 .login h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #E0F74B;
+    color: #fcec0c;
 }
 
 .login form {
@@ -74,7 +74,7 @@ form .txt_field {
 }
 
 .fpass a:hover {
-    color: #E0F74B;
+    color: #fcec0c;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -83,7 +83,7 @@ input[type="submit"] {
     margin: 20px;
     width: 50%;
     height: 50px;
-    background: #E0F74B;
+    background: #fcec0c;
     border: none;
     border-radius: 25px;
     font-size: 20px;
@@ -105,7 +105,7 @@ input[type="submit"]:hover {
 }
 
 .register a {
-    color: #E0F74B;
+    color: #fcec0c;
     text-decoration: none;
     transition: 0.5s;
 }

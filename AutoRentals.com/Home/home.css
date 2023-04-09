@@ -24,14 +24,14 @@ Header {
 
 .Links a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     margin: 20px;
     font-size: 18px;
 
 }
 
 .Links a:hover {
-    color: #e0f74b;
+    color: #fcec0c;
     transition: 0.5s;
 }
 
@@ -43,7 +43,7 @@ Header {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    filter: brightness(50%);
 }
 
 .Background video {
@@ -59,26 +59,26 @@ Header {
 .desc {
     text-align: center;
     margin-top: 15%;
-    color: #fff;
-    animation: fadeIn 4s ease-in-out forwards;
+    color: #d1c5c0;
+    animation: fadeIn 2s ease-in-out forwards;
     
 }
 
 h1 {
     font-size: 50px;
     font-weight: normal;
-    color:#fff;
+    color:#d1c5c0;
 }
 
 #AR {
-    color: #e0f74b;
+    color: #fcec0c;
     font-weight: bold;
 }
 
 h2 {
     font-size: 25px;
     font-weight: lighter;
-    color:#d5d5d5
+    color:#d1c5c0
 }
 
 @keyframes fadeIn {
