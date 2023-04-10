@@ -1,15 +1,15 @@
 .Heading {
     color: #fcec0c;
-    ;
     margin-top: 10vh;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
-    margin-bottom: 40vh;
+    margin-bottom: 50vh;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
 .Arrow {
     display: flex;
-    margin-bottom: 17vh;
+    margin-bottom: 10vh;
     align-items: center;
     justify-content: center;
 }
@@ -43,6 +43,7 @@
     flex: 1;
     padding: 20px;
     width: 70%;
+    font-size: 20px;
 }
 
 .dealership {
@@ -70,6 +71,7 @@
     flex: 1;
     padding: 20px;
     width: 70%;
+    font-size: 20px;
 }
 
 .keys {
@@ -98,6 +100,7 @@
     text-align: center;
     margin-bottom: 20px;
     width: 70%;
+    font-size: 20px;
 }
 
 .photo {
@@ -118,4 +121,13 @@
 .org:hover {
     opacity: 0;
     transition: 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

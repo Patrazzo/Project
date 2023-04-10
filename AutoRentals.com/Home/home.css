@@ -57,28 +57,18 @@ Header {
 }
 
 .desc {
+    color: #fcec0c;
+    margin-top: 20vh;
+    font-size: 50px;
     text-align: center;
-    margin-top: 15%;
-    color: #d1c5c0;
     animation: fadeIn 2s ease-in-out forwards;
     
 }
 
-h1 {
-    font-size: 50px;
-    font-weight: normal;
-    color:#d1c5c0;
-}
-
-#AR {
-    color: #fcec0c;
-    font-weight: bold;
-}
-
 h2 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: lighter;
-    color:#d1c5c0
+    color:#d1c5c0;
 }
 
 @keyframes fadeIn {
