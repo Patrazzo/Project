@@ -1,11 +1,13 @@
-.Heading{
-    color: #fcec0c;;
+.Heading {
+    color: #fcec0c;
+    ;
     margin-top: 10vh;
     font-size: 60px;
     text-align: center;
     margin-bottom: 40vh;
 }
-.Arrow{
+
+.Arrow {
     display: flex;
     margin-bottom: 17vh;
     align-items: center;
@@ -16,71 +18,104 @@
     display: none;
 }
 
-.WholeTxt{
+.WholeTxt {
     display: block;
     color: #d1c5c0;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.WhoAreWe h2{
-    color: #fcec0c;;
+.WhoAreWe {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center; 
+}
+
+.WhoAreWe h2 {
+    color: #fcec0c;
     margin-bottom: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-.WhoAreWe{
-    background-color: #000000;
-    color: #d1c5c0;
-    padding: 50px;
-    padding-right: 58%;
-    font-size: 20px;
+.WhoAreWe .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
 }
 
+.dealership {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
 
-.OurMission h2{
-    color: #fcec0c;;
+.OurMission {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center; 
+}
+
+.OurMission h2 {
+    color: #fcec0c;
     margin-bottom: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-.OurMission{
-    background-color: #000000;
-    color: #d1c5c0;
-    padding: 50px;
-    padding-left: 58%;
-    font-size: 20px;
+.OurMission .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
 }
 
-.OurTeam h2{
-    color: #fcec0c;;
+.keys {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.WhatWeOffer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.WhatWeOffer h2 {
+    color: #fcec0c;
     margin-bottom: 20px;
     text-align: center;
     font-size: 40px;
 }
 
-.OurTeam{
-    background-color: #000000;
-    color: #d1c5c0;
-    padding: 50px;
-    font-size: 20px;
-}
-
-.WhatWeOffer h2{
-    color: #fcec0c;;
-    margin-bottom: 20px;
+.WhatWeOffer .text {
     text-align: center;
-    font-size: 40px;
+    margin-bottom: 20px;
+    width: 70%;
 }
 
-.WhatWeOffer{
-    text-align: left;
-    background-color: #000000;
-    color: #d1c5c0;
-    padding: 50px;
-    padding-right: 58%;
-    font-size: 20px;
-    margin-bottom: 100px ;
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.org {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.hvr {
+    position: relative;
+    z-index: -1;
+}
+
+.org:hover {
+    opacity: 0;
+    transition: 0.5s;
 }
