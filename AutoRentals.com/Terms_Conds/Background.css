@@ -22,7 +22,7 @@ Header {
 
 .Links a {
     text-decoration: none;
-    color: #d1c5c0;
+    color: #ffffff;
     margin: 20px;
     font-size: 18px;
 
@@ -44,7 +44,7 @@ Header {
     justify-content: center;
     align-items: center;
     box-shadow: #000000;
-
+    filter: brightness(50%);
 }
 
 .Background video {

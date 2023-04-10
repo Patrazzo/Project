@@ -42,7 +42,7 @@ Header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    filter: brightness(50%);
 }
 .Background video{
     object-fit: cover;

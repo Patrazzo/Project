@@ -43,7 +43,7 @@ Header {
     display: flex;
     justify-content: center;
     align-items: center;
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
 .Background video {
