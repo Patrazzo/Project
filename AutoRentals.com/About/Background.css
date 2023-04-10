@@ -91,3 +91,16 @@ Footer {
     text-align: center;
     width: 100%;
 }
+
+.Documentation {
+    text-decoration: none;
+    color: #d1c5c0;
+    font-weight: 100;
+    font-size: 18px;
+
+}
+
+.Documentation:hover {
+    color: #fcec0c;
+    transition: 0.5s;
+}

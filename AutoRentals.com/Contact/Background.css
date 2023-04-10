@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@500&display=swap');
+
 * {
-    background-color: transparent;
     font-family: 'Playfair Display', serif;
     font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
     margin: 0;
     overflow: hidden;
 }
@@ -29,6 +30,9 @@ Header {
     transition: 0.5s;
 }
 
+#clicked{
+    color:#fcec0c;
+}
 
 .Background{
     position: absolute;
