@@ -8,7 +8,7 @@ window.addEventListener('scroll', function() {
     for (var i = 0; i < elements.length; i++) {
       var position = elements[i].getBoundingClientRect();
   
-      // Ако елемента е във видимата част на прозореца му се добавя active.
+      // Ако елемента е във видимата част на прозореца се му се добавя active.
       if (position.top < window.innerHeight && position.bottom >= 0) {
         elements[i].classList.add('active');
       }

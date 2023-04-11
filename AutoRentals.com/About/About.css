@@ -3,12 +3,12 @@
     margin-top: 10vh;
     font-size: 50px;
     text-align: center;
-    margin-bottom: 50vh;
+    margin-bottom: 40vh;
     animation: fadeIn 2s ease-in-out forwards;
 }
 .my-fade{
     opacity: 0;
-    transition: opacity 2s ease-out;
+    transition: opacity 2.5s ease-out;
   }
   
 .my-fade.active {
@@ -16,13 +16,21 @@
 }
 .org.my-fade{
     opacity: 0;
-    transition: opacity 2s ease-out;
+    transition: opacity 0.5s ease-out;
   }
   
 .org.my-fade.active {
     opacity: 1;
 }
 
+.hvr.my-fade{
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+  }
+  
+.hvr.my-fade {
+    opacity: 1;
+}
 .Arrow {
     display: flex;
     margin-bottom: 10vh;
@@ -33,6 +41,21 @@
     z-index: 1000;
     animation: fadeIn 2s ease-in-out forwards;
 }
+.Arrow {
+    position: relative;
+    animation: moveUpDown 1.9s ease-in-out 3;
+}
+@keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(65px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 ::-webkit-scrollbar {
     display: none;
 }
@@ -137,7 +160,7 @@
     z-index: -1;
 }
 
-.org:hover {
+.org.my-fade:hover {
     opacity: 0;
     transition: 0.5s;
 }
