@@ -17,7 +17,10 @@
     align-items: center;
     justify-content: center;
 }
-
+.Arrow img {
+    z-index: 1000;
+    animation: fadeIn 2s ease-in-out forwards;
+}
 ::-webkit-scrollbar {
     display: none;
 }
