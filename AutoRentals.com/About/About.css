@@ -6,6 +6,22 @@
     margin-bottom: 50vh;
     animation: fadeIn 2s ease-in-out forwards;
 }
+.my-fade{
+    opacity: 0;
+    transition: opacity 2s ease-out;
+  }
+  
+.my-fade.active {
+    opacity: 1;
+}
+.org.my-fade{
+    opacity: 0;
+    transition: opacity 2s ease-out;
+  }
+  
+.org.my-fade.active {
+    opacity: 1;
+}
 
 .Arrow {
     display: flex;
@@ -17,7 +33,6 @@
     z-index: 1000;
     animation: fadeIn 2s ease-in-out forwards;
 }
-
 ::-webkit-scrollbar {
     display: none;
 }
