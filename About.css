@@ -1,0 +1,152 @@
+.Heading {
+    color: #fcec0c;
+    margin-top: 10vh;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 50vh;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.my-fade{
+    opacity: 0;
+    transition: opacity 2s ease-out;
+  }
+  
+.my-fade.active {
+    opacity: 1;
+}
+.org.my-fade{
+    opacity: 0;
+    transition: opacity 2s ease-out;
+  }
+  
+.org.my-fade.active {
+    opacity: 1;
+}
+
+.Arrow {
+    display: flex;
+    margin-bottom: 10vh;
+    align-items: center;
+    justify-content: center;
+}
+.Arrow img {
+    z-index: 1000;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.WholeTxt {
+    display: block;
+    color: #d1c5c0;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.WhoAreWe {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center; 
+}
+
+.WhoAreWe h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhoAreWe .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.dealership {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurMission {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center; 
+}
+
+.OurMission h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.OurMission .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.keys {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.WhatWeOffer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.WhatWeOffer h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhatWeOffer .text {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.photo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.org {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.hvr {
+    position: relative;
+    z-index: -1;
+}
+
+.org:hover {
+    opacity: 0;
+    transition: 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
