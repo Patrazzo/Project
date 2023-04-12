@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@500&display=swap');
 
 * {
-    background-color: transparent;
     margin: 0;
-    font-family: 'Playfair Display', serif;
+    
     font-family: 'Ubuntu', sans-serif;
 }
 
 body {
-    background-color: #000000;
+    background-color: #000;
 }
 
 Header {
@@ -24,13 +23,14 @@ Header {
 .Links a {
     text-decoration: none;
     color: #ffffff;
-    margin: 20px;
     font-size: 18px;
+    margin: 20px;
+}
 
+#clicked {
+    color: #fcec0c;
 }
-#clicked{
-    color:#fcec0c;
-}
+
 .Links a:hover {
     color: #fcec0c;
     transition: 0.5s;
@@ -44,26 +44,38 @@ Header {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: #000000;
-    filter: brightness(50%);
+    filter: brightness(60%);
 }
 
 .Background video {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    z-index: -1000;
+    z-index: -1;
     pointer-events: all;
+}
+
+.Background img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: all;
+    display: none;
 }
 
 .original-logo {
     position: absolute;
     transition: 0.5s;
+    width: 100px;
+    height: 75px;
 }
 
 .hovered-logo {
     position: relative;
     z-index: -1;
+    width: 100px;
+    height: 75px;
 }
 
 .original-logo:hover {
@@ -74,11 +86,15 @@ Header {
 .original-login {
     position: absolute;
     transition: 0.5s;
+    width: 60px;
+    height: 60px;
 }
 
 .hovered-login {
     position: relative;
     z-index: -1;
+    width: 60px;
+    height: 60px;
 }
 
 .original-login:hover {
@@ -86,14 +102,15 @@ Header {
     transition: 0.5s;
 }
 
-Footer {
+Footer{
     color: #909090;
-    margin-bottom: 10px;
+    
+    bottom: 1%;
     text-align: center;
     width: 100%;
 }
 
-.Documentation {
+.Documentation{
     text-decoration: none;
     color: #d1c5c0;
     font-weight: 100;
@@ -104,4 +121,97 @@ Footer {
 .Documentation:hover {
     color: #fcec0c;
     transition: 0.5s;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #ffffff;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #menu-icon {
+        display: block;
+        text-align: center;
+    }
+    #menu-icon {
+        display: block;
+        text-align: center;
+    }
+
+    .Background video{
+        display: none;
+    }
+    .Background img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: all;
+        display: block;
+    }
+
+    .Links {
+        position: absolute;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        height: 30vh;
+        width: 100%;
+        background: #031b30e6;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        transition: all .50s ease;
+        padding-top: 100px;
+    }
+
+    .Links a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+        color: #fcec0c;
+    }
+
+    .Links.open {
+        top: -10px;
+    }
+
+    .Login {
+        z-index: -1;
+    }
+
+    .original-logo {
+        position: relative;
+        transition: 0.5s;
+        width: 75px;
+        height: 60px;
+    }
+
+    .original-login {
+        position: relative;
+        transition: 0.5s;
+        width: 40px;
+        height: 40px;
+        margin-left: 35px;
+    }
+
+    .hovered-logo {
+        display: none;
+    }
+    .hovered-login {
+        display: none;
+    }
+
+    Footer {
+        color: #909090;
+        bottom: 1%;
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+    }
 }

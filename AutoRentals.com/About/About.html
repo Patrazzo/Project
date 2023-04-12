@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="Background.css"> <!-- Свързваме страницата със CSS-->
     <link rel="stylesheet" href="About.css"> <!-- Свързваме страницата със CSS-->
     <script src="About.js"></script>
-
+    <link rel="stylesheet" href="Responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>AutoRental | About</title> <!-- Задаваме име на страницата-->
+    
 </head>
 
 <body> <!-- В body се съдържат видимите обекти в сайта -->
@@ -32,8 +34,9 @@
             <a href="../Catalog/Catalog.html">CATALOG</a>
             <a id="clicked" href="../About/About.html">ABOUT</a>
             <a href="../Contact/Contact.html">CONTACT</a>
-
+            
         </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
         <div class="Login"><!-- Създаваме обект Login, който съдържа link-a към формата -->
             <a href="../Login/Login.html"><img class="original-login" src="../Photos/Login.png" width="60"
                     height="60"></a>
@@ -48,6 +51,7 @@
             <video autoplay loop muted>
                 <source src="../Photos/AboutBG.mp4" type="video/mp4">
             </video>
+            <img src="../Photos/DEF.jpg">
         </div>
 
         <div class="Heading">
@@ -120,16 +124,19 @@
                         repairs .
                     </p>
                 </div>
+
                 <div class="photo">
-                    <a href="../Home/home.html"><img class="org my-fade" src="../Photos/Logo.png" width="400"></a>
-                    <a href="../Home/home.html"><img class="hvr my-fade" src="../Photos/HoverLogo.png" width="400"></a>
+                    <a href="../Home/home.html"><img class="org my-fade" src="../Photos/Logo.png" width="200"></a>
+                    <a href="../Home/home.html"><img class="hvr my-fade" src="../Photos/HoverLogo.png" width="200"></a>
                 </div>
+                
             </div>
         </div>
     </main>
     <footer>
         <h5>Copyright <a class="Documentation" href="../Documentation/Documentation.html">©</a> 2023 AutoRentals | All right reserved</h5>
     </footer>
+    <script src="Script.js"></script>
 </body>
 
 </html>
