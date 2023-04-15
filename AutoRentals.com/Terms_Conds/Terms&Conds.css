@@ -7,8 +7,8 @@
     animation: fadeIn 2s ease-in-out forwards;
 }
 
-.Heading h2{
-    color:#d1c5c0;
+.Heading h2 {
+    color: #d1c5c0;
 }
 
 .Arrow {
@@ -17,10 +17,12 @@
     align-items: center;
     justify-content: center;
 }
+
 .Arrow img {
     z-index: 1000;
     animation: fadeIn 2s ease-in-out forwards;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -37,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     padding: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .Terms h3 {
@@ -54,10 +56,12 @@
 }
 
 .photo img {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .org {
     position: absolute;
     transition: 0.5s;
@@ -72,6 +76,7 @@
     opacity: 0;
     transition: 0.5s;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -79,5 +84,47 @@
 
     to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Heading {
+        font-size: 30px;
+        margin-bottom: 35vh;
+    }
+
+    .Arrow {
+        margin-bottom: 25vh;
+    }
+
+    .Terms h3 {
+        color: #fcec0c;
+        margin-bottom: 5px;
+        text-align: left;
+        font-size: 35px;
+    }
+
+    .Terms .text {
+        width: 98%;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .Heading {
+        font-size: 20px;
+        margin-bottom: 35vh;
+    }
+
+    .Terms h3 {
+        color: #fcec0c;
+        margin-bottom: 5px;
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .Terms .text {
+        width: 98%;
+        font-size: 15px;
     }
 }
