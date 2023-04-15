@@ -91,3 +91,134 @@ input[type="submit"]:hover {
         opacity: 1;
     }
 }
+
+#menu-icon {
+    font-size: 35px;
+    color: #ffffff;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #menu-icon {
+        display: block;
+        text-align: center;
+    }
+
+    .Background video {
+        display: none;
+    }
+
+    .Background img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: all;
+        display: block;
+    }
+
+    .Links {
+        position: fixed;
+        top: -100vh;
+        left: 0;
+        right: 0;
+        height: 30vh;
+        width: 100%;
+        background: #031b30;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        transition: all .50s ease;
+        padding-top: 100px;
+        z-index: 1000;
+    }
+
+    .Links a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+        color: #fcec0c;
+    }
+
+    .Links.open {
+        top: -10px;
+    }
+
+    .Login {
+        z-index: -1;
+    }
+
+    .original-logo {
+        position: relative;
+        transition: 0.5s;
+        width: 75px;
+        height: 60px;
+    }
+
+    .original-login {
+        position: relative;
+        transition: 0.5s;
+        width: 40px;
+        height: 40px;
+        margin-left: 35px;
+    }
+
+    .hovered-logo {
+        display: none;
+    }
+
+    .hovered-login {
+        display: none;
+    }
+
+    .login {
+        width: 80%;
+    }
+
+    .login h2 {
+        font-size: 15px;
+    }
+
+    .login form {
+        padding: 20px;
+    }
+
+    .txt_field input {
+        color: #ffffff;
+        margin-right: 5px;
+        padding-left: 10px;
+        width: 100%;
+        height: 40px;
+        font-size: 12px;
+        border: none;
+        background: none;
+        outline: none;
+    }
+
+    .txt_field input::placeholder {
+        color: #d0d0d0
+    }
+
+    input[type="submit"] {
+        margin: 20px;
+        margin-bottom: 10px;
+        width: 50%;
+        height: 30px;
+        
+        font-size: 15px;
+        
+    }
+
+    Footer {
+        color: #909090;
+        position: fixed;
+        bottom: 1%;
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+    }
+}

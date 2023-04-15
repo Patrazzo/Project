@@ -1,31 +1,35 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// the message
-$msg = "First line of text\nSecond line of text";
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
-// use wordwrap() if lines are longer than 70 characters
-$msg = wordwrap($msg,70);
+if(isset($_POST["send"])){
+    $mail = new PHPMailer(true);
+    
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = 'autorentals2@gmail.com';
+    $mail->Password = 'ddhpsxstodjbsmom';
+    $mail->SMTPSecure = 'ssl';
+    $mail->Port = 465;
 
-// send email
-mail("yolalo8303@gam1fy.com","My subject",$msg);
+    $mail->setFrom('autorentals2@gmail.com');
 
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $fname = $_POST["fname"];
-//     $lname = $_POST["lname"];
-//     $email = $_POST["email"];
-//     $message = $_POST["message"];
+    $mail->addAddress($_POST["email"]);
 
-//     $to = "dereg70898@ippals.com"; // Replace with your email address
-//     $subject = "Contact Form Submission";
-//     $body = "First Name: " . $fname . "\n" .
-//         "Last Name: " . $lname . "\n" .
-//         "Email: " . $email . "\n" .
-//         "Message: " . $message;
+    $mail->isHTML(true);
+    $mail->Subject = 'Contact Form Submission';
+    $mail->Body = 'First Name: ' . $_POST["fname"] . '<br>Last Name: ' . $_POST["lname"] . '<br>Message: ' . $_POST["message"];
 
-//     if (mail($to, $subject, $body)) {
-//         echo "<script>alert('Thank you for your message! We will get back to you shortly.');</script>";
-//     } else {
-//         echo "<script>alert('Sorry, there was an error sending your message. Please try again later.');</script>";
-//     }
-// }
+    if($mail->send()){
+        echo '<script>alert("Message sent successfully!");</script>';
+    }
+    else{
+        echo '<script>alert("Message could not be sent. Please try again later.");</script>';
+    }
+}
 ?>

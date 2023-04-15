@@ -1,67 +1,70 @@
+<!-- This is an HTML file with the basic structure of an HTML page -->
+
 <!DOCTYPE html>
 <html>
 
-<head> <!-- В head се съдържа информацията за страницата -->
+<head>
+    <!-- This section contains meta tags and links to CSS stylesheets and JavaScript files -->
     <meta charset="UTF-8">
-    <!-- Означава наична за кодиране на знаците в документа, използваме UTF-8 понеже поддържа широк набор от знаци и се разпознава от много браузъри-->
-    <meta name="description" content=" "> <!-- Показва описанието на страницата -->
+    <meta name="description" content=" ">
     <meta name="keywords" content=" ">
-    <!-- Показва ключови думи на search engine-а за по-добро откриване на страницата-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Определя размера на страницата според устройството-->
-    <meta name="google" content="notranslate">
-    <!-- Показва на search engine-a, че страницата не трябва да се превежда-->
-    <link rel="icon" href="../Photos/Logo.png"> <!-- Използваме го, за да зададем лого на страницата-->
+    <link rel="icon" href="../Photos/Logo.png">
     <link rel="shortcut" href="../Photos/Logo.png">
-    <link rel="stylesheet" href="Background.css"> <!-- Свързваме страницата със CSS-->
-    <link rel="stylesheet" href="Home.css"> <!-- Свързваме страницата със CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
     <title>AutoRental | Home</title>
 </head>
 
-<body> <!-- В body се съдържат видимите обекти в сайта -->
+<body>
+    <!-- This section contains the visible objects on the webpage -->
     <header>
-        <div class="Logo"> <!-- Създаваме обект Logo, който съдържа линк под формата на снимка -->
+        <!-- This is the header section containing the logo, links, and login button -->
+        <div class="Logo">
+            <!-- This div contains the AutoRental logo -->
             <a href="../Home/home.html"><img class="original-logo" src="../Photos/Logo.png"></a>
-            <a href="../Home/home.html"><img class="hovered-logo" src="../Photos/HoverLogo.png" ></a>
+            <!-- This is the hover state of the logo -->
+            <a href="../Home/home.html"><img class="hovered-logo" src="../Photos/HoverLogo.png"></a>
         </div>
-        <div class="Links"> <!-- Създаваме обект Links, който съдържа линкове под формата на текст -->
+        <div class="Links">
+            <!-- This div contains links to the Catalog, About, and Contact pages -->
             <a href="../Catalog/Catalog.html">CATALOG</a>
             <a href="../About/About.html">ABOUT</a>
             <a href="../Contact/Contact.html">CONTACT</a>
         </div>
         <div class="bx bx-menu" id="menu-icon"></div>
-
-        <div class="Login"><!-- Създаваме обект Login, който съдържа link-a към формата -->
+        <!-- This div contains the login button -->
+        <div class="Login">
             <a href="../Login/Login.html"><img class="original-login" src="../Photos/Login.png"></a>
             <a href="../Login/test/Login.html"><img class="hovered-login" src="../Photos/HoverLogin.png"></a>
         </div>
-
-
     </header>
 
     <main>
-
+        <!-- This section contains the main content of the webpage -->
         <div class="Background">
+            <!-- This div contains the video background and fallback image -->
             <video autoplay loop muted>
                 <source src="../Photos/HomeBG.mp4">
             </video>
             <img src="../Photos/DEF.jpg">
         </div>
-
         <div class="Description">
+            <!-- This div contains the welcome message and a description of the website -->
             <h1>WELCOME TO AUTORENTAL</h1>
             <h2>Indulge in a luxurious experience with the Balkans' leading website for high-end cars.</h2>
         </div>
-
     </main>
+
     <footer>
-        <h5>Copyright <a class="Documentation" href="../Documentation/Documentation.html">©</a> 2023 AutoRentals | All
-            right reserved</h5>
+        <!-- This section contains the footer of the webpage -->
+        <h5>Copyright
+            <a class="Documentation" href="../Documentation/Documentation.html">©</a>
+            2023 AutoRentals | All right reserved
+        </h5>
     </footer>
-    <script src="Script.js"></script>
+    <script src="Home.js"></script>
+    <!-- This is a link to the JavaScript file -->
 </body>
 
 </html>
