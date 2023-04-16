@@ -17,7 +17,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 800px;
-    height: 550px;
+    height: auto;
     background: transparent;
     backdrop-filter: blur(5px);
     background-color: rgba(3, 27, 48, 0.9);
@@ -114,6 +114,7 @@ body {
     font-size: 20px;
     color: #454545;
     transition: 0.5s;
+    margin-bottom: 30px;
 }
 
 .submit input[type="submit"]:hover {
