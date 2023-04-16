@@ -170,6 +170,7 @@ input[type="submit"]:hover {
         justify-content: flex-start;
         align-items: center;
         border-radius: 0 0 10px 10px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
         transition: all .50s ease;
         padding-top: 100px;
     }
@@ -179,7 +180,7 @@ input[type="submit"]:hover {
         margin: 12px 0;
         padding: 0px 25px;
         transition: all .50s ease;
-        color: #fcec0c;
+        color: #ffffff;
     }
 
     .Links.open {

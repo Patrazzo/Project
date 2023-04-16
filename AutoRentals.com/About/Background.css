@@ -112,7 +112,7 @@ Footer{
 
 .Documentation{
     text-decoration: none;
-    color: #d1c5c0;
+    color: #909090;
     font-weight: 100;
     font-size: 18px;
 
@@ -170,7 +170,7 @@ Footer{
         margin: 12px 0;
         padding: 0px 25px;
         transition: all .50s ease;
-        color: #fcec0c;
+        color: #ffffff;
     }
 
     .Links.open {
