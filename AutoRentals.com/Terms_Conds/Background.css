@@ -2,7 +2,6 @@
 
 * {
     margin: 0;
-    
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -45,6 +44,7 @@ Header {
     justify-content: center;
     align-items: center;
     filter: brightness(60%);
+    z-index: -1000;
 }
 
 .Background video {
@@ -107,6 +107,7 @@ Footer {
     position: relative;
     bottom: 1%;
     text-align: center;
+    background-color: #000000;
     width: 100%;
 }
 

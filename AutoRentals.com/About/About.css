@@ -1,4 +1,5 @@
 .Heading {
+    position: relative;
     color: #fcec0c;
     margin-top: 10vh;
     font-size: 50px;
@@ -6,55 +7,65 @@
     margin-bottom: 40vh;
     animation: fadeIn 2s ease-in-out forwards;
 }
-.my-fade{
+
+.my-fade {
     opacity: 0;
     transition: opacity 2.5s ease-out;
-  }
-  
+}
+
 .my-fade.active {
     opacity: 1;
 }
-.org.my-fade{
+
+.org.my-fade {
     opacity: 0;
     transition: opacity 2.5s ease-out;
-  }
-  
+}
+
 .org.my-fade.active {
     opacity: 1;
 }
-.hvr.my-fade{
+
+.hvr.my-fade {
     opacity: 0;
     transition: opacity 1s ease-out;
 }
-  
+
 .hvr.my-fade {
     opacity: 1;
 }
+
 .Arrow {
     display: flex;
-    margin-bottom: 30vh;
+    margin-bottom: 10%;
     align-items: center;
     justify-content: center;
 }
+
 .Arrow img {
     z-index: 1000;
     animation: fadeIn 2s ease-in-out forwards;
 }
+
 .Arrow {
     position: relative;
     animation: moveUpDown 1.9s ease-in-out 3;
 }
+
 @keyframes moveUpDown {
     0% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
+
     50% {
-      transform: translateY(65px);
+        transform: translateY(65px);
     }
+
     100% {
-      transform: translateY(0px);
+        transform: translateY(0px);
     }
-  }
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -64,13 +75,15 @@
     color: #d1c5c0;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    background-color: #000;
 }
 
 .WhoAreWe {
     display: flex;
     color: #d1c5c0;
     padding: 50px;
-    align-items: center; 
+    align-items: center;
 }
 
 .WhoAreWe h2 {
@@ -98,7 +111,7 @@
     display: flex;
     color: #d1c5c0;
     padding: 50px;
-    align-items: center; 
+    align-items: center;
 }
 
 .OurMission h2 {
@@ -139,31 +152,22 @@
 
 .WhatWeOffer .text {
     text-align: center;
-    margin-bottom: 20px;
     width: 70%;
     font-size: 20px;
     text-align: justify;
 }
 
-.photo img {
+.photo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .org {
-    position: absolute;
-    transition: 0.5s;
-}
-
-.hvr {
     position: relative;
-    z-index: -1;
-}
-
-.org.my-fade:hover {
-    opacity: 0;
     transition: 0.5s;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;

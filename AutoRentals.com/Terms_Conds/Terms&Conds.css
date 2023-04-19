@@ -1,9 +1,9 @@
 .Heading {
     color: #fcec0c;
-    margin-top: 10vh;
-    font-size: 50px;
+    margin-top: 15vh;
+    font-size: 35px;
     text-align: center;
-    margin-bottom: 42vh;
+    margin-bottom: 45vh;
     animation: fadeIn 2s ease-in-out forwards;
 }
 
@@ -13,9 +13,10 @@
 
 .Arrow {
     display: flex;
-    margin-bottom: 17vh;
+    
     align-items: center;
     justify-content: center;
+
 }
 
 .Arrow img {
@@ -47,6 +48,8 @@
     color: #d1c5c0;
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
+    margin-top: 10%;
+    background-color: #000;
 }
 
 .Terms {
@@ -71,24 +74,14 @@
 }
 
 .photo img {
-    margin-top: 50px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .org {
-    position: absolute;
-    transition: 0.5s;
-}
-
-.hvr {
     position: relative;
-    z-index: -1;
-}
-
-.org:hover {
-    opacity: 0;
     transition: 0.5s;
 }
 
@@ -105,7 +98,7 @@
 @media (max-width: 1000px) {
     .Heading {
         font-size: 30px;
-        margin-bottom: 35vh;
+        margin-bottom: 45vh;
     }
 
     .Arrow {
@@ -143,3 +136,6 @@
         font-size: 15px;
     }
 }
+
+
+    
