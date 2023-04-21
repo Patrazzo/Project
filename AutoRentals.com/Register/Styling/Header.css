@@ -6,14 +6,15 @@ Header {
     align-items: center;
     z-index: 1;
     padding: 10px 20px 10px 20px;
-    height: auto;
+    margin-bottom: 85vh;
 }
+
 .Links a {
+    
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
-    transition: 0.5s;
     margin: 20px;
+    font-size: 18px;
 }
 
 .Links a:hover {
@@ -21,54 +22,31 @@ Header {
     transition: 0.5s;
 }
 
-.Links img {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#clicked {
-    color: #fcec0c;
-}
-
-.original-logo {
+.original-logo{
     position: absolute;
     transition: 0.5s;
-    width: 100px;
-    height: 75px;
-}
-
-.hovered-logo {
+}   
+.hovered-logo{
     position: relative;
     z-index: -1;
-    width: 100px;
-    height: 75px;
-    transition: 0.5s;
 }
-
-.original-logo:hover {
-    opacity: 0;
-    
-}
-
-.original-login {
-    position: absolute;
-    transition: 0.5s;
-    width: 60px;
-    height: 60px;
-}
-
-.hovered-login {
-    position: relative;
-    z-index: -1;
-    width: 60px;
-    height: 60px;
-}
-
-.original-login:hover {
+.original-logo:hover{
     opacity: 0;
     transition: 0.5s;
 }
 
+.original-login{
+    position: absolute;
+    transition: 0.5s;
+}
+.hovered-login{
+    position: relative;
+    z-index: -1;
+}
+.original-login:hover{
+    opacity: 0;
+    transition: 0.5s;
+}
 
 #menu-icon {
     font-size: 35px;
@@ -77,22 +55,29 @@ Header {
     display: none;
 }
 
-.Lang img{
-    margin: 10px 10px 0px 10px;
-}
+@media (max-width: 700px) {
+    Header {
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        padding: 10px 20px 10px 20px;
+        margin-bottom: 86vh;
+    }
 
-@media (max-width: 900px) {
     #menu-icon {
         display: block;
         text-align: center;
     }
 
     .Links {
-        position: fixed;
+        position: absolute;
         top: -100vh;
         left: 0;
         right: 0;
-        height: 40vh;
+        height: 50vh;
         width: 100%;
         background: #031b30;
         display: flex;
@@ -103,7 +88,6 @@ Header {
         box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
         transition: all .50s ease;
         padding-top: 100px;
-        z-index: 1000;
     }
 
     .Links a {
@@ -116,14 +100,6 @@ Header {
 
     .Links.open {
         top: -10px;
-    }
-
-    .Links img {
-        margin: 20px;
-    }
-
-    .Login {
-        z-index: -1;
     }
 
     .Login {

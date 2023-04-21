@@ -6,28 +6,22 @@ Header {
     align-items: center;
     z-index: 1;
     padding: 10px 20px 10px 20px;
-    height: auto;
 }
+
 .Links a {
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
-    transition: 0.5s;
     margin: 20px;
+}
+
+#clicked {
+    color: #fcec0c;
 }
 
 .Links a:hover {
     color: #fcec0c;
     transition: 0.5s;
-}
-
-.Links img {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#clicked {
-    color: #fcec0c;
 }
 
 .original-logo {
@@ -42,12 +36,11 @@ Header {
     z-index: -1;
     width: 100px;
     height: 75px;
-    transition: 0.5s;
 }
 
 .original-logo:hover {
     opacity: 0;
-    
+    transition: 0.5s;
 }
 
 .original-login {
@@ -69,7 +62,6 @@ Header {
     transition: 0.5s;
 }
 
-
 #menu-icon {
     font-size: 35px;
     color: #ffffff;
@@ -77,22 +69,18 @@ Header {
     display: none;
 }
 
-.Lang img{
-    margin: 10px 10px 0px 10px;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 700px) {
     #menu-icon {
         display: block;
         text-align: center;
     }
 
     .Links {
-        position: fixed;
+        position: absolute;
         top: -100vh;
         left: 0;
         right: 0;
-        height: 40vh;
+        height: 30vh;
         width: 100%;
         background: #031b30;
         display: flex;
@@ -103,7 +91,6 @@ Header {
         box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
         transition: all .50s ease;
         padding-top: 100px;
-        z-index: 1000;
     }
 
     .Links a {
@@ -116,14 +103,6 @@ Header {
 
     .Links.open {
         top: -10px;
-    }
-
-    .Links img {
-        margin: 20px;
-    }
-
-    .Login {
-        z-index: -1;
     }
 
     .Login {
