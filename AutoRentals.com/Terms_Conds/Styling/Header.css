@@ -43,6 +43,10 @@ Header {
     transition: 0.5s;
 }
 
+.Login {
+    margin-left: 40px;
+}
+
 .original-login {
     position: absolute;
     transition: 0.5s;
@@ -74,6 +78,7 @@ Header {
         display: block;
         text-align: center;
     }
+
     .Links {
         position: absolute;
         top: -100vh;

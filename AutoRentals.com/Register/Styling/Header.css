@@ -10,7 +10,7 @@ Header {
 }
 
 .Links a {
-    
+
     text-decoration: none;
     color: #ffffff;
     margin: 20px;
@@ -22,28 +22,36 @@ Header {
     transition: 0.5s;
 }
 
-.original-logo{
+.original-logo {
     position: absolute;
     transition: 0.5s;
-}   
-.hovered-logo{
+}
+
+.hovered-logo {
     position: relative;
     z-index: -1;
 }
-.original-logo:hover{
+
+.original-logo:hover {
     opacity: 0;
     transition: 0.5s;
 }
 
-.original-login{
+.Login {
+    margin-left: 40px;
+}
+
+.original-login {
     position: absolute;
     transition: 0.5s;
 }
-.hovered-login{
+
+.hovered-login {
     position: relative;
     z-index: -1;
 }
-.original-login:hover{
+
+.original-login:hover {
     opacity: 0;
     transition: 0.5s;
 }

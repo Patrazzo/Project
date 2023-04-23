@@ -36,6 +36,10 @@ Header {
     transition: 0.5s;
 }
 
+.Login{
+    margin-left: 40px;
+}
+
 .original-login {
     position: absolute;
     transition: 0.5s;
