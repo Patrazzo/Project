@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!-- В head се съдържа информацията за страницата -->
+    <meta charset="UTF-8">
+    <!-- Означава наична за кодиране на знаците в документа, използваме UTF-8 понеже поддържа широк набор от знаци и се разпознава от много браузъри-->
+    <meta name="description" content=" "> <!-- Показва описанието на страницата -->
+    <meta name="keywords" content=" ">
+    <!-- Показва ключови думи на search engine-а за по-добро откриване на страницата-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Определя размера на страницата според устройството-->
+    <meta name="google" content="notranslate">
+    <!-- Показва на search engine-a, че страницата не трябва да се превежда-->
+    <link rel="icon" href="../Photos/Logo.png"> <!-- Използваме го, за да зададем лого на страницата-->
+    <link rel="shortcut" href="../Photos/Logo.png">
+    <link rel="stylesheet" href="../Styling/Background.css">
+    <link rel="stylesheet" href="../Styling/Footer.css">
+    <link rel="stylesheet" href="../Styling/General.css">
+    <link rel="stylesheet" href="../Styling/Header.css">
+    <link rel="stylesheet" href="../Styling/Animation.css">
+    <link rel="stylesheet" href="../Styling/Content.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>AutoRental | Contact</title> <!-- Задаваме име на страницата-->
+</head>
+
+<body> <!-- В body се съдържат видимите обекти в сайта -->
+    <header>
+        <div class="Logo"> <!-- Създаваме обект Logo, който съдържа линк под формата на снимка -->
+            <a href="../../Home/BG/home.html"><img class="original-logo" src="../../Photos/Logo.png" width="100" height="75"></a>
+            <a href="../../Home/BG/home.html"><img class="hovered-logo" src="../../Photos/HoverLogo.png" width="100"
+                    height="75"></a>
+        </div>
+        <div class="Links"> <!-- Създаваме обект Links, който съдържа линкове под формата на текст -->
+            <a href="../../Catalog/BG/Catalog.html">КАТАЛОГ</a>
+            <a href="../../About/BG/About.html">ЗА НАС</a>
+            <a id="clicked" href="../../Contact/BG/Contact.html">КОНТАКТ</a>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="Login"><!-- Създаваме обект Login, който съдържа link-a към формата -->
+            <a href="../../Login/BG/Login.html"><img class="original-login" src="../../Photos/Login.png" width="60"
+                    height="60"></a>
+            <a href="../../Login/BG/Login.html"><img class="hovered-login" src="../../Photos/HoverLogin.png" width="60"
+                    height="60"></a>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="Background">
+            <video autoplay loop muted>
+                <source src="../../Photos/ContactBG.mp4">
+            </video>
+            <img src="../../Photos/DEF.jpg">
+        </div>
+
+
+        <div class="contact">
+            <h1>КОНТАКТ</h1>
+            <form action="../Functionality/Contact.php" method="post">
+                <div class="names">
+                    <div class="fname">
+                        <input type="text" id="fname" name="fname" placeholder="Име" required>
+                    </div>
+                    <div class="lname">
+                        <input type="text" id="lname" name="lname" placeholder="Фамилия" required>
+                    </div>
+                </div>
+                <div class="email">
+                    <input type="text" id="subject" name="subject" placeholder="Предмет" required>
+                    <input type="text" id="email" name="email" placeholder="E-mail" required>
+                </div>
+                <div class="message">
+                    <textarea id="body" name="body" rows="10" cols="50" placeholder="Съобщение"></textarea>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+
+    </main>
+    <footer>
+        <!-- This section contains the footer of the webpage -->
+        <h5>Copyright
+            <a class="Documentation" href="../../Documentation/BG/Documentation.html">©</a>
+            2023 AutoRentals | Всички права запазени |
+            <a href="../../Contact/BG/Contact.html"><img src="../../Photos/BG.jpg" height="10" width="15"></a>
+            <a href="../../Contact/EN/Contact.html"><img src="../../Photos/EN.jpg" height="10" width="15"></a>
+        </h5>
+    </footer>
+    <script src="../Functionality/Contact.js"></script>
+</body>
+
+</html>
