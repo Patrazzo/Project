@@ -1,0 +1,44 @@
+.Background {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(60%);
+    margin-bottom: 30px;
+    z-index: -1000;
+}
+
+.Background video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: all;
+}
+
+.Background img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: all;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .Background video {
+        display: none;
+    }
+
+    .Background img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: all;
+        display: block;
+    }
+}

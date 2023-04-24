@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 700px) {
+
+}

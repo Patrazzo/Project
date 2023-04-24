@@ -1,0 +1,264 @@
+.Heading {
+    position: relative;
+    color: #fcec0c;
+    margin-top: 10vh;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40vh;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.my-fade {
+    opacity: 0;
+    transition: opacity 2.5s ease-out;
+}
+
+.my-fade.active {
+    opacity: 1;
+}
+
+.org.my-fade {
+    opacity: 0;
+    transition: opacity 2.5s ease-out;
+}
+
+.org.my-fade.active {
+    opacity: 1;
+}
+
+.hvr.my-fade {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.hvr.my-fade {
+    opacity: 1;
+}
+
+.Arrow {
+    display: flex;
+    margin-bottom: 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.Arrow img {
+    z-index: 1000;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.Arrow {
+    position: relative;
+    animation: moveUpDown 1.9s ease-in-out 3;
+}
+
+.WholeTxt {
+    display: block;
+    color: #d1c5c0;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 50px;
+    background-color: #000;
+}
+
+.WhoAreWe {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center;
+}
+
+.WhoAreWe h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhoAreWe .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.dealership {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.OurMission {
+    display: flex;
+    color: #d1c5c0;
+    padding: 50px;
+    align-items: center;
+}
+
+.OurMission h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.OurMission .text {
+    flex: 1;
+    padding: 20px;
+    width: 70%;
+    font-size: 20px;
+}
+
+.keys {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.WhatWeOffer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.WhatWeOffer h2 {
+    color: #fcec0c;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.WhatWeOffer .text {
+    text-align: center;
+    width: 70%;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.org {
+    position: relative;
+    transition: 0.5s;
+}
+
+@media (max-width: 700px) {
+    .Heading {
+        color: #fcec0c;
+        margin-top: 15vh;
+        font-size: 35px;
+        text-align: center;
+        margin-bottom: 50vh;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .Arrow {
+        display: flex;
+        margin-bottom: 20vh;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .Arrow img {
+        z-index: 100;
+        animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .Arrow {
+        position: relative;
+        animation: moveUpDown 1.9s ease-in-out 3;
+    }
+
+    .WholeTxt {
+        display: block;
+        color: #d1c5c0;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .WhoAreWe {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .WhoAreWe h2 {
+        font-size: 20px;
+    }
+
+    .WhoAreWe .text {
+        order: 1;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .WhoAreWe .dealership {
+        order: 2;
+    }
+
+    .WhoAreWe img {
+        width: 100%;
+
+    }
+
+
+    .OurMission {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .OurMission h2 {
+        font-size: 20px;
+    }
+
+    .OurMission .text {
+        order: 1;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .OurMission img {
+        width: 100%;
+
+    }
+
+    .keys {
+        order: 2;
+    }
+
+    .WhatWeOffer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .WhatWeOffer h2 {
+        font-size: 20px;
+    }
+
+    .WhatWeOffer .text {
+        order: 1;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .WhatWeOffer .photo{
+        position: relative;
+        order: 2;
+        
+        height: auto;
+        width: auto;
+    }
+}

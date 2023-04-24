@@ -1,0 +1,77 @@
+<!-- This is an HTML file with the basic structure of an HTML page -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- This section contains meta tags and links to CSS stylesheets and JavaScript files -->
+    <meta charset="UTF-8">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../Photos/Logo.png">
+    <link rel="shortcut" href="../../Photos/Logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>AutoRental | Home</title>
+    <link rel="stylesheet" href="../Styling/Background.css">
+    <link rel="stylesheet" href="../Styling/Footer.css">
+    <link rel="stylesheet" href="../Styling/General.css">
+    <link rel="stylesheet" href="../Styling/Header.css">
+    <link rel="stylesheet" href="../Styling/Animation.css">
+    <link rel="stylesheet" href="../Styling/Content.css">
+</head>
+
+<body>
+    <!-- This section contains the visible objects on the webpage -->
+    <header>
+        <!-- This is the header section containing the logo, links, and login button -->
+        <div class="Logo">
+            <!-- This div contains the AutoRental logo -->
+            <a href="../../Home/EN/home.html"><img class="original-logo" src="../../Photos/Logo.png"></a>
+            <!-- This is the hover state of the logo -->
+            <a href="../../Home/EN/home.html"><img class="hovered-logo" src="../../Photos/HoverLogo.png"></a>
+        </div>
+        <div class="Links">
+            <!-- This div contains links to the Catalog, About, and Contact pages -->
+            <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+            <a href="../../About/EN/About.html">ABOUT</a>
+            <a href="../../Contact/EN/Contact.html">CONTACT</a>
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <!-- This div contains the login button -->
+        <div class="Login">
+            <a href="../../Login/EN/Login.html"><img class="original-login" src="../../Photos/Login.png"></a>
+            <a href="../../Login/EN/Login.html"><img class="hovered-login" src="../../Photos/HoverLogin.png"></a>
+        </div>
+    </header>
+
+    <main>
+        <!-- This section contains the main content of the webpage -->
+        <div class="Background">
+            <!-- This div contains the video background and fallback image -->
+            <video autoplay loop muted>
+                <source src="../../Photos/HomeBG.mp4">
+            </video>
+            <img src="../../Photos/DEF.jpg">
+        </div>
+        <div class="Description">
+            <!-- This div contains the welcome message and a description of the website -->
+            <h1>WELCOME TO AUTORENTAL</h1>
+            <h2>Indulge in a luxurious experience with the Balkans' leading website for high-end cars.</h2>
+        </div>
+    </main>
+
+    <footer>
+        <!-- This section contains the footer of the webpage -->
+        <h5>Copyright
+            <a class="Documentation" href="../../Documentation/EN/Documentation.html">©</a>
+            2023 AutoRentals | All right reserved |
+            <a href="../../Home/BG/home.html"><img src="../../Photos/BG.jpg" height="10" width="15"></a>
+            <a href="../../Home/EN/home.html"><img src="../../Photos/EN.jpg" height="10" width="15"></a>
+        </h5>
+    </footer>
+    <script src="../Functionality/Home.js"></script>
+    <!-- This is a link to the JavaScript file -->
+</body>
+
+</html>
