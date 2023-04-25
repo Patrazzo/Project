@@ -36,6 +36,14 @@ form .txt_field {
     margin: 10px 0;
 }
 
+.valid {
+    border-bottom-color: limegreen !important; 
+}
+
+.invalid {
+    border-bottom-color: red !important; 
+}
+
 .txt_field input {
     color: #ffffff;
     margin-right: 5px;
