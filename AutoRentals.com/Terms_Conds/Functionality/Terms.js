@@ -16,3 +16,10 @@ function scrollToTop() {
         }
     }, 10);
 }
+
+function scrollDown() {
+    window.scrollTo({
+        top: 800,
+        behavior: "smooth"
+    });
+  }
