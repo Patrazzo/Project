@@ -28,10 +28,11 @@
 }
 
 form .txt_field {
+    --border-color: rgba(224, 247, 75, 0.5); /* define custom variable */
     position: relative;
     background-color: rgba(69, 69, 69, 0.4);
     border-radius: 10px;
-    border-bottom: 2px solid rgba(224, 247, 75, 0.5);
+    border-bottom: 2px solid var(--border-color); /* use custom variable */
     margin: 10px 0;
 }
 
