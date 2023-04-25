@@ -26,3 +26,10 @@ window.addEventListener('scroll', function() {
         }
     }, 10);
 }
+
+function scrollDown() {
+  window.scrollTo({
+      top: 800,
+      behavior: "smooth"
+  });
+}
