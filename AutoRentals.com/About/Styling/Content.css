@@ -152,30 +152,19 @@
 
 @media (max-width: 700px) {
     .Heading {
-        color: #fcec0c;
-        margin-top: 15vh;
-        font-size: 35px;
-        text-align: center;
+        font-size: 30px;
         margin-bottom: 50vh;
-        animation: fadeIn 2s ease-in-out forwards;
     }
 
     .Arrow {
-        display: flex;
-        margin-bottom: 20vh;
-        align-items: center;
-        justify-content: center;
-
+        margin-bottom: 25vh;
+        position: relative;
+        animation: moveUpDown 1.9s ease-in-out 3;
     }
 
     .Arrow img {
         z-index: 100;
         animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    .Arrow {
-        position: relative;
-        animation: moveUpDown 1.9s ease-in-out 3;
     }
 
     .WholeTxt {
