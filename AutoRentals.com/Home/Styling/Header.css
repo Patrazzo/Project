@@ -11,7 +11,7 @@ Header {
 .Links a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 18px;
+    font-size: 30px;
     transition: 0.5s;
     margin: 20px;
 }
@@ -114,6 +114,7 @@ Header {
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
+        font-size: 18px;
         transition: all .50s ease;
         color: #ffffff;
     }
