@@ -4,20 +4,20 @@
     font-size: 3vw;
     text-align: center;
     animation: fadeIn 2s ease-in-out forwards;
-    z-index: -100;
+    
 }
 
 h2 {
-    font-size: 2vw;
+    font-size: 2zzvw;
     font-weight: lighter;
     color: #d1c5c0;
 }
 
 @media (max-width: 600px) {
     .Description{
-        font-size: 4vw;
+        font-size: 20px;
     }
     h2{
-        font-size: 3vw;
+        font-size: 15px;
     }
 }

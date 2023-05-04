@@ -1,7 +1,7 @@
 Footer {
     color: #909090;
-    position: fixed;
-    bottom: 1%;
+    position: absolute;
+    bottom: -50vh;
     text-align: center;
     width: 100%;
 }
@@ -22,7 +22,7 @@ Footer {
 @media (max-width: 600px) {
     Footer {
         color: #909090;
-        position: fixed;
+        
         bottom: 1%;
         text-align: center;
         width: 100%;
