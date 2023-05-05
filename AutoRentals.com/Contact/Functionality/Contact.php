@@ -19,7 +19,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email'])){
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = true;
     $mail->Username = "autorentals2@gmail.com";
-    $mail->Password = 'idrxsvfjzatuzhif';
+    $mail->Password = 'wfceelwaepuuevwm';
     $mail->Port = 465;
     $mail->SMTPSecure = "ssl";
 
@@ -35,7 +35,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email'])){
     }
     else
     {
-        echo '<script>alert("Failed to sent."); window.location="../Contact/contact.html";</script>';
+        echo '<script>alert("Failed to sent."); window.location="../EN/Contact.html";</script>';
     }
 
     exit(json_encode(array("status" => $status, "response" => $response)));
