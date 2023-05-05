@@ -31,11 +31,11 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email'])){
     $mail->Body = $body;
 
     if($mail->send()){
-        echo '<script>alert("Successfully sent."); window.location="../Home/home.html";</script>';
+        echo '<script>alert("Successfully sent."); window.location="../../Home/EN/home.html";</script>';
     }
     else
     {
-        echo '<script>alert("Failed to sent."); window.location="../EN/Contact.html";</script>';
+        echo '<script>alert("Failed to sent."); window.location="../../Contact/BG/Contact.html";</script>';
     }
 
     exit(json_encode(array("status" => $status, "response" => $response)));
