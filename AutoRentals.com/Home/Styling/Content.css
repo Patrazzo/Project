@@ -1,51 +1,23 @@
 .Description {
     color: #fcec0c;
-    margin-top: 20vh;
-    font-size: 50px;
+    margin: 10vh 20px 20vh 20px;
+    font-size: 3vw;
     text-align: center;
     animation: fadeIn 2s ease-in-out forwards;
-    z-index: -1000;
+    
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 2zzvw;
     font-weight: lighter;
     color: #d1c5c0;
 }
 
-@media (max-width: 900px) {
-    .Description {
-        color: #fcec0c;
-        margin: 15vh 10px 10px 10px;
-        font-size: 25px;
-        text-align: center;
-        animation: fadeIn 2s ease-in-out forwards;
-
-    }
-
-    h2 {
+@media (max-width: 600px) {
+    .Description{
         font-size: 20px;
-        font-weight: lighter;
-        color: #d1c5c0;
-        margin: 10px;
     }
-}
-
-@media (max-width: 350px) {
-    .Description {
-        color: #fcec0c;
-        margin-top: 20vh;
-        font-size: 20px;
-        text-align: center;
-        animation: fadeIn 2s ease-in-out forwards;
-
-    }
-
-    h2 {
+    h2{
         font-size: 15px;
-        font-weight: lighter;
-        color: #909090;
-        margin: 10px;
     }
 }
-

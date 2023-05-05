@@ -85,7 +85,7 @@ Header {
     margin: 10px 10px 0px 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
     #menu-icon {
         display: block;
         text-align: center;
@@ -114,6 +114,7 @@ Header {
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
+        font-size: 20px;
         transition: all .50s ease;
         color: #ffffff;
     }
@@ -146,7 +147,6 @@ Header {
         transition: 0.5s;
         width: 40px;
         height: 40px;
-        margin-left: 35px;
     }
 
     .hovered-logo {
