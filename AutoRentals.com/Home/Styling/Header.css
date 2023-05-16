@@ -54,14 +54,14 @@ Header {
     margin-left: 40px;
 }
 
-.original-login {
+#original-login {
     position: absolute;
     transition: 0.5s;
     width: 60px;
     height: 60px;
 }
 
-.hovered-login {
+#hovered-login {
     position: relative;
     z-index: -1;
     width: 60px;
