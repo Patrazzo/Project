@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head> <!-- В head се съдържа информацията за страницата -->
+    <meta charset="UTF-8">
+    <!-- Означава наична за кодиране на знаците в документа, използваме UTF-8 понеже поддържа широк набор от знаци и се разпознава от много браузъри-->
+    <meta name="description" content=" "> <!-- Показва описанието на страницата -->
+    <meta name="keywords" content=" ">
+    <!-- Показва ключови думи на search engine-а за по-добро откриване на страницата-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Определя размера на страницата според устройството-->
+    <meta name="google" content="notranslate">
+    <!-- Показва на search engine-a, че страницата не трябва да се превежда-->
+    <link rel="icon" href="../../Photos/Logo.png"> <!-- Използваме го, за да зададем лого на страницата-->
+    <link rel="shortcut" href="../../Photos/Logo.png">
+    <link rel="stylesheet" href="../Styling/Animation.css"> <!-- Свързваме страницата със CSS-->
+    <link rel="stylesheet" href="../Styling/Background.css">
+    <link rel="stylesheet" href="../Styling/Content.css">
+    <link rel="stylesheet" href="../Styling/Footer.css">
+    <link rel="stylesheet" href="../Styling/General.css">
+    <link rel="stylesheet" href="../Styling/Header.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>AutoRental | Правила & условия</title> <!-- Задаваме име на страницата-->
+</head>
+
+<body> <!-- В body се съдържат видимите обекти в сайта -->
+    <header>
+        <div class="Logo"> <!-- Създаваме обект Logo, който съдържа линк под формата на снимка -->
+            <a href="../../Home/BG/home.html"><img class="original-logo" src="../../Photos/Logo.png" width="100"
+                    height="75"></a>
+            <a href="../../Home/BG/home.html"><img class="hovered-logo" src="../../Photos/HoverLogo.png" width="100"
+                    height="75"></a>
+        </div>
+        <div class="Links"> <!-- Създаваме обект Links, който съдържа линкове под формата на текст -->
+            <a href="../../Catalog/BG/Catalog.html">КАТАЛОГ</a>
+            <a href="../../About/BG/About.html">ЗА НАС</a>
+            <a href="../../Contact/BG/Contact.html">КОНТАКТ</a>
+
+        </div>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <div class="Login"><!-- Създаваме обект Login, който съдържа link-a към формата -->
+            <a href="../../Login/BG/Login.html"><img class="original-login" src="../../Photos/Login.png" width="60"
+                    height="60"></a>
+            <a href="../../Login/BG/Login.html"><img class="hovered-login" src="../../Photos/HoverLogin.png" width="60"
+                    height="60"></a>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="Background">
+            <video autoplay loop muted>
+                <source src="../../Photos/LegalBG.mp4" type="video/mp4">
+            </video>
+            <img src="../../Photos/DEF.jpg" alt="">
+        </div>
+
+        <div class="Heading">
+            <h1>ПРАВИЛА И УСЛОВИЯ</h1>
+        </div>
+        <div class="Arrow">
+            <img src="../../Photos/Arrow.png" width="50" height="50" onclick="scrollDown()">
+        </div>
+        <div class="WholeTxt">
+            
+            <div class="Photo">
+                <a onclick="scrollToTop(); return false;"><img class="org my-fade" src="../../Photos/Logo.png" width="200"></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- This section contains the footer of the webpage -->
+        <h5>Copyright
+            <a class="Documentation" href="../../Documentation/BG/Documentation.html">©</a>
+            2023 AutoRentals | Всички права запазени |
+            <a href="../../Terms_Conds/BG/Terms&Conds.html"><img src="../../Photos/BG.jpg" height="10" width="15"></a>
+            <a href="../../Terms_Conds/EN/Terms&Conds.html"><img src="../../Photos/EN.jpg" height="10" width="15"></a>
+        </h5>
+    </footer>
+    <script src="../Functionality/Terms.js"></script>
+</body>
+
+</html>

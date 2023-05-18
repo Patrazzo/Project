@@ -1,0 +1,31 @@
+Footer {
+    color: #909090;
+    position: relative;
+    bottom: 1%;
+    text-align: center;
+    background-color: #000000;
+    width: 100%;
+}
+
+.Documentation {
+    text-decoration: none;
+    color: #909090;
+    font-weight: 100;
+    font-size: 18px;
+
+}
+
+.Documentation:hover {
+    color: #fcec0c;
+    transition: 0.5s;
+}
+
+@media (max-width: 700px) {
+    Footer {
+        color: #909090;
+        bottom: 1%;
+        text-align: center;
+        width: 100%;
+        font-size: 13px;
+    }
+}

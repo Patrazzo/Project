@@ -1,0 +1,125 @@
+Header {
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 10px 20px 10px 20px;
+}
+
+.Links a {
+
+    text-decoration: none;
+    color: #ffffff;
+    margin: 20px;
+    font-size: 18px;
+}
+
+.Links a:hover {
+    color: #fcec0c;
+    transition: 0.5s;
+}
+
+.original-logo {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.hovered-logo {
+    position: relative;
+    z-index: -1;
+}
+
+.original-logo:hover {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.Login{
+    margin-left: 40px;
+}
+
+.original-login {
+    position: absolute;
+    transition: 0.5s;
+}
+
+.hovered-login {
+    position: relative;
+    z-index: -1;
+}
+
+.original-login:hover {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#menu-icon {
+    font-size: 35px;
+    color: #ffffff;
+    z-index: 10001;
+    display: none;
+}
+
+@media (max-width: 600px) {
+    #menu-icon {
+        display: block;
+        text-align: center;
+    }
+    .Links {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 40vh;
+        width: 100%;
+        background: #031b30;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 0 0 10px 10px;
+        transition: all .50s ease;
+        padding-top: 100px;
+        box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .Links a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+        color: #ffffff;
+    }
+
+    .Links.open {
+        top: -10px;
+    }
+
+    .Login {
+        z-index: -1;
+    }
+
+    .original-logo {
+        position: relative;
+        transition: 0.5s;
+        width: 75px;
+        height: 60px;
+    }
+
+    .original-login {
+        position: relative;
+        transition: 0.5s;
+        width: 40px;
+        height: 40px;
+    }
+
+    .hovered-logo {
+        display: none;
+    }
+
+    .hovered-login {
+        display: none;
+    }
+}
