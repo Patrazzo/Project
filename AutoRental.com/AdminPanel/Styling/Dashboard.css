@@ -1,0 +1,49 @@
+.main{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    padding-bottom: 50px;
+}
+.container h1{
+    margin: 30px;
+    color: wheat;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+.container div{
+    display: flex;
+    background-color: wheat;
+    margin: 10px;
+    height: 150px;
+    width: 40%;
+    border-radius: 20px;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container div h2{
+    margin: 30px;
+    height: fit-content;
+}
+
+.container div p{
+    background-color: black;
+    color: aliceblue;
+    padding: 10px;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+}

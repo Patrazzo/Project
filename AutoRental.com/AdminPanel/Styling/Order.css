@@ -1,0 +1,85 @@
+.main{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    padding-bottom: 50px;
+}
+.container h1{
+    margin: 30px;
+    color: wheat;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.container div{
+    padding: 20px;
+    display: flex;
+    background-color: wheat;
+    margin: 10px;
+    height: auto;
+    width: 40%;
+    border-radius: 20px;
+    justify-content: baseline;
+    flex-direction: column;
+}
+
+.container .row{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    flex-direction: row;
+    margin: 0;
+    justify-content: baseline;
+    align-items: center;
+    
+}
+
+.container div p{
+    margin: 5px;
+    width: auto;
+}
+.container div h6{
+    margin: 5px;
+    width: 70%;
+}
+
+.order .row .options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    background-color: gold;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.order .row select{
+    background-color: aqua;
+    width: 100px;
+}
+
+#center{
+    justify-content: center;
+ 
+}
+
+.options button{
+    margin: 5px 2px 5px 2px;
+    height: 30px;
+    width: 70px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+}

@@ -1,0 +1,94 @@
+.main{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+.addProduct{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    background-color: aqua;
+}
+
+.addProduct h1{
+    color: red;
+    margin: 30px;
+}
+
+.addProduct form{
+    display: flex;
+    padding: 50px;
+    gap: 20px;
+    align-items: baseline;
+    flex-direction: column;
+    background-color: bisque;
+    width: 300px;
+    height: auto;
+}
+
+.listContainer{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    padding-bottom: 50px;
+}
+.listContainer h1{
+    margin: 30px;
+    color: wheat;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.listContainer div{
+    display: flex;
+    background-color: wheat;
+    margin: 10px;
+    width: 40%;
+    border-radius: 20px;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.listContainer div h2{
+    margin: 20px;
+    height: fit-content;
+}
+
+.listContainer div p{
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.listContainer .options{
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: fit-content;
+    background-color: gold;
+    flex-direction: row;
+}
+
+.options button{
+    margin: 10px 2px 10px 2px;
+    height: 30px;
+    width: 70px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+}
+

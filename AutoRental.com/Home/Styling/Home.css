@@ -1,0 +1,66 @@
+/*НАСТРОЙКИ НА MAIN*/
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+    /* ЗА ТЕЛЕФОН =AUTO= */
+    align-items: center;
+    background-color: transparent;
+}
+
+.message {
+    color: #fff;
+    margin: 5%;
+    text-align: center;
+    width: 90%;
+}
+
+.message h1 {
+    font-size: 5rem;
+}
+
+.message h2 {
+    font-size: 1.3rem;
+}
+
+.slider {
+    display: flex;
+    margin: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    color: #d1c5c0;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    color: #d1c5c0;
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.5vw;
+    text-align: center;
+    align-items: center;
+    background-color: #031b30;
+    border-radius: 10px;
+    margin: 10px;
+    gap: 2vw;
+}

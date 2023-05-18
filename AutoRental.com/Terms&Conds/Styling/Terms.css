@@ -1,0 +1,41 @@
+/*OVERRIDE-ваме фона на страницата*/
+.all {
+    background: #000000;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    height: auto;
+    background-color: #080808;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    padding: 30px;
+}
+
+.termsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111111;
+    border-radius: 20px;
+    padding: 50px;
+    color:aliceblue;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.termsContainer h3{
+    color: #f6e837;
+    font-size: 3vw;
+    text-align: center;
+    margin: 10px;
+}
+
+.text{ 
+    width: 65%;
+}
