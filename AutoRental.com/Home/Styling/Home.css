@@ -12,18 +12,24 @@
 
 .message {
     color: #fff;
-    margin: 5%;
     text-align: center;
     width: 90%;
 }
 
 .message h1 {
-    font-size: 5rem;
+    font-size: 6.8vw;
+    
 }
 
 .message h2 {
-    font-size: 1.3rem;
+    font-size: 3vw;
+    font-weight: lighter;
+    color: white ;/*malko po tamen*/
+    
 }
+
+
+
 
 .slider {
     display: flex;

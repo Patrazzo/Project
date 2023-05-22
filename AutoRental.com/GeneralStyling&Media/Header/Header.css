@@ -5,7 +5,7 @@
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: transparent;
   padding: 10px 30px 0 30px;
   overflow: hidden;
 }
@@ -29,6 +29,18 @@
 
 #original-logo:hover {
   opacity: 0;
+}
+
+@media screen and (max-width: 800px) {
+  #original-logo {
+    width: 75px;
+    height: 50px;
+  }
+  
+  #hovered-logo {
+    width: 75px;
+    height: 50px;
+  }
 }
 
 /************** LOGIN ***************/
@@ -95,8 +107,14 @@
   background-color: #333;
 }
 
+.menu{
+  display: none;
+}
 /************** RESPONSIVE HEADER ********************/
 @media (max-width: 800px) {
+  .header {
+    background-color: rgba(20, 20, 20, 0.9);
+  }
 
   .login {
     display: none;
@@ -129,27 +147,24 @@
     top: 80px;
     left: 0;
     width: 100%;
-    background-color: rgba(20, 20, 20, 0.9);
+    background-color: rgba(20, 20, 20, 0.95);
     display: none;
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-  
+
   .menu.active {
     display: flex;
+
+    
   }
 
   .menu a {
     color: #f3f6fb;
     text-decoration: none;
-    font-size: 18px;
-    margin: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
   }
 }
 
-@media (min-width: 720px) {
-  .menu {
-    display: none;
-  }
-}
