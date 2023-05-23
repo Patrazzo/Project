@@ -1,33 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap');
 
-* {
-	font-family: "Poppins", sans-serif;
-	margin: 0;
-	padding: 0;
-	scroll-behavior: smooth;
-	box-sizing: border-box;
+.all {
+	background: #080808;
 }
 
-body {
-	width: 100%;
-	height: 100vh;
+.main {
+	margin: 30px;
+	width: 90vw;
+	height: auto;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
-	color: #fff;
-	background: #2c2f48;
+	align-items: center;
+	flex-direction: column;
 }
 
-.contact-container {
+.main h2 {
+	text-align: center;
+	color: #f6e837;
+	font-size: 40px;
+	margin: 20px 0 70px 0;
+}
+
+.container {
+	width: 100%;
+	height: auto;
+	background-color: #101010;
+	border-radius: 20px;
 	max-width: 960px;
 	margin: auto;
-	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1.5rem;
-	background: #363953;
 	box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
-	border-radius: 0.5rem;
 	overflow: hidden;
 }
 
@@ -35,15 +39,9 @@ body {
 	padding: 20px;
 }
 
-.form-container h3 {
-	font-size: 1.2rem;
-	font-weight: 600;
-	margin-bottom: 1rem;
-}
-
 .contact-form {
 	display: grid;
-	row-gap: 1rem;
+	row-gap: 10px;
 }
 
 .contact-form input,
@@ -51,7 +49,7 @@ body {
 	width: 100%;
 	border: none;
 	outline: none;
-	background: #2c2f48;
+	background: #080808;
 	padding: 10px;
 	font-size: 0.9rem;
 	color: #fff;
@@ -66,39 +64,41 @@ body {
 .contact-form .send-button {
 	border: none;
 	outline: none;
-	background: #00dbde;
+	background: #f6e837;
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	cursor: pointer;
+	transition: 0.3s all linear;
+	color: #101010;
 }
 
 .contact-form .send-button:hover {
-	background: hsl(181, 100%, 44%, 0.8);
-	transition: 0.3s all linear;
+	background: #ecff8f;
+	color: #101010;
 }
 
 .map iframe {
 	width: 100%;
 	height: 100%;
+	filter: invert();
 }
 
-/* Responsive */
-
 @media (max-width:964px) {
-	.contact-container {
+	.container {
 		margin: 0 auto;
 		width: 90%;
 	}
+	.main h2{
+		font-size: 7vw;
+	}
 }
-
 @media (max-width: 700px) {
-	.contact-container {
+	.container {
 		grid-template-columns: 1fr;
 		gap: 1rem;
-		margin-top: 20rem !important;
+		
 	}
-
 	.map iframe {
 		height: 400px;
 	}

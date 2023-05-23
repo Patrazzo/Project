@@ -9,7 +9,7 @@
 }
 
 .all{
-  background: #000000;
+  background: #080808;
 }
 
 .TextContainer {
@@ -76,7 +76,7 @@
     color: #f6e837;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 10vw;
+    font-size: 7vw;
   }
 }
 
