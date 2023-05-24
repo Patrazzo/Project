@@ -2,14 +2,15 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 95vw;
+    border-radius: 20px;
     height: auto;
-    /* ЗА ТЕЛЕФОН =AUTO= */
-    align-items: center;
-    background-color: transparent;
+    box-shadow: 10px 10px 30px black;
+    align-items: baseline;
+    background-color: var(--background-color);
     justify-content: center;
-    align-items: center;
-    margin: 50px 0;
+    margin: 20px 0 50px 0;
+    min-height: 100vh;
 }
 
 h3 {
@@ -27,8 +28,7 @@ h3 {
     border-radius: 20px;
     cursor: pointer;
     padding-top: 10px;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-        0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
     transition: .4s;
     background: #f2f2f2;
     display: inline-block;

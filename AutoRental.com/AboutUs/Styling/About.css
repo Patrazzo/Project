@@ -8,23 +8,21 @@
   justify-content: center;
 }
 
-.all{
-  background: #080808;
-}
 
 .TextContainer {
   display: block;
-  background-color: #080808;
   text-align: justify;
   font-family: 'Courier New', Courier, monospace;
-  margin: 0 0 70px 0;
+  margin: 20px 0 70px 0;
   border-radius: 20px;
   padding-top: 50px;
   width: 95%;
+  box-shadow: 10px 10px 30px black;
+  background-color: var(--background-color);
 }
 
 .TextContainer h2{
-  color: #f6e837;
+  color: var(--accent-color);
   text-align: center;
   font-size: 40px;
 }
@@ -35,7 +33,7 @@
   color: #FBF5F3;
   padding: 5%;
   align-items: center;
-  background-color: #101010;
+  background-color: var(--secondary-color);
   border-radius: 10px;
   margin: 50px;
   gap: 2vw;
@@ -55,7 +53,8 @@
 
 @media screen and (max-width: 900px) {
   .TextContainer{
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
+    width: 100%;
   }
   .Row{
     flex-direction: column;
@@ -104,4 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.scroller img{
+  cursor: pointer;;
 }

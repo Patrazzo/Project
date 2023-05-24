@@ -56,15 +56,24 @@
 			<h2>ВЛИЗАНЕ</h2>
 			<div class="container">
 				<div class="form-container">
-					<form action="" class="contact-form">
-						<input type="text" placeholder="Имена" required>
-						<input type="text" placeholder="Тема" required>
-						<input type="email" name="" id="" placeholder="Имейл" required>
-						<textarea name="" id="" cols="30" rows="10" placeholder="Съобщение"
-							required></textarea>
-						<input type="submit" value="ПРАТИ" class="send-button">
-
-					</form>
+					<form action="../Functionality/Login.php" method="post">
+                        <div class="txt_field">
+                            <input type="text" id="email" name="email" placeholder="Имейл" required>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" id="password" name="password" placeholder="Парола" required>
+                        </div>
+                        <div class="fpass">
+                            <a href="../../FPass/BG/FPass.html">Забравена парола?</a>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="ВЛЕЗ">
+                        </div>
+                        <div class="register">
+                            <label for="register">Нямаш акаунт?</label>
+                            <a href="../../Register/BG/Register.html" name="register">Регистрирай се<a>
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>

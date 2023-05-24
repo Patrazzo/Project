@@ -56,24 +56,43 @@
 			<h2>РЕГИСТЪР</h2>
 			<div class="container">
 				<div class="form-container">
-					<form action="" class="contact-form">
-						<input type="text" placeholder="Имена" required>
-						<input type="text" placeholder="Тема" required>
-						<input type="email" name="" id="" placeholder="Имейл" required>
-						<textarea name="" id="" cols="30" rows="10" placeholder="Съобщение"
-							required></textarea>
-						<input type="submit" value="ПРАТИ" class="send-button">
-
-					</form>
+					<form action="../Functionality/Register.php" method="post">
+                        <div class="txt_field">
+                            <input type="text" id="fname" name="fname" placeholder="Име" required>
+                        </div>
+                        <div class="txt_field">
+                            <input type="text" id="lname" name="lname" placeholder="Фамилия" required>
+                        </div>
+                        <div class="txt_field">
+                            <input type="password" id="password" name="password" placeholder="Парола" required>
+                        </div>
+                        <div class="txt_field">
+                            <input type="email" id="email" name="email" placeholder="Имейл" required>
+                        </div>
+                        <div class="txt_field">
+                            <input type="tel" id="tel" name="tel" placeholder="Телефонен номер" required>
+                        </div>
+                        <div class="sure">
+                            <input type="checkbox" id="sure" name="sure" value="Sure" required>
+                            <label for="sure"> Съглаявам се с <a href="../../Terms&Conds/BG/Terms&Conds.html">условията.</a></label>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="ВПИСВАНЕ">
+                        </div>
+                        <div class="loginl">
+                            <label for="login">Вече имате профил?</label>
+                            <a href="../../Login/BG/Login.html" name="login">Влезте<a>
+                        </div>
+                    </form>
 				</div>
 			</div>
 		</div>
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | Всички права запазени |
-                <a href="../../Login/BG/Login.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
+                <a href="../../Register/BG/Register.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
                         alt="bg"></a>
-                <a href="../../Login/EN/Login.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
+                <a href="../../Register/EN/Register.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
                         alt="en"></a>
             </h5>
         </div>

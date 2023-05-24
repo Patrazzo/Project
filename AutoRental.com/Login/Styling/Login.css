@@ -1,17 +1,18 @@
 .main {
-	margin: 30px;
+	margin: 30px 0 50px 0;
 	width: 90vw;
-	height: 100vh;
+	height: auto;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	background-color: #101010;
+	background-color: var(--background-color);
 	border-radius: 20px;
+	box-shadow: 10px 10px 30px black;
 }
 
 .main h2 {
 	text-align: center;
-	color: #f6e837;
+	color: var(--accent-color);
 	font-size: 40px;
 	margin: 20px 0 70px 0;
 }
@@ -19,70 +20,78 @@
 .container {
 	width: auto;
 	height: auto;
-	background-color: #080808;
+	min-width: 300px;
+	min-height: 350px;
+	background-color: var(--secondary-color);
 	border-radius: 20px;
 	max-width: 960px;
 	margin: 0 90px 90px 90px;
 	display: flex;
 	justify-content: center;
+	box-shadow: 10px 10px 30px black;
+
 }
 
 .form-container {
 	padding: 20px;
-
 }
 
-.contact-form {
-	display: flex;
-	flex-direction: column;
-	row-gap: 10px;
-}
-
-.contact-form input,
-.contact-form textarea {
+.txt_field input{
 	width: 100%;
-	border: none;
-	outline: none;
-	background: #101010;
+	height: 35px;
+	margin: 10px 0;
+	background: var(--accent-color);
+	border-radius: 15px;
 	padding: 10px;
-	font-size: 0.9rem;
-	color: #fff;
-	border-radius: 0.4rem;
-}
-
-.contact-form textarea {
-	resize: none;
-	height: 200px;
-}
-
-.contact-form .send-button {
 	border: none;
 	outline: none;
-	background: #f6e837;
-	font-size: 1rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: 0.3s all linear;
-	color: #101010;
+	color:black;
 }
 
-.contact-form .send-button:hover {
-	background: #ecff8f;
-	color: #101010;
+.txt_field input::placeholder{
+	color: #bbb;
 }
 
+.fpass{
+	margin: 10px;
+	text-align: center;
+}
+.fpass a{
+	color: #f6e837;
+}
+
+.submit{
+	margin: 10px;
+	text-align: center;
+}
+
+.submit input{
+	width: 40%;
+	height: 30px;
+	border-radius: 20px;
+	background-color: aqua;
+	border: none;
+}
+
+.register{
+	color: azure;
+}
+
+.register a{
+	color: greenyellow;
+}
 
 
 @media (max-width: 550px) {
 	.main{
-		margin: 0;
+		
 		width: 100vw;
-		border-radius: 0;
+		margin: 20px 0 35px 0;
 	}
 	
 	.container {
-		width: 100%;
+		width: 95%;
+		
 	}
 
 	.container {

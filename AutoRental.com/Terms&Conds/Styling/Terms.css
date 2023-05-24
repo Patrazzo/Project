@@ -1,6 +1,6 @@
 /*OVERRIDE-ваме фона на страницата*/
 .all {
-    background: #000000;
+    background: var(--primary-color);
 }
 
 .main {
@@ -8,12 +8,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     width: 95vw;
+    background-color: var(--background-color);
     height: auto;
-    background-color: #080808;
     border-radius: 20px;
+    box-shadow: 10px 10px 30px black;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    margin: 20px 0;
     padding: 30px;
 }
 
@@ -21,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #111111;
+    background: var(--secondary-color);
     border-radius: 20px;
     padding: 50px;
     color:aliceblue;
