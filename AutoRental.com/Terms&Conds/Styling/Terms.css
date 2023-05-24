@@ -1,7 +1,5 @@
 /*OVERRIDE-ваме фона на страницата*/
-.all {
-    background: var(--primary-color);
-}
+
 
 .main {
     display: flex;
@@ -39,4 +37,36 @@
 
 .text{ 
     width: 65%;
+}
+
+@media  screen and (max-width: 1000px) {
+    .termsContainer h3{
+        font-size: 5vw;
+    }
+    
+    .text{
+        width: 95%;
+    }
+
+    .scroller img {
+        width: 150px;
+      }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .main{
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .termsContainer{
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    
+
+    
+    
 }

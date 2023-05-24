@@ -82,7 +82,7 @@
 @media screen and (max-width: 600px) {
   
   .Row {
-    margin: 0 0 20px 0;
+    margin: 0 5px 20px 5px;
   }
 
   .text{

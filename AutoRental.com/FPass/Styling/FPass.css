@@ -58,17 +58,31 @@
 	color: #f6e837;
 }
 
-.submit{
-	margin: 10px;
-	text-align: center;
+.submit input{
+	height: 35px;
+	overflow: hidden;
+	width: 100%;
+	border: none;
+	outline: none;
+	background: #080808;
+	padding: 10px;
+	font-size: 0.9rem;
+	color: #fff;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	background: #f6e837;
+	font-size: 1rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.3s all linear;
+	color: #101010;
 }
 
-.submit input{
-	width: 40%;
-	height: 30px;
-	border-radius: 20px;
-	background-color: aqua;
-	border: none;
+.submit input:hover{
+	background: #ecff8f;
+	color: #101010;
 }
 
 .register{
