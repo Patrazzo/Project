@@ -23,13 +23,13 @@
     background: var(--secondary-color);
     border-radius: 20px;
     padding: 50px;
-    color:aliceblue;
+    color: var(--light-gray);
     font-size: 20px;
     margin-bottom: 50px;
 }
 
 .termsContainer h3{
-    color: #f6e837;
+    color: var(--accent-color);
     font-size: 3vw;
     text-align: center;
     margin: 10px;

@@ -30,7 +30,7 @@
 .Row {
   display: flex;
   flex-direction: row;
-  color: #FBF5F3;
+  color: var(--light-gray);
   padding: 5%;
   align-items: center;
   background-color: var(--secondary-color);
@@ -72,7 +72,7 @@
     width: 150px;
   }
   .TextContainer h2 {
-    color: #f6e837;
+    color: var(--accent-color);
     margin-bottom: 20px;
     text-align: center;
     font-size: 7vw;

@@ -24,7 +24,7 @@
 .message h2 {
     font-size: 3vw;
     font-weight: lighter;
-    color: white ;/*malko po tamen*/
+    color: var(--light-gray) ;/*malko po tamen*/
     
 }
 
@@ -48,7 +48,7 @@
 .stats {
     display: flex;
     flex-direction: row;
-    color: #d1c5c0;
+    color: var(--light-gray);
     text-align: justify;
     font-family: 'Courier New', Courier, monospace;
     justify-content: center;
@@ -58,14 +58,14 @@
 
 .info {
     display: flex;
-    color: #d1c5c0;
+    color: var(--light-gray);
     height: 150px;
     width: 200px;
     padding: 10px;
     font-size: 1.5vw;
     text-align: center;
     align-items: center;
-    background-color: #031b30;
+    background-color: var(--secondary-color);
     border-radius: 10px;
     margin: 10px;
     gap: 2vw;

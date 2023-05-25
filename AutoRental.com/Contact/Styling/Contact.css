@@ -15,7 +15,7 @@
 
 .main h2 {
 	text-align: center;
-	color: #f6e837;
+	color: var(--accent-color);
 	font-size: 40px;
 	margin: 20px 0 70px 0;
 }
@@ -51,9 +51,9 @@
 	outline: none;
 	background: #080808;
 	padding: 10px;
-	font-size: 0.9rem;
-	color: #fff;
-	border-radius: 0.4rem;
+	font-size: 15px;
+	color: var(--light-gray);
+	border-radius: 20px;
 }
 
 .contact-form textarea {
@@ -66,18 +66,18 @@
 .submit input{
 	border: none;
 	outline: none;
-	background: #f6e837;
+	background: black;
 	font-size: 1rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: 0.3s all linear;
-	color: #101010;
+	color: var(--light-gray);
 }
 
 .submit input:hover{
-	background: #ecff8f;
-	color: #101010;
+	background: var(--accent-color);
+	color: black;
 }
 
 .map iframe {
