@@ -12,7 +12,7 @@
 }
 
 .footer h5 {
-    color: azure;
+    color: var(--light-gray);
     width: 90%;
     font-size: 13px;
 }

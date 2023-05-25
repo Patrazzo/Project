@@ -76,19 +76,19 @@
 
 .links a {
   text-decoration: none;
-  color: #f3f6fb;
+  color: var(--light-gray);
   font-size: 18px;
   transition: 0.5s;
   margin: 20px;
 }
 
 .links a:hover {
-  color: #f6e837;
+  color: var(--accent-color);
   transition: 0.5s;
 }
 
 #clicked {
-  color: #f6e837;
+  color: var(--accent-color);
 }
 
 .links img {
@@ -165,7 +165,7 @@
   }
 
   .menu a {
-    color: #f3f6fb;
+    color: var(--light-gray);
     text-decoration: none;
     font-size: 15px;
     margin-bottom: 10px;
