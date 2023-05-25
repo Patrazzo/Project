@@ -1,7 +1,8 @@
 .main {
-	margin: 30px;
+	margin: 30px 0 50px 0;
 	width: 90vw;
-	height: 100vh;
+	height: auto;
+	min-height: 65vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -14,12 +15,13 @@
 	text-align: center;
 	color: var(--accent-color);
 	font-size: 40px;
-	margin: 20px 0 70px 0;
+	margin: 20px 0 20px 0;
 }
 
 .container {
 	width: auto;
 	height: auto;
+	min-width: 300px;
 	background-color: var(--secondary-color);
 	border-radius: 20px;
 	max-width: 960px;
@@ -32,31 +34,26 @@
 
 .form-container {
 	padding: 20px;
+	width: 100%;
 }
 
 .txt_field input{
 	width: 100%;
-	height: 35px;
+	height: 50px;
 	margin: 10px 0;
-	background: var(--accent-color);
+	background: #000000;
 	border-radius: 15px;
 	padding: 10px;
 	border: none;
 	outline: none;
-	color:black;
+	color: var(--light-gray);
 }
 
 .txt_field input::placeholder{
 	color: #bbb;
 }
 
-.fpass{
-	margin: 10px;
-	text-align: center;
-}
-.fpass a{
-	color: #f6e837;
-}
+
 
 .submit input{
 	height: 35px;
@@ -64,19 +61,10 @@
 	width: 100%;
 	border: none;
 	outline: none;
-	background: #080808;
-	padding: 10px;
-	font-size: 0.9rem;
-	color: #fff;
 	border-radius: 20px;
-	border: none;
-	outline: none;
 	background: #f6e837;
-	font-size: 1rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: 0.3s all linear;
+	font-size: 15px;
+	transition: 0.5s;
 	color: #101010;
 }
 
@@ -85,19 +73,12 @@
 	color: #101010;
 }
 
-.register{
-	color: azure;
-}
-
-.register a{
-	color: greenyellow;
-}
 
 
 @media (max-width: 550px) {
 	.main{
-		
 		width: 100vw;
+		min-height: 75vh;
 		margin: 20px 0 35px 0;
 	}
 	
@@ -111,8 +92,8 @@
 	}
 
 	.main h2 {
-		font-size: 10vw;
-		margin: 100px 20px 20px 20px;
+		font-size: 6vw;
+		margin: 15px;
 	}
 
 	.container {
