@@ -58,11 +58,12 @@
 			<div class="container">
 				<div class="form-container">
 
-					<form action="" class="contact-form">
-						<input type="text" placeholder="Потребител" required>
-						<input type="text" placeholder="Тема" required>
-						<input type="email" name="" id="" placeholder="Имейл" required>
-						<textarea name="" id="" cols="30" rows="10" placeholder="Съобщение" required></textarea>
+					<form action="../Functionality/ContactBG.php" class="contact-form">
+						<input type="text" id="fname" name="fname" placeholder="Име" required>
+						<input type="text" id="lname" name="lname" placeholder="Фамилия" required>
+						<input type="text" id="subject" name="subject" placeholder="Предмет" required>
+						<input type="text" id="email" name="email" placeholder="Имейл" required>
+						<textarea id="body" name="body" rows="10" cols="50" placeholder="Съобщение"></textarea>
 						<div class="submit">
 							<input type="submit" value="ПРАТИ">
 						</div>
