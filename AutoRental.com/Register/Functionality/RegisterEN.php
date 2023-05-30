@@ -10,6 +10,7 @@ if (isset($_POST['submit'])) {
     $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phoneNumber = mysqli_real_escape_string($conn, $_POST['phoneNumber']);
+    $utype = 'user';
 
     $stmt = mysqli_prepare($conn, "SELECT * FROM `users` WHERE email = ?");
     mysqli_stmt_bind_param($stmt, "s", $email);
@@ -19,8 +20,8 @@ if (isset($_POST['submit'])) {
     if (mysqli_num_rows($result) > 0) {
         $message = 'User already exists!';
     } else {
-        $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber) VALUES(?, ?, ?, ?, ?)");
-        mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber);
+        $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber, utype) VALUES(?, ?, ?, ?, ?, ?)");
+        mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber, $utype);
         mysqli_stmt_execute($stmt);
         header('location: ../../Home/EN/Home.html');
         exit;

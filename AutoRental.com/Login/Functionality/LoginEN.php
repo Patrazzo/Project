@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
 
         if (password_verify($password, $row["pass"])) {
-            $_SESSION["id"] = $row["id"];
+            $_SESSION["users_id"] = $row["users_id"];
             $_SESSION["firstName"] = $row["firstName"];
             $_SESSION["lastName"] = $row["lastName"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["phoneNumber"] = $row["phoneNumber"];
-
+            $_SESSION["utype"] = $row["utype"];
             header('location: ../../Home/EN/Home.php');
             exit();
         } else {
