@@ -22,13 +22,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["email"] = $row["email"];
             $_SESSION["phoneNumber"] = $row["phoneNumber"];
             $_SESSION["utype"] = $row["utype"];
-            header('location: ../../Home/EN/Home.php');
+            
+            if ($row["utype"] == "user") {
+                header('location: ../../Home/EN/HomeU.php');
+            } elseif ($row["utype"] == "admin") {
+                header('location: ../../Home/EN/HomeA.php');
+            } else {
+                // Handle unknown user type
+                header('location: ../EN/Login.html');
+            }
             exit();
         } else {
-            header('location: ../EN/Login.html');        
+            header('location: ../EN/Login.html');
+            exit();
         }
     } else {
-        header('location: ../EN/Login.html');    
+        header('location: ../EN/Login.html');
+        exit();
     }
 }
 ?>
