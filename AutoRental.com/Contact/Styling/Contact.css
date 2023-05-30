@@ -1,6 +1,6 @@
 .main {
 	margin: 30px;
-	width: 90vw;
+	width: 95vw;
 	height: auto;
 	display: flex;
 	justify-content: center;
@@ -63,7 +63,7 @@
 
 
 
-.submit input{
+.submit input {
 	border: none;
 	outline: none;
 	background: var(--primary-color);
@@ -75,7 +75,7 @@
 	color: var(--light-gray);
 }
 
-.submit input:hover{
+.submit input:hover {
 	background: var(--accent-color);
 	color: black;
 }
@@ -86,28 +86,33 @@
 	filter: invert();
 }
 
-@media screen and (max-width: 900px){
-	.container{
+@media screen and (max-width: 900px) {
+	.container {
 		margin: 10px 10px 50px 10px;
 
 	}
-	
+
+	.main h2 {
+		margin: 20px 0 70px 0;
+	}
+
 }
+
 @media screen and (max-width: 550px) {
-	.main{
-		
+	.main {
+
 		width: 100vw;
 		margin: 20px 0 40px 0;
 	}
-	
+
 	.container {
 		width: 95%;
 	}
 
-	
+
 
 	.main h2 {
-		font-size: 6vw;
+		font-size: 8vw;
 		margin: 15px;
 	}
 
@@ -118,16 +123,4 @@
 	.map iframe {
 		height: 400px;
 	}
-}
-
-
-@media (max-width: 400px) {
-	
-
-	.main h2 {
-		font-size: 5vw;
-		margin: 20px;
-	}
-
-	
 }
