@@ -62,7 +62,12 @@
 
     .termsContainer{
         padding: 20px;
-        font-size: 12px;
+        font-size: 15px;
+    }
+
+    .termsContainer h3{
+        padding: 20px;
+        font-size: 8vw;
     }
 
     
