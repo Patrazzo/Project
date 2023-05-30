@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["email"] = $row["email"];
             $_SESSION["phoneNumber"] = $row["phoneNumber"];
 
-            header('location: ../../Home/EN/Home.html');
+            header('location: ../../Home/EN/Home.php');
             exit();
         } else {
             header('location: ../EN/Login.html');        

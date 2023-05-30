@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['id'])) {
+    // User is logged in
+    $firstName = $_SESSION['firstName'];
+    $lastName = $_SESSION['lastName'];
+    $email = $_SESSION['email'];
+    $phoneNumber = $_SESSION['phoneNumber'];
+    $user_type = isset($_SESSION['user_type']) ? $_SESSION['user_type'] : 'user';
+
+    // Display user information
+    echo "Welcome, $firstName $lastName!<br>";
+    echo "Email: $email<br>";
+    echo "Phone: $phoneNumber<br>";
+
+    // Check user type and display additional information
+    if ($user_type == 'user') {
+        echo "You are a regular user.";
+    } elseif ($user_type == 'admin') {
+        echo "You are an admin.";
+    } else {
+        echo "Unknown user type.";
+    }
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
