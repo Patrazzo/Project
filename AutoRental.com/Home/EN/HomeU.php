@@ -1,30 +1,17 @@
 <?php
 session_start();
 
-if (isset($_SESSION['users_id'])) {
-    $firstName = $_SESSION['firstName'];
-    $lastName = $_SESSION['lastName'];
-    $email = $_SESSION['email'];
-    $phoneNumber = $_SESSION['phoneNumber'];
-    $utype = $_SESSION['utype'];
+$users_id = $_SESSION['users_id'];
+$firstName = $_SESSION['firstName'];
 
-    echo "Welcome, $firstName $lastName!<br>";
-    echo "Email: $email<br>";
-    echo "Phone: $phoneNumber<br>";
-    echo "Type: $utype<br>";
 
-    if ($utype == 'user') {
-        echo "You are a regular user.";
-    } elseif ($utype == 'admin') {
-        echo "You are an admin.";
-    } else {
-        echo "Unknown user type.";
-    }
+if(!isset($users_id)){
+   header('location:../../Login/EN/Login.html');
+}
+else{
+    echo "Hello, user $firstName";
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
