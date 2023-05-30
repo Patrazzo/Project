@@ -22,7 +22,6 @@ if (isset($_POST['submit'])) {
         $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber) VALUES(?, ?, ?, ?, ?)");
         mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber);
         mysqli_stmt_execute($stmt);
-        $message = 'Registered successfully!';
         header('location: ../../Home/EN/Home.html');
         exit;
     }
