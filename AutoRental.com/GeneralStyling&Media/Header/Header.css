@@ -5,11 +5,10 @@
   height: 80px;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--primary-color) ;
+  background-color: var(--primary-color);
   padding: 10px 30px 0 30px;
   overflow: hidden;
   border-radius: 0 0 20px 20px;
-  
 }
 
 /************ LOGO **************/
@@ -38,7 +37,7 @@
     width: 75px;
     height: 50px;
   }
-  
+
   #hovered-logo {
     width: 75px;
     height: 50px;
@@ -106,20 +105,22 @@
   width: 25px;
   height: 3px;
   margin-bottom: 5px;
-  
+  background-color: var(--light-gray);
+  transition: 0.5s;
 }
 
-.menu{
+.menu {
   display: none;
 }
+
 /************** RESPONSIVE HEADER ********************/
 @media (max-width: 800px) {
-  
-  .header{
+  .header {
     border-radius: 0;
     padding: 10px;
     height: 65px;
   }
+  
   .login {
     display: none;
   }
@@ -127,6 +128,7 @@
   .links {
     display: none;
   }
+  
 
   .menu-toggle {
     display: block;
@@ -138,11 +140,6 @@
     height: 3px;
     margin-bottom: 5px;
     background-color: var(--light-gray);
-
-  }
-
-  .menu-toggle.active {
-    transform: rotate(180deg);
     transition: 0.5s;
   }
 
@@ -156,12 +153,24 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    animation-duration: 0.6s;
+    animation-fill-mode: both;
+    animation-name: fade-in;
   }
 
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   .menu.active {
     display: flex;
-
-    
+   
   }
 
   .menu a {
@@ -172,3 +181,15 @@
   }
 }
 
+/************** MENU TOGGLE ANIMATION ********************/
+.menu-toggle .change:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle .change:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle .change:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
