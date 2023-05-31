@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+    echo "Hello, stranger";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
