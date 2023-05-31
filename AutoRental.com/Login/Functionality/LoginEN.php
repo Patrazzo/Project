@@ -16,19 +16,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = mysqli_fetch_assoc($result);
 
         if (password_verify($password, $row["pass"])) {
-            $_SESSION["id"] = $row["id"];
+            $_SESSION["users_id"] = $row["users_id"];
             $_SESSION["firstName"] = $row["firstName"];
             $_SESSION["lastName"] = $row["lastName"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["phoneNumber"] = $row["phoneNumber"];
-
-            header('location: ../../Home/EN/Home.html');
+            $_SESSION["utype"] = $row["utype"];
+            
+            if ($row["utype"] == "user") {
+                header('location: ../../Home/EN/HomeU.php');
+            } elseif ($row["utype"] == "admin") {
+                header('location: ../../Home/EN/HomeA.php');
+            } else {
+                // Handle unknown user type
+                header('location: ../EN/Login.html');
+            }
             exit();
         } else {
-            header('location: ../EN/Login.html');        
+            header('location: ../EN/Login.html');
+            exit();
         }
     } else {
-        header('location: ../EN/Login.html');    
+        header('location: ../EN/Login.html');
+        exit();
     }
 }
 ?>
