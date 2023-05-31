@@ -1,0 +1,104 @@
+/*НАСТРОЙКИ НА MAIN*/
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 95%;
+    border-radius: 20px;
+    align-items: center;
+    padding-top: 30px;
+    margin: 20px 0 70px 0;
+    background-color: var(--background-color);
+}
+
+.message {
+    
+    background-color: var(--secondary-color);
+    text-align: center;
+    border-radius: 20px;
+    width: 95%;
+    padding: 30px;
+}
+
+.message h1 {
+    font-size: 5vw;
+    color: var(--accent-color);
+}
+
+.message h2 {
+    font-size: 3vw;
+    font-weight: lighter;
+    color: var(--light-gray);
+}
+
+
+
+
+.slider {
+    display: flex;
+    margin: 5%;
+    width: 90%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    color: var(--light-gray);
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.info {
+    display: flex;
+    color: var(--light-gray);
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+    font-size: 1.5vw;
+    text-align: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    margin: 10px;
+    gap: 2vw;
+}
+
+.scroller {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroller img {
+    cursor: pointer;
+    ;
+}
+
+@media screen and (max-width: 500px) {
+    .message h1 {
+        font-size: 5vw;
+    
+    }
+    
+    .message h2 {
+        font-size: 3vw;
+        font-weight: lighter;
+        color: var(--light-gray);
+    }
+
+    .scroller img {
+        width: 150px;
+      }
+}
