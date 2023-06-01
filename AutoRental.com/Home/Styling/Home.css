@@ -6,70 +6,23 @@
   width: 95%;
   border-radius: 20px;
   align-items: center;
+  justify-content: center;
   padding-top: 30px;
   margin: 20px 0 70px 0;
   background-color: var(--background-color);
 }
 
-.message {
-
-  background-color: var(--secondary-color);
-  text-align: center;
-  border-radius: 20px;
-  width: 95%;
-  padding: 30px;
-}
-
-.message h1 {
+#message {
   font-size: 5vw;
+  text-align: center;
   color: var(--accent-color);
 }
 
-.message h2 {
+#description {
   font-size: 3vw;
   font-weight: lighter;
   color: var(--light-gray);
-}
-
-
-.slider {
-  display: flex;
-  margin: 5%;
   width: 90%;
-  text-align: center;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.stats {
-  display: flex;
-  flex-direction: row;
-  color: var(--light-gray);
-  text-align: justify;
-  font-family: 'Courier New', Courier, monospace;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-.info {
-  display: flex;
-  color: var(--light-gray);
-  height: 150px;
-  width: 200px;
-  padding: 10px;
-  font-size: 1.5vw;
-  text-align: center;
-  align-items: center;
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-  margin: 10px;
-  gap: 2vw;
 }
 
 .scroller {
@@ -81,16 +34,14 @@
 
 .scroller img {
   cursor: pointer;
-  ;
 }
 
 /* Slider Seetings */
-
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
+  margin-bottom: 30px;
   padding: 30px;
   width: 95%;
   border-radius: 20px;
@@ -103,66 +54,158 @@
   background-color: var(--secondary-color);
   text-align: center;
   width: 50%;
-  font-size: 3vw;
+  font-size: 4vw;
   color: var(--accent-color);
   border-radius: 10px;
   padding: 5px;
 
 }
-.images img {
-  background-color: var(--background-color);
-  padding: 10px;
-  margin-top: 25px;
-  width: 250px;
-  height: 300px;
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 50px;
+  width: 80%;
 }
 
-
-
+.images img {
+  padding: 10px;
+  margin-top: 25px;
+  width: 30%;
+  height: 80%;
+}
 
 /*CARDS SEETINGS*/
 .cards {
   display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   flex-direction: row;
-  width: 90%;
+  width: 95%;
   font-size: 25px;
-  margin: 50px;
+  margin: 10px;
   position: relative;
   gap: 20px;
 }
 
-.card1 {
-  background-color: var(--primary-color);
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--background-color);
   border-radius: 10px;
-  padding: 10px;
+  padding: 40px;
+  width: 35%;
+  height: 100%;
 }
 
-.Cards h2 {
+.card h2 {
+  width: 90%;
+  background-color: transparent;
   color: yellow;
+  margin-bottom: 15px;
+  font-size: 2vw;
+}
+
+.card p {
+  color: var(--light-gray);
+  font-size: 1vw;
   margin-bottom: 15px;
 }
 
-.card1 p {
-  color: white;
-  text-align: justify;
-  font-size: 13px;
+.card button {
+  margin: 10px 2px 10px 2px;
+  height: 40px;
+  width: 90px;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--light-gray);
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 500px) {
-  .message h1 {
-    font-size: 5vw;
+.card button:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 10px 10px 30px black;
+}
 
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1200px) {
+  .card p{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .content{
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  .images {
+    gap: 10px;
+  }
+  .images img {
+    padding: 10px;
+    margin-top: 0;
   }
 
-  .message h2 {
+  .cards{
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .card{
+    width: 100%;
+    height: auto;
+  }
+  .card h2{
+    font-size: 5vw;
+  }
+
+  .card p{
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  #message {
+    font-size: 5vw;
+  }
+
+  #description {
     font-size: 3vw;
     font-weight: lighter;
     color: var(--light-gray);
   }
 
+  .cards {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 20px;
+  }
+
   .scroller img {
     width: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .images {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .images img {
+    width: 80%;
+    height: 90%;
+    
   }
 }
