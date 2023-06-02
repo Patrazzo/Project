@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+    echo "Hello, stranger";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,16 +28,16 @@
         <div class="header">
 
             <div class="logo">
-                <a href="../../Home/EN/Home.html"><img id="original-logo"
+                <a href="../../Home/EN/HomeN.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-                <a href="../../Home/EN/Home.html"><img id="hovered-logo"
+                <a href="../../Home/EN/HomeN.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
 
             <div class="links">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/About.html">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
+                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
             </div>
 
             <div class="menu-toggle">
@@ -42,8 +48,8 @@
 
             <div class="menu">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/About.html">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
+                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>
 
@@ -151,9 +157,9 @@
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | All Rights reserved |
-                <a href="../../AboutUs/BG/About.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
+                <a href="../../AboutUs/BG/AboutN.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
                         width="15" alt="bg"></a>
-                <a href="../../AboutUs/EN/About.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
+                <a href="../../AboutUs/EN/AboutN.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
                         width="15" alt="en"></a>
             </h5>
         </div>
