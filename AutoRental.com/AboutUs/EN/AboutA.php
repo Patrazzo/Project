@@ -37,16 +37,16 @@ else{
         <div class="header">
 
             <div class="logo">
-                <a href="../../Home/EN/Home.html"><img id="original-logo"
+                <a href="../../Home/EN/HomeA.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-                <a href="../../Home/EN/Home.html"><img id="hovered-logo"
+                <a href="../../Home/EN/HomeA.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
 
             <div class="links">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a id="clicked" href="../../AboutUs/EN/AboutA.php">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a href="../../Contact/EN/ContactA.php">CONTACT</a>
             </div>
 
             <div class="menu-toggle">
@@ -58,7 +58,7 @@ else{
             <div class="menu">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a id="clicked" href="../../AboutUs/EN/AboutA.php">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a href="../../Contact/EN/ContactA.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>
 

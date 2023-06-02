@@ -35,7 +35,7 @@ session_start();
             <div class="links">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
             </div>
     
             <div class="menu-toggle">
@@ -47,7 +47,7 @@ session_start();
             <div class="menu">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>
         
