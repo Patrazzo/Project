@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+$users_id = $_SESSION['users_id'];
+$firstName = $_SESSION['firstName'];
+
+
+if(!isset($users_id)){
+   header('location:../../Login/EN/Login.html');
+}
+else{
+    echo "Hello, admin $firstName";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +45,7 @@
 
             <div class="links">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/About.html">ABOUT US</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutA.php">ABOUT US</a>
                 <a href="../../Contact/EN/Contact.html">CONTACT</a>
             </div>
 
@@ -42,7 +57,7 @@
 
             <div class="menu">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/About.html">ABOUT US</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutA.php">ABOUT US</a>
                 <a href="../../Contact/EN/Contact.html">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>
@@ -151,9 +166,9 @@
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | All Rights reserved |
-                <a href="../../AboutUs/BG/About.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
+                <a href="../../AboutUs/BG/AboutA.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
                         width="15" alt="bg"></a>
-                <a href="../../AboutUs/EN/About.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
+                <a href="../../AboutUs/EN/AboutA.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
                         width="15" alt="en"></a>
             </h5>
         </div>
