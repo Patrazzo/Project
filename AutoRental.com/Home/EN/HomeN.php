@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-    echo "Hello, stranger";
+echo "Hello, stranger";
 ?>
 
 <!DOCTYPE html>
@@ -31,28 +31,28 @@ session_start();
                 <a href="../../Home/EN/Home.html"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
-        
+
             <div class="links">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a href="../../AboutUs/EN/About.html">ABOUT US</a>
                 <a href="../../Contact/EN/Contact.html">CONTACT</a>
             </div>
-    
+
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-        
+
             <div class="menu">
                 <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
                 <a href="../../AboutUs/EN/About.html">ABOUT US</a>
                 <a href="../../Contact/EN/Contact.html">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>
-        
+
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
-        
+
             <div class="login">
                 <a href="../../Login/EN/Login.html"><img id="original-login"
                         src="../../GeneralStyling&Media/Photos/Login.png"></a>
@@ -64,59 +64,60 @@ session_start();
 
         <div class="main">
 
-            <div class="message">
-                <h1>WELCOME TO AUTORENTAL</h1>
-                <h2>Indulge in a luxurious experience with the Balkans' leading website for high-end cars</h2>
+            <div class="content">
+                <h1 id="message">ДОБРЕ ДОШЛИ В AUTORENTAL</h1>
+                <h2 id="description">Отдайте се на луксозно преживяване с водещия сайт за автомобили от висок клас на
+                    Балканите.</h2>
             </div>
 
-            <div class="slider">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit laborum doloribus odio
-                    expedita ullam perferendis aperiam, neque animi vel veritatis explicabo alias natus adipisci maiores
-                    corrupti quaerat, architecto minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Inventore aperiam optio at soluta eum corrupti natus, adipisci recusandae quidem accusantium cum
-                    provident illum totam odio, voluptates, autem quos ipsa quo? Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Nobis corrupti placeat, adipisci velit maiores fugit eligendi quisquam? Hic ipsa
-                    ut necessitatibus quidem ducimus, corrupti, autem asperiores excepturi dolore, similique maiores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque sunt repudiandae eaque,
-                    temporibus quae quasi possimus minus veritatis consectetur voluptate ipsam iste ea voluptatum
-                    pariatur non, nesciunt hic sed?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit laborum doloribus odio
-                    expedita ullam perferendis aperiam, neque animi vel veritatis explicabo alias natus adipisci maiores
-                    corrupti quaerat, architecto minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Inventore aperiam optio at soluta eum corrupti natus, adipisci recusandae quidem accusantium cum
-                    provident illum totam odio, voluptates, autem quos ipsa quo? Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Nobis corrupti placeat, adipisci velit maiores fugit eligendi quisquam? Hic ipsa
-                    ut necessitatibus quidem ducimus, corrupti, autem asperiores excepturi dolore, similique maiores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque sunt repudiandae eaque,
-                    temporibus quae quasi possimus minus veritatis consectetur voluptate ipsam iste ea voluptatum
-                    pariatur non, nesciunt hic sed?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque reprehenderit laborum doloribus odio
-                    expedita ullam perferendis aperiam, neque animi vel veritatis explicabo alias natus adipisci maiores
-                    corrupti quaerat, architecto minima? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Inventore aperiam optio at soluta eum corrupti natus, adipisci recusandae quidem accusantium cum
-                    provident illum totam odio, voluptates, autem quos ipsa quo? Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Nobis corrupti placeat, adipisci velit maiores fugit eligendi quisquam? Hic ipsa
-                    ut necessitatibus quidem ducimus, corrupti, autem asperiores excepturi dolore, similique maiores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus itaque sunt repudiandae eaque,
-                    temporibus quae quasi possimus minus veritatis consectetur voluptate ipsam iste ea voluptatum
-                    pariatur non, nesciunt hic sed?
-                </p>
+            <div class="content">
+                <h2>Нашите топ марки</h2>
+                <div class="images">
+                    <img src="../../GeneralStyling&Media/Photos/PorscheLogo.png" alt="">
+                    <img src="../../GeneralStyling&Media/Photos/FerrariLogo.png" alt="">
+                    <img src="../../GeneralStyling&Media/Photos/LamborghiniLogo.png" alt="">
+                </div>
             </div>
-            
+
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <h2>КОИ СМЕ НИЕ</h2>
+                        <p> Ние сме водеща компания за луксозни коли под наем. Предлагаме висококачествени
+                            автомобили, персонализирани услуги и цялостно обслужване. Нашата цел е да предоставим
+                            най-доброто изживяване на клиентите си.</p>
+                        <button>виж още</button>
+                    </div>
+                    <div class="card">
+                        <h2>НАШАТА МИСИЯ</h2>
+                        <p> Нашата мисия: най-добро изживяване при наемане на коли. Луксозни автомобили - Ferrari,
+                            Lamborghini, Porsche и др. Гладък процес, безпроблемно. Персонализирано обслужване,
+                            поддръжка от начало до край. Винаги на разположение.</p>
+                        <button>виж още</button>
+                    </div>
+                    <div class="card">
+                        <h2>КАКВО ПРЕДЛАГАМЕ</h2>
+                        <p>
+                            Нашата компания за коли под наем предлага безпроблемно изживяване и грижи след наемането.
+                            Онлайн резервации, удобни услуги за вземане и връщане. Поддръжка, почистване, спешна помощ.
+                        </p>
+                        <button>виж още</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="scroller">
-            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"
-                    width="300"></a>
-        </div>
-        <div class="footer">
-            <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Home/BG/Home.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
-                        width="15" alt="bg"></a>
-                <a href="../../Home/EN/Home.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
-                        width="15" alt="en"></a>
-            </h5>
-        </div>
+    </div>
+    <div class="scroller">
+        <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png" width="300"></a>
+    </div>
+    <div class="footer">
+        <h5>Copyright © 2023 AutoRental | All rights reserved |
+            <a href="../../Home/BG/Home.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
+                    alt="bg"></a>
+            <a href="../../Home/EN/Home.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
+                    alt="en"></a>
+        </h5>
+    </div>
 
 
     </div>
