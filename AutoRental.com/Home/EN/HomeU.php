@@ -34,14 +34,14 @@ else {
         <div class="header">
 
             <div class="logo">
-                <a href="../../Home/EN/Home.html"><img id="original-logo"
+                <a href="../../Home/EN/HomeU.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-                <a href="../../Home/EN/Home.html"><img id="hovered-logo"
+                <a href="../../Home/EN/HomeU.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
 
             <div class="links">
-                <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
                 <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
             </div>
@@ -53,7 +53,7 @@ else {
             </div>
 
             <div class="menu">
-                <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
                 <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
@@ -117,9 +117,9 @@ else {
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Home/BG/Home.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
+                <a href="../../Home/BG/HomeU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
                         width="15" alt="bg"></a>
-                <a href="../../Home/EN/Home.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
+                <a href="../../Home/EN/HomeU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
                         width="15" alt="en"></a>
             </h5>
         </div>

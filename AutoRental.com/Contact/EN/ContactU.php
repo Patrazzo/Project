@@ -40,9 +40,9 @@ else {
 			</div>
 
 			<div class="links">
-				<a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+				<a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
 				<a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-				<a id="clicked" href="../../Contact/EN/Contact.html">CONTACT</a>
+				<a id="clicked" href="../../Contact/EN/ContactU.php">CONTACT</a>
 			</div>
 
 			<div class="menu-toggle">
@@ -52,9 +52,9 @@ else {
 			</div>
 
 			<div class="menu">
-				<a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+				<a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
 				<a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-				<a id="clicked" href="../../Contact/EN/Contact.html">CONTACT</a>
+				<a id="clicked" href="../../Contact/EN/ContactU.php">CONTACT</a>
 				<a href="../../Login/EN/Login.html">LOGIN</a>
 			</div>
 
@@ -95,9 +95,9 @@ else {
 		</div>
 		<div class="footer">
 			<h5>Copyright © 2023 AutoRental | All Rights reserved |
-				<a href="../../Contact/BG/Contact.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
+				<a href="../../Contact/BG/ContactU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
 						width="15" alt="bg"></a>
-				<a href="../../Contact/EN/Contact.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
+				<a href="../../Contact/EN/ContactU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
 						width="15" alt="en"></a>
 			</h5>
 		</div>

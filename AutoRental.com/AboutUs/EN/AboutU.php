@@ -43,7 +43,7 @@ else {
             </div>
 
             <div class="links">
-                <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
                 <a id="clicked" href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
             </div>
@@ -55,7 +55,7 @@ else {
             </div>
 
             <div class="menu">
-                <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
                 <a id="clicked" href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>

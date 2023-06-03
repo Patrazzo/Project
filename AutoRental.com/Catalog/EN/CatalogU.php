@@ -1,8 +1,16 @@
 <?php
+session_start();
 include '../../Config/config.php';
 
-if ($conn->connect_error) {
-    die("Грешка при връзката с базата данни: " . $conn->connect_error);
+$firstName = $_SESSION['firstName'];
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'user') {
+    header('location:../../Login/EN/Login.html');
+    exit();
+}
+else {
+    echo "Hello, user $firstName";
 }
 
 $sql = "SELECT * FROM catalog";
@@ -40,9 +48,9 @@ $result = $conn->query($sql);
             </div>
 
             <div class="links">
-                <a id="clicked" href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a href="../../AboutUs/EN/About.html">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a id="clicked" href="../../Catalog/EN/CatalogU.php">CATALOG</a>
+                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
+                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
             </div>
 
             <div class="menu-toggle">
@@ -53,8 +61,8 @@ $result = $conn->query($sql);
 
             <div class="menu">
                 <a id="clicked" href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a href="../../AboutUs/EN/About.html">ABOUT US</a>
-                <a href="../../Contact/EN/Contact.html">CONTACT</a>
+                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
+                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
                 <a href="../../Login/EN/Login.html">LOGIN</a>
             </div>  
 
@@ -87,9 +95,9 @@ $result = $conn->query($sql);
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Catalog/BG/Catalog.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
+                <a href="../../Catalog/BG/CatalogU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
                         alt="bg"></a>
-                <a href="../../Catalog/EN/Catalog.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
+                <a href="../../Catalog/EN/CatalogU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
                         alt="en"></a>
             </h5>
         </div>
