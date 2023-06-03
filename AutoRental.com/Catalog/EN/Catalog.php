@@ -1,3 +1,16 @@
+<?php
+include '../../Config/config.php';
+
+if ($conn->connect_error) {
+    die("Грешка при връзката с базата данни: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM catalog";
+$result = $conn->query($sql);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,53 +67,21 @@
         </div>
 
         <div class="main">
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-
-            <div class="content">
-                <img src="../../GeneralStyling&Media/Photos/Ferrari.png">
-                <h3>Brand</h3>
-                <p>ОПИСАНИЕ</p>
-                <h6>$200</h6>
-                <a href="************************************" class="buy">Виж повече</a>
-            </div>
-
+        <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="content">';
+                    echo '<img src="../../GeneralStyling&Media/Photos/cars/' . $row["image"] . '">';
+                    echo '<h3>' . $row["name"] . '</h3>';
+                    echo '<p>' . $row["description"] . '</p>';
+                    echo '<h6>' . $row["price"] . '</h6>';
+                    echo '<a href="************************************" class="buy">Виж повече</a>';
+                    echo '</div>';
+                }
+            } else {
+                echo "Няма налични елементи в каталога.";
+            }
+            ?>
 
         </div>
 
@@ -118,3 +99,7 @@
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>
