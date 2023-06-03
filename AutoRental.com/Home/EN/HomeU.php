@@ -10,7 +10,6 @@ if ($_SESSION['utype'] !== 'user') {
 else {
     echo "Hello, user $firstName";
 }
-
 ?>
 
 <!DOCTYPE html>

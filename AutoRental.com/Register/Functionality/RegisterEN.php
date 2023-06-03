@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
         $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber, utype) VALUES(?, ?, ?, ?, ?, ?)");
         mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber, $utype);
         mysqli_stmt_execute($stmt);
-        header('location: ../../Home/EN/Home.html');
+        header('location: ../../Login/EN/Login.html');
         exit;
     }
 }

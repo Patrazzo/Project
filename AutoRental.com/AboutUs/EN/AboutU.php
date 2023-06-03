@@ -1,14 +1,13 @@
 <?php
 session_start();
-
-$users_id = $_SESSION['users_id'];
 $firstName = $_SESSION['firstName'];
+$utype = $_SESSION['utype'];
 
-
-if(!isset($users_id)){
-   header('location:../../Login/EN/Login.html');
+if ($_SESSION['utype'] !== 'user') {
+    header('location:../../Login/EN/Login.html');
+    exit();
 }
-else{
+else {
     echo "Hello, user $firstName";
 }
 ?>
