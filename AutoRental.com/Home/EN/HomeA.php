@@ -4,10 +4,13 @@ $firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'admin') {
-    header('location:../../Login/EN/Login.html');
+    header('location: ../../Login/EN/Login.html');
     exit();
-}
-else {
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
     echo "Hello, admin $firstName";
 }
 ?>
@@ -53,19 +56,26 @@ else {
             </div>
 
             <div class="menu">
-                <a href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutA.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactA.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
+                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
+                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                    <a href="../../Login/EN/Login.html">LOGIN</a>
+                <?php else : ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">LOGOUT</a>
+                <?php endif; ?>
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login"
-                        src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login"
-                        src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php else : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php endif; ?>
             </div>
         </div>
 
@@ -117,9 +127,9 @@ else {
 
         <div class="footer">
             <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Home/BG/Home.html"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
+                <a href="../../Home/BG/HomeA.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
                         width="15" alt="bg"></a>
-                <a href="../../Home/EN/Home.html"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
+                <a href="../../Home/EN/HomeA.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
                         width="15" alt="en"></a>
             </h5>
         </div>

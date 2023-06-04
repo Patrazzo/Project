@@ -73,7 +73,9 @@ echo "Hello, stranger";
                     echo '<h3>' . $row["name"] . '</h3>';
                     echo '<p>' . $row["description"] . '</p>';
                     echo '<h6>' . $row["price"] . '</h6>';
-                    echo '<a href="************************************" class="buy">Виж повече</a>';
+                    echo '<br>';
+                    echo '<a href="../../Login/EN/Login.html" class="buy">Влез</a>';
+                    echo '<br>';
                     echo '</div>';
                 }
             } else {

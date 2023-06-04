@@ -4,10 +4,13 @@ $firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
-    header('location:../../Login/EN/Login.html');
+    header('location: ../../Login/EN/Login.html');
     exit();
-}
-else {
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
     echo "Hello, user $firstName";
 }
 ?>
@@ -56,18 +59,25 @@ else {
 
             <div class="menu">
                 <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
+                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                    <a href="../../Login/EN/Login.html">LOGIN</a>
+                <?php else : ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">LOGOUT</a>
+                <?php endif; ?>
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login"
-                        src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login"
-                        src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php else : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php endif; ?>
             </div>
         </div>
 

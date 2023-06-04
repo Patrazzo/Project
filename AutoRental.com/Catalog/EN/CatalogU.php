@@ -6,17 +6,20 @@ $firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
-    header('location:../../Login/EN/Login.html');
+    header('location: ../../Login/EN/Login.html');
     exit();
-}
-else {
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
     echo "Hello, user $firstName";
 }
 
 $sql = "SELECT * FROM catalog";
 $result = $conn->query($sql);
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -60,18 +63,27 @@ $result = $conn->query($sql);
             </div>
 
             <div class="menu">
-                <a id="clicked" href="../../Catalog/EN/Catalog.html">CATALOG</a>
+                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
                 <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
                 <a href="../../Contact/EN/ContactU.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
-            </div>  
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                    <a href="../../Login/EN/Login.html">LOGIN</a>
+                <?php else : ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">LOGOUT</a>
+                <?php endif; ?>
+            </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
-            </div>  
+            <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php else : ?>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            <?php endif; ?>
+            </div>
         </div>
 
         <div class="main">
@@ -83,7 +95,9 @@ $result = $conn->query($sql);
                     echo '<h3>' . $row["name"] . '</h3>';
                     echo '<p>' . $row["description"] . '</p>';
                     echo '<h6>' . $row["price"] . '</h6>';
-                    echo '<a href="************************************" class="buy">Виж повече</a>';
+                    echo '<br>';
+                    echo '<a href="../Cars/car.html" class="buy">Виж повече</a>';
+                    echo '<br>';
                     echo '</div>';
                 }
             } else {
