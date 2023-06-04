@@ -80,9 +80,8 @@ if ($_SESSION['utype'] !== 'user') {
         </div>
 
         <div class="main">
-
             <div class="content">
-                <h1 id="message">ДОБРЕ ДОШЛИ В AUTORENTAL</h1>
+                <h1 id="message">ДОБРЕ ДОШЛИ, <?php echo $firstName; ?></h1>
                 <h2 id="description">Отдайте се на луксозно преживяване с водещия сайт за автомобили от висок клас на
                     Балканите.</h2>
             </div>
