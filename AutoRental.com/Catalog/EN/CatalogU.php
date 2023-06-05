@@ -91,12 +91,13 @@ $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="content">';
+                    echo '<br>';
                     echo '<img src="../../GeneralStyling&Media/Photos/cars/' . $row["image"] . '">';
                     echo '<h3>' . $row["name"] . '</h3>';
                     echo '<p>' . $row["description"] . '</p>';
-                    echo '<h6>' . $row["price"] . '</h6>';
                     echo '<br>';
-                    echo '<a href="../Cars/car.html" class="buy">Виж повече</a>';
+                    echo '<h6>' . $row["price"] . '</h6>';
+                    echo '<a href="../../Order/EN/Order.php?carId=' . $row['id'] . '" class="buy">Виж повече</a>';
                     echo '<br>';
                     echo '</div>';
                 }

@@ -69,11 +69,12 @@ echo "Hello, stranger";
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="content">';
+                    echo '<br>';
                     echo '<img src="../../GeneralStyling&Media/Photos/cars/' . $row["image"] . '">';
                     echo '<h3>' . $row["name"] . '</h3>';
                     echo '<p>' . $row["description"] . '</p>';
-                    echo '<h6>' . $row["price"] . '</h6>';
                     echo '<br>';
+                    echo '<h6>' . $row["price"] . '</h6>';
                     echo '<a href="../../Login/EN/Login.html" class="buy">Влез</a>';
                     echo '<br>';
                     echo '</div>';
