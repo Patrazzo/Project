@@ -82,6 +82,7 @@
 
 .register{
 	margin: 30px;
+	text-align: center;
 	color: var(--light-gray);
 }
 

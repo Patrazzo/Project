@@ -4,10 +4,13 @@ $firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
-    header('location:../../Login/EN/Login.html');
+    header('location: ../../Login/EN/Login.html');
     exit();
-}
-else {
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
     echo "Hello, user $firstName";
 }
 ?>
@@ -22,7 +25,7 @@ else {
     <link rel="icon" href="../../GeneralStyling&Media/Photos/Logo.png">
     <link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
     <script src="../Functionality/About.js"></script>
-    <title>About Us | AutoRental</title>
+    <title>За нас | AutoRental</title>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
     <link rel="stylesheet" href="../Styling/About.css">
@@ -43,9 +46,9 @@ else {
             </div>
 
             <div class="links">
-                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
+                <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
             </div>
 
             <div class="menu-toggle">
@@ -55,42 +58,55 @@ else {
             </div>
 
             <div class="menu">
-                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-                <a id="clicked" href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
+                <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+                <?php endif; ?>
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login"
-                        src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login"
-                        src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php endif; ?>
             </div>
         </div>
 
         <div class="main">
             <div class="TextContainer">
                 <div>
-                    <h2>WHO WE ARE</h2>
+                    <h2>КОИ СМЕ НИЕ</h2>
                 </div>
                 <div class="Row">
                     <div class="text">
                         <p>
-                            Welcome to our luxury car rental company, where we offer a diverse range of high-quality
-                            rental
-                            cars to meet all your needs. We have been serving the public for years and have earned a
-                            reputation as the best car rental provider in the Balkans. Our commitment to excellence,
-                            customer service, and the most exceptional fleet of cars is unmatched in the region.
-
-                            Our focus on customer satisfaction is paramount. We understand that every customer is unique
-                            and
-                            has their specific needs and desires. Therefore, we offer personalized recommendations and
-                            services tailored to each customer. We pride ourselves on providing exceptional service that
-                            goes above and beyond expectations, from the moment you contact us to the end of your rental
-                            period.
+                            Добре дошли в нашата компания за луксозни коли под наем, където предлагаме разнообразна гама
+                            от висококачествени коли под наем автомобили, които да отговарят на всички ваши нужди. Ние
+                            служим на обществеността от години и спечелихме a репутация на най-добрия доставчик на коли
+                            под
+                            наем на Балканите. Нашият ангажимент към съвършенство, обслужване на клиенти, а
+                            най-изключителният
+                            автопарк е несравним в региона. Нашият фокус върху удовлетвореността на клиентите е от
+                            първостепенно
+                            значение. Ние разбираме, че всеки клиент е уникален и имат своите специфични нужди и
+                            желания. Затова
+                            предлагаме персонализирани препоръки и услуги, съобразени с всеки клиент. Ние се гордеем с
+                            предоставянето на изключителна услуга, която надхвърля очакванията, от момента, в който се
+                            свържете
+                            с нас до края на вашия наем.
                         </p>
                     </div>
                     <div class="image">
@@ -100,7 +116,7 @@ else {
 
 
                 <div>
-                    <h2>OUR MISSION</h2>
+                    <h2>НАШАТА МИСИЯ</h2>
                 </div>
                 <div class="Row">
 
@@ -109,19 +125,20 @@ else {
                     </div>
                     <div class="text">
                         <p>
-                            Our mission is simple - to provide our customers with the best possible car rental
-                            experience.
-                            We offer a wide variety of luxury, high quality, and fast cars from brands such as Ferrari,
-                            Lamborghini, Porsche, and more. Our goal is to make the process of renting a car as smooth
-                            and
-                            seamless as possible, so that our customers can focus on enjoying the drive.
-
-                            We pride ourselves on our exceptional customer service. Our team is dedicated to ensuring
-                            that
-                            every customer receives personalized attention and support, from the moment they first
-                            contact
-                            us to the end of their rental period. We are always available to answer questions, provide
-                            recommendations, and offer any assistance that our customers may need.
+                            Нашата мисия е проста - да предоставим на нашите клиенти възможно най-доброто изживяване при
+                            наемане на коли под наем. Ние предлагаме голямо разнообразие от луксозни, висококачествени и
+                            бързи автомобили от марки като Ferrari, Lamborghini, Porsche и др. Нашата цел е да направим
+                            процеса на наемане на автомобил максимално гладък и възможно най-безпроблемно, така че
+                            нашите
+                            клиенти да могат
+                            да се съсредоточат върху удоволствието от шофирането. Ние се гордеем с нашето изключително
+                            обслужване
+                            на клиентите. Нашият екип е посветен на това всеки клиент получава персонализирано внимание
+                            и поддръжка
+                            от момента на първия контакт ни до края на периода им под наем. Винаги сме на разположение
+                            да отговорим на
+                            въпроси, да предоставим препоръки и предлагаме всякаква помощ, от която нашите клиенти може
+                            да се нуждаят.
                         </p>
                     </div>
                 </div>
@@ -129,27 +146,22 @@ else {
 
 
                 <div>
-                    <h2>WHAT WE OFFER</h2>
+                    <h2>КАКВО ПРЕДЛАГАМЕ</h2>
                 </div>
                 <div class="Row">
                     <div class="text">
                         <p>
-                            At our car rental company, we understand that renting a car is more than a transaction -
-                            it's an
-                            experience.
-                            That's why we offer a range of services to make the entire rental experience as seamless and
-                            enjoyable
-                            as
-                            possible, from online booking to pick-up and drop-off services. We also offer a full range
-                            of
-                            post-rental
-                            services to ensure your rental experience is as stress-free as possible, including regular
-                            cleaning
-                            and
-                            maintenance, emergency roadside assistance and expert technicians trained to handle even the
-                            most
-                            complex
-                            repairs .
+                            В нашата компания за коли под наем разбираме, че наемането на кола е повече от транзакция -
+                            това
+                            е опит. Ето защо ние предлагаме набор от услуги, за да направим цялото изживяване при
+                            наемане възможно
+                            най-безпроблемно приятно като възможно, от онлайн резервация до услуги за вземане и връщане.
+                            Предлагаме
+                            и пълна гама от след наемане услуги, за да гарантирате, че изживяването ви под наем е
+                            възможно най-без стрес,
+                            включително редовно почистване и поддръжка, спешна пътна помощ и експертни техници, обучени
+                            да се справят дори с
+                            повечето комплекс ремонти.
                         </p>
                     </div>
                     <div class="image">
@@ -164,13 +176,9 @@ else {
         </div>
 
         <div class="footer">
-            <h5>Copyright © 2023 AutoRental | All Rights reserved |
-                <a href="../../AboutUs/BG/AboutU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
-                        width="15" alt="bg"></a>
-                <a href="../../AboutUs/EN/AboutU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
-                        width="15" alt="en"></a>
-            </h5>
+            <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>
+
 
 
     </div>

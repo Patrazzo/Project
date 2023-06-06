@@ -6,17 +6,20 @@ $firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
-    header('location:../../Login/EN/Login.html');
+    header('location: ../../Login/EN/Login.html');
     exit();
-}
-else {
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
     echo "Hello, user $firstName";
 }
 
 $sql = "SELECT * FROM catalog";
 $result = $conn->query($sql);
-
 ?>
+
 
 
 <!DOCTYPE html>
@@ -28,7 +31,8 @@ $result = $conn->query($sql);
     <link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog | AutoRental</title>
+    <title>Каталог | AutoRental</title>
+    <script src="../Functionality/Catalog.js"></script>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
     <link rel="stylesheet" href="../Styling/Catalog.css">
@@ -41,16 +45,16 @@ $result = $conn->query($sql);
         <div class="header">
 
             <div class="logo">
-                <a href="../../Home/EN/Home.html"><img id="original-logo"
+                <a href="../../Home/EN/HomeU.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-                <a href="../../Home/EN/Home.html"><img id="hovered-logo"
+                <a href="../../Home/EN/HomeU.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
 
             <div class="links">
-                <a id="clicked" href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
+                <a id="clicked" href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
             </div>
 
             <div class="menu-toggle">
@@ -60,47 +64,64 @@ $result = $conn->query($sql);
             </div>
 
             <div class="menu">
-                <a id="clicked" href="../../Catalog/EN/Catalog.html">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
-            </div>  
+                <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+                <?php endif; ?>
+            </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
-            </div>  
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php endif; ?>
+            </div>
         </div>
 
         <div class="main">
-        <?php
+            <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="content">';
+                    echo '<br>';
                     echo '<img src="../../GeneralStyling&Media/Photos/cars/' . $row["image"] . '">';
                     echo '<h3>' . $row["name"] . '</h3>';
                     echo '<p>' . $row["description"] . '</p>';
+                    echo '<br>';
                     echo '<h6>' . $row["price"] . '</h6>';
-                    echo '<a href="************************************" class="buy">Виж повече</a>';
+                    echo '<a href="../../Order/EN/Order.php?carId=' . $row['id'] . '" class="buy">Виж повече</a>';
+                    echo '<br>';
                     echo '</div>';
                 }
             } else {
-                echo "Няма налични елементи в каталога.";
+                echo "<div style='color: var(--accent-color); font-size: 10px;'>";
+                echo "<h2>Няма налични елементи в каталога.</h2>";
+                echo "</div>";
             }
             ?>
 
         </div>
+        <div class="scroller">
+            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
+        </div>
 
         <div class="footer">
-            <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Catalog/BG/CatalogU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
-                        alt="bg"></a>
-                <a href="../../Catalog/EN/CatalogU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
-                        alt="en"></a>
-            </h5>
+            <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>
+
 
 
     </div>
