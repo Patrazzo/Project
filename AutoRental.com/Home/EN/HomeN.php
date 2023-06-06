@@ -33,9 +33,9 @@ echo "Hello, stranger";
             </div>
 
             <div class="links">
-                <a href="../../Catalog/EN/CatalogN.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
+                <a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
             </div>
 
             <div class="menu-toggle">
@@ -45,10 +45,10 @@ echo "Hello, stranger";
             </div>
 
             <div class="menu">
-                <a href="../../Catalog/EN/CatalogN.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
+                <a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
+                <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
@@ -86,14 +86,14 @@ echo "Hello, stranger";
                         <p> Ние сме водеща компания за луксозни коли под наем. Предлагаме висококачествени
                             автомобили, персонализирани услуги и цялостно обслужване. Нашата цел е да предоставим
                             най-доброто изживяване на клиентите си.</p>
-                        <button>виж още</button>
+                        <button>ВИЖ ОЩЕ</button>
                     </div>
                     <div class="card">
                         <h2>НАШАТА МИСИЯ</h2>
                         <p> Нашата мисия: най-добро изживяване при наемане на коли. Луксозни автомобили - Ferrari,
                             Lamborghini, Porsche и др. Гладък процес, безпроблемно. Персонализирано обслужване,
                             поддръжка от начало до край. Винаги на разположение.</p>
-                        <button>виж още</button>
+                        <button>ВИЖ ОЩЕ</button>
                     </div>
                     <div class="card">
                         <h2>КАКВО ПРЕДЛАГАМЕ</h2>
@@ -101,7 +101,7 @@ echo "Hello, stranger";
                             Нашата компания за коли под наем предлага безпроблемно изживяване и грижи след наемането.
                             Онлайн резервации, удобни услуги за вземане и връщане. Поддръжка, почистване, спешна помощ.
                         </p>
-                        <button>виж още</button>
+                        <button>ВИЖ ОЩЕ</button>
                     </div>
                 </div>
             </div>
@@ -111,13 +111,9 @@ echo "Hello, stranger";
         <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png" width="300"></a>
     </div>
     <div class="footer">
-        <h5>Copyright © 2023 AutoRental | All rights reserved |
-            <a href="../../Home/BG/HomeN.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
-                    alt="bg"></a>
-            <a href="../../Home/EN/HomeN.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
-                    alt="en"></a>
-        </h5>
+        <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
     </div>
+
 
 
     </div>

@@ -24,7 +24,7 @@ if ($_SESSION['utype'] !== 'user') {
 	<link rel="icon" href="../../GeneralStyling&Media/Photos/Logo.png">
 	<link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Contact | AutoRental</title>
+	<title>Контакт | AutoRental</title>
 	<link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
 	<link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
 	<link rel="stylesheet" href="../Styling/Contact.css">
@@ -43,9 +43,9 @@ if ($_SESSION['utype'] !== 'user') {
 			</div>
 
 			<div class="links">
-				<a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-				<a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-				<a id="clicked" href="../../Contact/EN/ContactU.php">CONTACT</a>
+				<a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+				<a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+				<a id="clicked" href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
 			</div>
 
 			<div class="menu-toggle">
@@ -55,13 +55,13 @@ if ($_SESSION['utype'] !== 'user') {
 			</div>
 
 			<div class="menu">
-                <a href="../../Catalog/EN/CatalogU.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutU.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactU.php">CONTACT</a>
+                <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
                 <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
-                    <a href="../../Login/EN/Login.html">LOGIN</a>
+                    <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
                 <?php else : ?>
-                    <a href="../../Home/EN/HomeN.php?logout=true">LOGOUT</a>
+                    <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
                 <?php endif; ?>
             </div>
 
@@ -83,13 +83,13 @@ if ($_SESSION['utype'] !== 'user') {
 				<div class="form-container">
 
 					<form action="../Functionality/ContactEN.php" class="contact-form">
-						<input type="text" id="fname" name="fname" placeholder="First Name" required>
-						<input type="text" id="lname" name="lname" placeholder="Last Name" required>
-						<input type="text" id="subject" name="subject" placeholder="Subject" required>
-						<input type="text" id="email" name="email" placeholder="Email" required>
-						<textarea id="body" name="body" rows="10" cols="50" placeholder="Message"></textarea>
+						<input type="text" id="fname" name="fname" placeholder="Име" required>
+						<input type="text" id="lname" name="lname" placeholder="Фамилия" required>
+						<input type="text" id="subject" name="subject" placeholder="Тема" required>
+						<input type="text" id="email" name="email" placeholder="Имейл" required>
+						<textarea id="body" name="body" rows="10" cols="50" placeholder="Съобщение"></textarea>
 						<div class="submit">
-							<input type="submit" value="SEND">
+							<input type="submit" value="ИЗПРАТИ">
 						</div>
 					</form>
 				</div>
@@ -104,13 +104,8 @@ if ($_SESSION['utype'] !== 'user') {
 			</div>
 		</div>
 		<div class="footer">
-			<h5>Copyright © 2023 AutoRental | All Rights reserved |
-				<a href="../../Contact/BG/ContactU.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10"
-						width="15" alt="bg"></a>
-				<a href="../../Contact/EN/ContactU.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10"
-						width="15" alt="en"></a>
-			</h5>
-		</div>
+            <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
+        </div>
 	</div>
 </body>
 
