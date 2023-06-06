@@ -18,7 +18,7 @@ echo "Hello, stranger";
     <link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog | AutoRental</title>
+    <title>Каталог | AutoRental</title>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
     <link rel="stylesheet" href="../Styling/Catalog.css">
@@ -38,9 +38,9 @@ echo "Hello, stranger";
             </div>
 
             <div class="links">
-                <a id="clicked" href="../../Catalog/EN/CatalogN.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
+                <a id="clicked" href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
             </div>
 
             <div class="menu-toggle">
@@ -50,22 +50,24 @@ echo "Hello, stranger";
             </div>
 
             <div class="menu">
-                <a id="clicked" href="../../Catalog/EN/CatalogN.php">CATALOG</a>
-                <a href="../../AboutUs/EN/AboutN.php">ABOUT US</a>
-                <a href="../../Contact/EN/ContactN.php">CONTACT</a>
-                <a href="../../Login/EN/Login.html">LOGIN</a>
-            </div>  
+                <a id="clicked" href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
+                <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
+            </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/Login.html"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
-            </div>  
+                <a href="../../Login/EN/Login.html"><img id="original-login"
+                        src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                <a href="../../Login/EN/Login.html"><img id="hovered-login"
+                        src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+            </div>
         </div>
 
         <div class="main">
-        <?php
+            <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     echo '<div class="content">';
@@ -80,20 +82,18 @@ echo "Hello, stranger";
                     echo '</div>';
                 }
             } else {
-                echo "Няма налични елементи в каталога.";
+                echo "<div style='color: var(--accent-color); font-size: 10px;'>";
+                echo "<h2>Няма налични елементи в каталога.</h2>";
+                echo "</div>";
             }
             ?>
 
         </div>
 
         <div class="footer">
-            <h5>Copyright © 2023 AutoRental | All rights reserved |
-                <a href="../../Catalog/BG/CatalogN.php"><img src="../../GeneralStyling&Media/Photos/BG.jpg" height="10" width="15"
-                        alt="bg"></a>
-                <a href="../../Catalog/EN/CatalogN.php"><img src="../../GeneralStyling&Media/Photos/EN.jpg" height="10" width="15"
-                        alt="en"></a>
-            </h5>
+            <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>
+
 
 
     </div>
