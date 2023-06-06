@@ -128,7 +128,9 @@ if ($_SESSION['utype'] !== 'user') {
                 </div>
             </div>
         </div>
-
+        <div class="scroller">
+            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
+        </div>
         <div class="footer">
             <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>

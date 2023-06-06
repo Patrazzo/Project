@@ -13,7 +13,7 @@ echo "Hello, stranger";
     <link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | AutoRental</title>
+    <title>Начало | AutoRental</title>
     <script src="../Functionality/Home.js"></script>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
@@ -108,7 +108,7 @@ echo "Hello, stranger";
         </div>
     </div>
     <div class="scroller">
-        <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png" width="300"></a>
+        <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
     </div>
     <div class="footer">
         <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>

@@ -32,6 +32,7 @@ $result = $conn->query($sql);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог | AutoRental</title>
+    <script src="../Functionality/Catalog.js"></script>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
     <link rel="stylesheet" href="../Styling/Catalog.css">
@@ -106,12 +107,15 @@ $result = $conn->query($sql);
                     echo '</div>';
                 }
             } else {
-                echo "<div style='color: var(--accent-color); font-size: 15px;'>";
+                echo "<div style='color: var(--accent-color); font-size: 10px;'>";
                 echo "<h2>Няма налични елементи в каталога.</h2>";
                 echo "</div>";
             }
             ?>
 
+        </div>
+        <div class="scroller">
+            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
         </div>
 
         <div class="footer">
