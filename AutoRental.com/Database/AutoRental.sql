@@ -12,9 +12,9 @@ CREATE TABLE catalog (
     id INT(11) AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
+    image VARCHAR(255),
     price DECIMAL(10, 2),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    reservedBy INT(11),
     available TINYINT(1) DEFAULT 1
 );
 
