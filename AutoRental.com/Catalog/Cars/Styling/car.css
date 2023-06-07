@@ -59,20 +59,7 @@
     width: 100%;
 }
 
-.info {
-    display: flex;
-    color: var(--light-gray);
-    height: 150px;
-    width: 200px;
-    padding: 10px;
-    font-size: 1.5vw;
-    text-align: center;
-    align-items: center;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-    margin: 10px;
-    gap: 2vw;
-}
+
 
 .scroller {
     width: 100vw;
@@ -86,6 +73,84 @@
     ;
 }
 
+/*Photo seetings*/
+
+
+.main {
+    display: flex;
+
+  }
+  .images {
+    width: 50%;
+    border-radius: 20px;
+    padding-top: 30px;
+    margin: 20px 20px;
+    background-color: var(--secondary-color);
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .images img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  
+  .info {
+    width: 50%;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 20px;
+    background-color: var(--secondary-color);
+    margin-right: 20px;
+}
+.text  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  background-color: var(--background-color);
+  border-radius: 20px;
+  margin: 0;
+}
+
+  .buy {
+    width: 100%;
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-size: 18px;
+    margin: 10px auto; 
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buy:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+.description {
+    width: 97%;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 20px;
+    background-color: var(--secondary-color);
+    margin-top: auto; 
+    color: white;
+}
+  
+/* RESPONSIVE */
 @media screen and (max-width: 500px) {
     .message h1 {
         font-size: 5vw;
@@ -101,4 +166,25 @@
     .scroller img {
         width: 150px;
       }
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 90%;
+        margin-left: auto;
+    }
+    .info {
+        width: 90%;
+    }
+    .description {
+        width: 90%;
+    }
+    
 }
+
+  
+  
+  
+  
+  
