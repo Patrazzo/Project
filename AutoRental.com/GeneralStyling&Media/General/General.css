@@ -1,10 +1,10 @@
+/* ИМПОРТВАНЕ НА ШРИФТ */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Ubuntu:wght@500&display=swap');
 
 /*ОБЩИ НАСТРОЙКИ*/
 * {
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
-    overflow-x: hidden;
     margin: 0;
 }
 
@@ -12,6 +12,7 @@ body{
     background: var(--primary-color);
 }
 
+/* НАСТРОЙКИ НА SCROLLER */
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -28,6 +29,7 @@ body{
     background: #777;
 }
 
+/* НАСТРОЙКИ НА OБЩИЯ ПРОЗОРЕЦ */
 .all {
     display: flex;
     flex-wrap: wrap;
@@ -35,7 +37,7 @@ body{
     position: relative;
 }
 
-
+/* ЗАДАВАНЕ НА ЦВЕТОВЕ */
 :root {
     --primary-color: #000814;
     --background-color: #001d3d;

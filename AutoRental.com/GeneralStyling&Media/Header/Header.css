@@ -90,11 +90,7 @@
   color: var(--accent-color);
 }
 
-.links img {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
+/* НАСТРОЙКИ ЗА БУРГЕР МЕНЮ */
 .menu-toggle {
   display: none;
   cursor: pointer;
@@ -111,6 +107,15 @@
 
 .menu {
   display: none;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-color);
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
 }
 
 /************** RESPONSIVE HEADER ********************/
@@ -134,28 +139,6 @@
     display: block;
   }
 
-  .menu-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin-bottom: 5px;
-    background-color: var(--light-gray);
-    transition: 0.5s;
-  }
-
-  .menu {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    background-color: var(--primary-color);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 0 0 20px 20px;
-  }
-
   .menu.active {
     display: flex;
     animation: fade-in 0.5s;
@@ -174,11 +157,13 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 /************** MENU TOGGLE ANIMATION ********************/
 .menu-toggle .change:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
