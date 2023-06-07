@@ -63,15 +63,14 @@ session_start();
 			<h2>СВЪРЖИ СЕ С НАС</h2>
 			<div class="container">
 				<div class="form-container">
-
-					<form action="../Functionality/ContactEN.php" class="contact-form">
-						<input type="text" id="fname" name="fname" placeholder="Име" required>
-						<input type="text" id="lname" name="lname" placeholder="Фамилия" required>
-						<input type="text" id="subject" name="subject" placeholder="Тема" required>
+					<form action="../Functionality/ContactN.php" class="contact-form" method="post">
+						<input type="text" id="firstName" name="firstName" placeholder="Име" required>
+						<input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
+						<input type="text" id="topic" name="topic" placeholder="Тема" required>
 						<input type="text" id="email" name="email" placeholder="Имейл" required>
 						<textarea id="body" name="body" rows="10" cols="50" placeholder="Съобщение"></textarea>
 						<div class="submit">
-							<input type="submit" value="ИЗПРАТИ">
+							<input type="submit" name="submit" value="ИЗПРАТИ">
 						</div>
 					</form>
 				</div>
