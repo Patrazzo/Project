@@ -81,10 +81,10 @@ if ($_SESSION['utype'] !== 'user') {
 			<h2>CONTACT US</h2>
 			<div class="container">
 				<div class="form-container">
-					<form action="../Functionality/ContactEN.php" class="contact-form">
+					<form action="../Functionality/ContactU.php" class="contact-form" method="post">
 						<input type="text" id="firstName" name="firstName" placeholder="Име" required>
 						<input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
-						<input type="text" id="subject" name="subject" placeholder="Тема" required>
+						<input type="text" id="topic" name="topic" placeholder="Тема" required>
 						<input type="text" id="email" name="email" placeholder="Имейл" required>
 						<textarea id="body" name="body" rows="10" cols="50" placeholder="Съобщение"></textarea>
 						<div class="submit">
