@@ -5,24 +5,23 @@
     height: 80px;
     justify-content: center;
     align-items: center;
-    text-align: center;
     background-color: var(--primary-color);
     border-radius: 20px 20px 0 0;
-
 }
 
 .footer h5 {
     color: var(--light-gray);
+    text-align: center;
+    font-size: 14px;
     width: 90%;
-    font-size: 13px;
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 550px) {
     .footer h5 {
         font-size: 12px;
     }
 }
-
 @media screen and (max-width: 400px) {
     .footer h5 {
         font-size: 9px;
