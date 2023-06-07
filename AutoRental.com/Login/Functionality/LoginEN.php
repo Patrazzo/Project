@@ -26,9 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($row["utype"] == "user") {
                 header('location: ../../Home/EN/HomeU.php');
             } elseif ($row["utype"] == "admin") {
-                header('location: ../../Home/EN/HomeA.php');
+                header('location: ../../AdminPanel/Panels/Dashboard.php');
             } else {
-                // Handle unknown user type
                 header('location: ../EN/Login.html');
             }
             exit();

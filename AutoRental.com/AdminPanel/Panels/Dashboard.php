@@ -14,23 +14,19 @@
 </head>
 <body>
     <div class="all">
-
         <div class="header">
-
             <div class="logo">
-                <a href="../../Home/EN/Home.html"><img id="original-logo"
+                <a href="../Panels/Dashboard.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-                <a href="../../Home/EN/Home.html"><img id="hovered-logo"
+                <a href="../Panels/Dashboard.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
 
             <div class="links">
-                <a id="clicked" href="../Panels/Dashboard.html">Dashboard</a>
-                <a href="../Panels/Products.html">Products</a>
-                <a href="../Panels/Orders.html">Orders</a>
-                <a href="../Panels/Account.html">Users</a>
-                <a href="../Panels/Messages.html">Messages</a>
-                
+            <a href="../Panels/Products.php">Products</a>
+                <a href="../Panels/Orders.php">Orders</a>
+                <a href="../Panels/Account.php">Users</a>
+                <a href="../Panels/Messages.php">Messages</a>
             </div>
 
             <div class="menu-toggle">
@@ -51,8 +47,17 @@
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
 
             <div class="login">
-                <a href="../../Login/EN/Login.html"><img id="original-login" src="../../GeneralStyling&Media/Photos/Login.png"></a>
-                <a href="../../Login/EN/"><img id="hovered-login" src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php endif; ?>
             </div>
         </div>
 
