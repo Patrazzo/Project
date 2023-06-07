@@ -35,3 +35,12 @@ CREATE TABLE orders (
     FOREIGN KEY (carId) REFERENCES catalog(id),
     FOREIGN KEY (userId) REFERENCES users(users_id)
 );
+
+CREATE TABLE messages (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  topic VARCHAR(100),
+  email VARCHAR(100),
+  message TEXT
+);
