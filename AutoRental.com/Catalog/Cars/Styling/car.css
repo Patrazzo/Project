@@ -12,7 +12,7 @@
 }
 
 .message {
-    
+
     background-color: var(--secondary-color);
     text-align: center;
     border-radius: 20px;
@@ -43,7 +43,7 @@
 
 .container {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: center;
     align-items: center;
 }
@@ -78,27 +78,28 @@
 
 .main {
     display: flex;
+    justify-content: center;
+}
 
-  }
-  .images {
+.images {
     width: 50%;
     border-radius: 20px;
     padding-top: 30px;
-    margin: 20px 20px;
+    
     background-color: var(--secondary-color);
-    align-self: flex-start;
+    
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .images img {
+}
+
+.images img {
     max-width: 100%;
     max-height: 100%;
-  }
-  
-  
-  .info {
+}
+
+
+.info {
     width: 50%;
     border-radius: 20px;
     padding: 30px;
@@ -106,19 +107,20 @@
     background-color: var(--secondary-color);
     margin-right: 20px;
 }
-.text  {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-  color: white;
-  background-color: var(--background-color);
-  border-radius: 20px;
-  margin: 0;
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background-color: var(--background-color);
+    border-radius: 20px;
+    margin: 0;
 }
 
-  .buy {
+.buy {
     width: 100%;
     background-color: var(--background-color);
     border: none;
@@ -129,9 +131,9 @@
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     font-size: 18px;
-    margin: 10px auto; 
+    margin: 10px auto;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -140,23 +142,25 @@
     background-color: var(--accent-color);
     color: black;
 }
+
 .description {
-    width: 97%;
+    width: 95%;
     border-radius: 20px;
     padding: 30px;
-    margin: 20px 20px;
     background-color: var(--secondary-color);
-    margin-top: auto; 
+    margin-top: auto;
     color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
 }
-  
+
 /* RESPONSIVE */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .message h1 {
         font-size: 5vw;
-    
+
     }
-    
+
     .message h2 {
         font-size: 3vw;
         font-weight: lighter;
@@ -165,26 +169,30 @@
 
     .scroller img {
         width: 150px;
-      }
+    }
+
     .container {
         display: flex;
         flex-direction: column;
+
     }
+
     .images {
         width: 90%;
-        margin-left: auto;
+        
     }
+
     .info {
         width: 90%;
     }
-    .description {
-        width: 90%;
-    }
+
     
+
 }
 
-  
-  
-  
-  
-  
+@media screen and (max-width: 400px) {
+.text{
+    font-size: 3vw;
+}
+
+}
