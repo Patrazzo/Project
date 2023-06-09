@@ -58,10 +58,10 @@ $result = mysqli_query($conn, $query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../../GeneralStyling&Media/Photos/Logo.png">
     <link rel="shortcut" href="../../GeneralStyling&Media/Photos/Logo.png">
-    <title>Orders | AutoRental | Admin</title>
+    <title>Products | AutoRental | Admin</title>
     <link rel="stylesheet" href="../../GeneralStyling&Media/General/General.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Header/Header.css">
-    <link rel="stylesheet" href="../Styling/Order.css">
+    <link rel="stylesheet" href="../Styling/Products.css">
     <link rel="stylesheet" href="../../GeneralStyling&Media/Footer/Footer.css">
 </head>
 
@@ -69,10 +69,10 @@ $result = mysqli_query($conn, $query);
     <!-- HTML content goes here -->
     <div class="main">
         <div class="container">
-            <h1>ORDERS</h1>
+            <h1>Products</h1>
                 <!-- Display the existing products -->
 <?php while ($row = mysqli_fetch_assoc($result)) : ?>
-    <div class="order">
+    <div class="product">
         <div class="row">
             <p>Name</p>
             <h6><?php echo $row['name']; ?></h6>
@@ -115,7 +115,7 @@ $result = mysqli_query($conn, $query);
 
 
             <!-- Add new product form -->
-            <div class="order">
+            <div class="addPrProduct">
                 <h3>Add New Product</h3>
                 <form method="POST" action="">
                     <input type="text" name="name" placeholder="Product Name" required>
