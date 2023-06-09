@@ -22,6 +22,7 @@ session_start();
 
 <body>
 	<div class="all">
+		
 		<div class="header">
 
 			<div class="logo">
@@ -59,6 +60,8 @@ session_start();
 						src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
 			</div>
 		</div>
+
+		
 		<div class="main">
 			<h2>СВЪРЖИ СЕ С НАС</h2>
 			<div class="container">
@@ -75,7 +78,7 @@ session_start();
 					</form>
 				</div>
 
-				<!-- Map -->
+				<!-- KOНТЕЙНЕР ЗА КАРТАТА -->
 				<div class="map">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.958894452646!2d23.908034299999997!3d42.894814000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa501bf6a08c81%3A0xe4f50f5955f4a188!2z0J3Qn9CTINC_0L4g0LrQvtC80L_RjtGC0YrRgNC90Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0Lgg0YHQuNGB0YLQtdC80Lg!5e0!3m2!1sbg!2sbg!4v1684692207029!5m2!1sbg!2sbg"
@@ -84,6 +87,8 @@ session_start();
 				</div>
 			</div>
 		</div>
+
+		
 		<div class="footer">
             <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>

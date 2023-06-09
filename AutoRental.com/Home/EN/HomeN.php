@@ -86,14 +86,14 @@ echo "Hello, stranger";
                         <p> Ние сме водеща компания за луксозни коли под наем. Предлагаме висококачествени
                             автомобили, персонализирани услуги и цялостно обслужване. Нашата цел е да предоставим
                             най-доброто изживяване на клиентите си.</p>
-                            <button onclick="location.href = '../../AboutUs/EN/AboutN.php';">ВИЖ ОЩЕ</button>
+                        <a href="../../AboutUs/EN/AboutN.php"><button>ВИЖ ОЩЕ</button></a>
                     </div>
                     <div class="card">
                         <h2>НАШАТА МИСИЯ</h2>
                         <p> Нашата мисия: най-добро изживяване при наемане на коли. Луксозни автомобили - Ferrari,
                             Lamborghini, Porsche и др. Гладък процес, безпроблемно. Персонализирано обслужване,
                             поддръжка от начало до край. Винаги на разположение.</p>
-                            <button onclick="location.href = '../../AboutUs/EN/AboutN.php';">ВИЖ ОЩЕ</button>
+                        <a href="../../AboutUs/EN/AboutN.php"><button>ВИЖ ОЩЕ</button></a>
                     </div>
                     <div class="card">
                         <h2>КАКВО ПРЕДЛАГАМЕ</h2>
@@ -101,7 +101,7 @@ echo "Hello, stranger";
                             Нашата компания за коли под наем предлага безпроблемно изживяване и грижи след наемането.
                             Онлайн резервации, удобни услуги за вземане и връщане. Поддръжка, почистване, спешна помощ.
                         </p>
-                        <button onclick="location.href = '../../AboutUs/EN/AboutN.php';">ВИЖ ОЩЕ</button>
+                        <a href="../../AboutUs/EN/AboutN.php"><button>ВИЖ ОЩЕ</button></a>
                     </div>
                 </div>
             </div>

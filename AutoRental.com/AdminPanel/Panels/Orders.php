@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $query);
         </div>
         <div class="row">
             <p>Image</p>
-            <img src="../../GeneralStyling&Media/Photos/cars/<?php echo $row['image']; ?>" alt="Product Image">
+            <img src="../../GeneralStyling&Media/Photos/cars/<?php echo $row['image']; ?>" width="200" alt="Product Image">
         </div>
         <div class="row">
             <p>Price</p>

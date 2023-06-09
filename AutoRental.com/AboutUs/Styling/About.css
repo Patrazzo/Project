@@ -48,6 +48,7 @@
   display: flex;
   flex: 1;
   border-radius: 10px;
+  width: 100px;
 }
 
 /* НАСТРОЙКИ НА КОНТЕЙНЕРА НА SCROLL-TO-TOP */
