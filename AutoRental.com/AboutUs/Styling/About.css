@@ -65,6 +65,7 @@
 
 /* RESPONSIVE PART */
 @media screen and (max-width: 900px) {
+  
   .TextContainer {
     margin: 20px 0 20px 0;
     width: 100%;
