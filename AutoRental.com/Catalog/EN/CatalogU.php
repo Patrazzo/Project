@@ -40,29 +40,32 @@ $result = $conn->query($sql);
 </head>
 
 <body>
+    <!-- OБЩ КОНТЕЙНЕР -->
     <div class="all">
 
+        <!-- КОНТЕЙНЕР ЗА ХЕДЪР -->
         <div class="header">
 
+            <!-- КОНТЕЙНЕР ЗА ЛОГО -->
             <div class="logo">
                 <a href="../../Home/EN/HomeU.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
                 <a href="../../Home/EN/HomeU.php"><img id="hovered-logo"
                         src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
             </div>
-
+            <!-- КОНТЕЙНЕР ЗА ЛИНКОВЕ -->
             <div class="links">
                 <a id="clicked" href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
                 <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
                 <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
             </div>
-
+            <!-- КОНТЕЙНЕР ЗА БУРГЕР МЕНЮ -->
             <div class="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-
+            <!-- КОНТЕЙНЕР ЗА ДРОПДАУН -->
             <div class="menu">
                 <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
                 <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
@@ -73,9 +76,9 @@ $result = $conn->query($sql);
                     <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
                 <?php endif; ?>
             </div>
-
+            <!-- ИМПЛЕМЕНТАЦИЯ НA JS ЗА РАБОТА НА ДРОПДАУНА -->
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
-
+            <!-- КОНТЕЙНЕР ЗА ЛОГИН -->
             <div class="login">
                 <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
                     <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
@@ -90,7 +93,7 @@ $result = $conn->query($sql);
                 <?php endif; ?>
             </div>
         </div>
-
+        <!-- КОНТЕЙНЕР ЗА МЕЙН -->
         <div class="main">
             <?php
             if ($result->num_rows > 0) {
@@ -114,16 +117,14 @@ $result = $conn->query($sql);
             ?>
 
         </div>
+        <!-- КОНТЕЙНЕР ЗА SCROLL-TO-TOP СНИМКА -->
         <div class="scroller">
             <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
         </div>
-
+        <!-- КОНТЕЙНЕР ЗА FOOTER -->
         <div class="footer">
             <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>
-
-
-
     </div>
 </body>
 

@@ -21,38 +21,39 @@ session_start();
 </head>
 
 <body>
+	<!-- OБЩ КОНТЕЙНЕР -->
 	<div class="all">
-		
+		<!-- КОНТЕЙНЕР ЗА ХЕДЪР -->
 		<div class="header">
-
+            <!-- КОНТЕЙНЕР ЗА ЛОГО -->
 			<div class="logo">
 				<a href="../../Home/EN/HomeN.php"><img id="original-logo"
 						src="../../GeneralStyling&Media/Photos/Logo.png"></a>
 				<a href="../../Home/EN/HomeN.php"><img id="hovered-logo"
 						src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
 			</div>
-
+            <!-- КОНТЕЙНЕР ЗА ЛИНКОВЕ -->
 			<div class="links">
 				<a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
 				<a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
 				<a id="clicked" href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
 			</div>
-
+            <!-- КОНТЕЙНЕР ЗА БУРГЕР МЕНЮ -->
 			<div class="menu-toggle">
 				<span></span>
 				<span></span>
 				<span></span>
 			</div>
-
+            <!-- КОНТЕЙНЕР ЗА ДРОПДАУН -->
 			<div class="menu">
 				<a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
 				<a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
 				<a id="clicked" href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
 				<a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
 			</div>
-
+            <!-- ИМПЛЕМЕНТАЦИЯ НA JS ЗА РАБОТА НА ДРОПДАУНА -->
 			<script src="../../GeneralStyling&Media/Header/Header.js"></script>
-
+            <!-- КОНТЕЙНЕР ЗА ЛОГИН -->
 			<div class="login">
 				<a href="../../Login/EN/Login.html"><img id="original-login"
 						src="../../GeneralStyling&Media/Photos/Login.png"></a>
@@ -61,9 +62,10 @@ session_start();
 			</div>
 		</div>
 
-		
+		<!-- КОНТЕЙНЕР ЗА МЕЙН -->
 		<div class="main">
 			<h2>СВЪРЖИ СЕ С НАС</h2>
+			<!-- КОНТЕЙНЕР ЗА СЪДЪРЖАНИЕТО -->
 			<div class="container">
 				<div class="form-container">
 					<form action="../Functionality/ContactN.php" class="contact-form" method="post">
@@ -88,7 +90,7 @@ session_start();
 			</div>
 		</div>
 
-		
+		<!-- КОНТЕЙНЕР ЗА FOOTER -->
 		<div class="footer">
             <h5>| Copyright © 2023 AutoRental | Всички права запазени |</h5>
         </div>
