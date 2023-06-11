@@ -146,16 +146,26 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="Welcome.php">Home</a>
+            <a class="disabled" href="Welcome.php">Home</a>
         </div>
         <div class="header-right">
-            <a href="Table.php">Users</a>
-            <a href="Welcome.php">Log out</a>
+            <?php
+            session_start();
+            $email = $_SESSION['email'];
+
+            if (!isset($email)) {
+                echo '<a href="Login.php">Login</a>'; // Display "Login" when not logged in
+                echo '<a href="Register.php">Register</a>';
+            } else {
+                echo '<a href="Table.php">Users</a>';
+                echo '<a href="Logout.php">Logout</a>'; // Display "Logout" when logged in
+            }
+            ?>
         </div>
     </header>
     <main>
         <?php
-        $db = mysqli_connect('localhost', 'root', '', '19223');
+        $db = mysqli_connect('localhost', 'root', 'Mysql1234', '19223');
         $ID = $_GET['ID'];
         $sql = "SELECT * FROM `19223`.data WHERE id = $ID";
         $res = mysqli_query($db, $sql);

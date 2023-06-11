@@ -18,7 +18,7 @@
         crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-        
+
         * {
             margin: 0;
             background-color: #333333;
@@ -116,7 +116,7 @@
 <?php
 $serv = 'localhost';
 $user = 'root';
-$pass = '';
+$pass = 'Mysql1234';
 $dbName = '19223';
 $db = new mysqli($serv, $user, $pass, $dbName) or die("Unable to connect");
 
@@ -145,8 +145,18 @@ if (isset($_POST['delete'])) {
             <a href="Welcome.php">Home</a>
         </div>
         <div class="header-right">
-            <a class="disabled" href="Table.php">Users</a>
-            <a href="Welcome.php">Log out</a>
+            <?php
+            session_start();
+            $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+
+            if ($email === '') {
+                echo '<a href="Login.php">Login</a>';
+                echo '<a href="Register.php">Register</a>';
+            } else {
+                echo '<a class="disabled" href="Table.php">Users</a>';
+                echo '<a href="Logout.php">Logout</a>';
+            }
+            ?>
         </div>
     </header>
 

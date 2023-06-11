@@ -135,12 +135,21 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="DWelcome.php">Home</a>
+            <a href="Welcome.php">Home</a>
         </div>
         <div class="header-right">
-            <a class="disabled" href="">Users</a>
-            <a href="Register.php">Register</a>
-            <a class="disabled" href="Login.php">Login</a>
+            <?php
+            session_start();
+            $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+
+            if ($email === '') {
+                echo '<a class="disabled" href="Login.php">Login</a>';
+                echo '<a href="Register.php">Register</a>';
+            } else {
+                echo '<a href="Table.php">Users</a>';
+                echo '<a href="Logout.php">Logout</a>';
+            }
+            ?>
         </div>
     </header>
 
@@ -161,9 +170,10 @@
         </div>
     </main>
     <?php
+
     $servername = 'localhost';
     $username = 'root';
-    $password = '';
+    $password = 'Mysql1234';
     $dbname = '19223';
 
     // Create a connection
@@ -186,6 +196,8 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
+            // Valid credentials, set session variable
+            $_SESSION["email"] = $email;
             header("Location: Welcome.php");
             exit;
         } else {
@@ -203,8 +215,9 @@
 
     // Close the connection
     $conn->close();
-    
+
     ?>
+
 
 </body>
 
