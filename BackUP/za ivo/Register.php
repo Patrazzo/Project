@@ -130,6 +130,7 @@
             text-align: center;
             margin: 30px;
         }
+
         .succ {
             color: #ffe0a3;
             font-size: 20px;
@@ -142,12 +143,22 @@
 <body>
     <header>
         <div class="header-left">
-            <a href="DWelcome.php">Home</a>
+            <a href="Welcome.php">Home</a>
         </div>
         <div class="header-right">
-            <a class="disabled" href="">Users</a>
-            <a class="disabled" href="Register.php">Register</a>
-            <a href="Login.php">Login</a>
+            <?php
+            session_start();
+            $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+
+            if ($email === '') {
+                echo '<a href="Login.php">Login</a>';
+                echo '<a class="disabled" href="Register.php">Register</a>';
+            } else {
+                echo '<a href="Table.php">Users</a>';
+                echo '<a href="Logout.php">Logout</a>';
+            }
+            ?>
+        </div>
         </div>
     </header>
 
@@ -184,7 +195,7 @@
     // Replace with your database credentials
     $servername = 'localhost';
     $username = 'root';
-    $password = '';
+    $password = 'Mysql1234';
     $dbname = '19223';
 
     // Create a connection

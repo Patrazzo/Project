@@ -141,7 +141,6 @@
 .card button:hover {
   background-color: var(--accent-color);
   color: var(--primary-color);
-  box-shadow: 10px 10px 30px black;
 }
 
 

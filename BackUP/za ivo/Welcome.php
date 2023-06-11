@@ -70,16 +70,67 @@
             <a class="disabled" href="Welcome.php">Home</a>
         </div>
         <div class="header-right">
-            <a class="disabled" href="">Users</a>
-            <a href="Register.php">Register</a>
-            <a href="Login.php">Login</a>
+            <?php
+            session_start();
+            $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+
+            if ($email === '') {
+                echo '<a href="Login.php">Login</a>';
+                echo '<a href="Register.php">Register</a>';
+            } else {
+                echo '<a href="Table.php">Users</a>';
+                echo '<a href="Logout.php">Logout</a>';
+            }
+            ?>
         </div>
     </header>
     <main>
         <div class="content">
-            <h1>Welcome</h1>
+            <h1>Welcome
+                <?php
+                
+                $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+
+                if ($email === '') {
+                    echo "Guest";
+                } else {
+                    // Connect to the database (replace with your own database connection code)
+                    $servername = 'localhost';
+                    $username = 'root';
+                    $password = 'Mysql1234';
+                    $dbname = '19223';
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Prepare and execute the SQL query to retrieve the username
+                    $stmt = $conn->prepare("SELECT username FROM data WHERE email = ?");
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+                        // Fetch the username from the result set
+                        $row = $result->fetch_assoc();
+                        $username = $row['username'];
+
+                        echo $username;
+                    }
+
+                    // Close the database connection
+                    $stmt->close();
+                    $conn->close();
+                }
+                ?>
+            </h1>
         </div>
+
     </main>
+
+
 </body>
 
 </html>
