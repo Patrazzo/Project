@@ -1,6 +1,21 @@
 <?php
+session_start();
+$firstName = $_SESSION['firstName'];
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'user') {
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} else {
+    echo "Hello, user $firstName";
+}
 $carId = $_GET['carId'];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,15 +39,15 @@ $carId = $_GET['carId'];
     <div class="header">
       <!-- КОНТЕЙНЕР ЗА ЛОГО -->
       <div class="logo">
-        <a href="../../Home/EN/HomeN.php"><img id="original-logo" src="../../GeneralStyling&Media/Photos/Logo.png"></a>
-        <a href="../../Home/EN/HomeN.php"><img id="hovered-logo"
+        <a href="../../Home/EN/HomeU.php"><img id="original-logo" src="../../GeneralStyling&Media/Photos/Logo.png"></a>
+        <a href="../../Home/EN/HomeU.php"><img id="hovered-logo"
             src="../../GeneralStyling&Media/Photos/HoverLogo.png"></a>
       </div>
       <!-- КОНТЕЙНЕР ЗА ЛИНКОВЕ -->
       <div class="links">
-        <a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
-        <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
-        <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
+        <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
+        <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+        <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
       </div>
       <!-- КОНТЕЙНЕР ЗА БУРГЕР МЕНЮ -->
       <div class="menu-toggle">
@@ -42,18 +57,31 @@ $carId = $_GET['carId'];
       </div>
       <!-- КОНТЕЙНЕР ЗА ДРОПДАУН -->
       <div class="menu">
-        <a href="../../Catalog/EN/CatalogN.php">КАТАЛОГ</a>
-        <a href="../../AboutUs/EN/AboutN.php">ЗА НАС</a>
-        <a href="../../Contact/EN/ContactN.php">КОНТАКТ</a>
-        <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
+                <a href="../../Catalog/EN/CatalogU.php">KАТАЛОГ</a>
+                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+                <?php endif; ?>
       </div>
       <!-- ИМПЛЕМЕНТАЦИЯ НA JS ЗА РАБОТА НА ДРОПДАУНА -->
       <script src="../../GeneralStyling&Media/Header/Header.js"></script>
       <!-- КОНТЕЙНЕР ЗА ЛОГИН -->
       <div class="login">
-        <a href="../../Login/EN/Login.html"><img id="hovered-login"
-            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
-      </div>
+                <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php else: ?>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="original-login"
+                            src="../../GeneralStyling&Media/Photos/Login.png"></a>
+                    <a href="../../Home/EN/HomeN.php?logout=true"><img id="hovered-login"
+                            src="../../GeneralStyling&Media/Photos/HoverLogin.png"></a>
+                <?php endif; ?>
+        </div>
     </div>
     <!-- КОНТЕЙНЕР ЗА МЕЙН -->
     <div class="main">
