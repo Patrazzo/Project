@@ -1,6 +1,7 @@
 <?php
 session_start();
 $utype = $_SESSION['utype'];
+$firstName = $_SESSION['firstName'];
 
 if ($_SESSION['utype'] !== 'user') {
     header('location: ../../Login/EN/Login.html');
