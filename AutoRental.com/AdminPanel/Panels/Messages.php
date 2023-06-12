@@ -1,3 +1,17 @@
+<?php
+session_start();
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'admin') {
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +39,7 @@
             </div>
 
             <div class="links">
-            <a href="../Panels/Products.php">Products</a>
+                <a href="../Panels/Products.php">Products</a>
                 <a href="../Panels/Orders.php">Orders</a>
                 <a href="../Panels/Account.php">Users</a>
                 <a id="clicked" href="../Panels/Messages.php">Messages</a>
@@ -43,7 +57,6 @@
                 <a href="../Panels/Orders.html">Orders</a>
                 <a href="../Panels/Account.html">Users</a>
                 <a id="clicked" href="../Panels/Messages.html">Messages</a>
-
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>

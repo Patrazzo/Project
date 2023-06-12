@@ -1,3 +1,17 @@
+<?php
+session_start();
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'admin') {
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
