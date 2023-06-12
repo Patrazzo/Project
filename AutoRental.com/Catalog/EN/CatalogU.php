@@ -1,8 +1,6 @@
 <?php
 session_start();
 include '../../Config/config.php';
-
-$firstName = $_SESSION['firstName'];
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
@@ -12,8 +10,6 @@ if ($_SESSION['utype'] !== 'user') {
     session_destroy();
     header('location: ../../Login/EN/Login.html');
     exit();
-} else {
-    echo "Hello, user $firstName";
 }
 
 $sql = "SELECT * FROM catalog";

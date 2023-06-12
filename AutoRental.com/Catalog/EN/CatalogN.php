@@ -4,8 +4,6 @@ include '../../Config/config.php';
 
 $sql = "SELECT * FROM catalog";
 $result = $conn->query($sql);
-
-echo "Hello, stranger";
 ?>
 
 
