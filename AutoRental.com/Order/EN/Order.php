@@ -125,9 +125,7 @@ $carId = $_GET['carId'];
                 <option value="option2">Плащане с карта</option>
               </select>
             </div>
-            <div class="txt_field">
-              <input type="hidden" name="carId" value="<?php echo $carId; ?>">
-            </div>
+              <input type="hidden" name="carId" value="<?php echo $_GET['carId']; ?>">
             <div class="submit">
               <input type="submit" value="ЗАВЪРШИ ПОРЪЧКА" name="submit">
             </div>
