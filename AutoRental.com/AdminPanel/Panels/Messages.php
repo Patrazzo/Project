@@ -10,6 +10,60 @@ if ($_SESSION['utype'] !== 'admin') {
     header('location: ../../Login/EN/Login.html');
     exit();
 }
+
+include '../../Config/config.php';
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Fetch messages from the database
+$sql = "SELECT * FROM messages";
+$result = mysqli_query($conn, $sql);
+
+// Delete message
+if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_id'])) {
+    $messageId = $_GET['message_id'];
+    $deleteSql = "DELETE FROM messages WHERE id = '$messageId'";
+    if (mysqli_query($conn, $deleteSql)) {
+    } else {
+        echo "Error deleting message: " . mysqli_error($conn);
+    }
+}
+
+mysqli_close($conn);
+?><?php
+session_start();
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'admin') {
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+}
+
+include '../../Config/config.php';
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM messages";
+$result = mysqli_query($conn, $sql);
+
+if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_id'])) {
+    $messageId = $_GET['message_id'];
+    $deleteSql = "DELETE FROM messages WHERE id = '$messageId'";
+    if (mysqli_query($conn, $deleteSql)) {
+        header('location: ../Panels/Messages.php');
+        exit();
+    }
+}
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -76,61 +130,43 @@ if ($_SESSION['utype'] !== 'admin') {
             </div>
         </div>
 
-
         <div class="main">
             <div class="container">
                 <h1>Messages</h1>
-                <div class="message">
-                    <div class="row">
-                        <p>UserID</p>
-                        <h6>1</h6>
+
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $messageId = $row['id'];
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+                    $topic = $row['topic'];
+                    $email = $row['email'];
+                    $body = $row['body'];
+                ?>
+                    <div class="message">
+                        <div class="row">
+                            <p>Name</p>
+                            <h6><?php echo $firstName . " " . $lastName; ?></h6>
+                        </div>
+                        <div class="row">
+                            <p>Number</p>
+                            <h6><?php echo $topic; ?></h6>
+                        </div>
+                        <div class="row">
+                            <p>Email</p>
+                            <h6><?php echo $email; ?></h6>
+                        </div>
+                        <div class="row">
+                            <p>Message</p>
+                            <h6><?php echo $body; ?></h6>
+                        </div>
+                        <div class="row">
+                            <a href="?delete=true&message_id=<?php echo $messageId; ?>" class="delete">Delete</a>
+                        </div>
                     </div>
-                    <div class="row">
-                        <p>Name</p>
-                        <h6>Ivoslav</h6>
-                    </div>
-                    <div class="row">
-                        <p>Number</p>
-                        <h6>0882029658</h6>
-                    </div>
-                    <div class="row">
-                        <p>email</p>
-                        <h6>19213@uktc-bg.com</h6>
-                    </div>
-                    <div class="row">
-                        <p>Message</p>
-                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem error aut pariatur totam
-                            reiciendis, alias quis culpa nihil in expedita enim doloribus, recusandae inventore tenetur
-                            harum consectetur et fuga sunt. Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
-                            sunt molestias eligendi aut veritatis laborum iure consectetur nemo, dicta excepturi quod
-                            illo recusandae repellendus harum vitae ratione libero rerum ipsam.
-                        </h6>
-                    </div>
-                </div>
-                <div class="message">
-                    <div class="row">
-                        <p>UserID</p>
-                        <h6>2</h6>
-                    </div>
-                    <div class="row">
-                        <p>Name</p>
-                        <h6>Petercho</h6>
-                    </div>
-                    <div class="row">
-                        <p>Number</p>
-                        <h6>0882029658</h6>
-                    </div>
-                    <div class="row">
-                        <p>email</p>
-                        <h6>19223@uktc-bg.com</h6>
-                    </div>
-                    <div class="row">
-                        <p>Message</p>
-                        <h6>
-                            Как беше рожденият ден?
-                        </h6>
-                    </div>
-                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
 

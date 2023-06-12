@@ -10,7 +10,41 @@ if ($_SESSION['utype'] !== 'admin') {
     header('location: ../../Login/EN/Login.html');
     exit();
 }
+
+include '../../Config/config.php';
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM users";
+$result = mysqli_query($conn, $sql);
+
+if (isset($_GET['update']) && $_GET['update'] == 'true' && isset($_GET['user_id']) && isset($_GET['utype'])) {
+    $userId = $_GET['user_id'];
+    $userType = $_GET['utype'];
+    $updateSql = "UPDATE users SET utype = '$userType' WHERE users_id = '$userId'";
+    if (mysqli_query($conn, $updateSql)) {
+        header('location: ../Panels/Account.php');
+    } else {
+        echo "Error updating user type: " . mysqli_error($conn);
+    }
+}
+
+// Delete user
+if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['user_id'])) {
+    $userId = $_GET['user_id'];
+    $deleteSql = "DELETE FROM users WHERE users_id = '$userId'";
+    if (mysqli_query($conn, $deleteSql)) {
+        header('location: ../Panels/Account.php');
+    } else {
+        echo "Error deleting user: " . mysqli_error($conn);
+    }
+}
+
+mysqli_close($conn);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,47 +112,53 @@ if ($_SESSION['utype'] !== 'admin') {
 
 
         <div class="main">
-            <div class="container">
-                <h1>ACCOUNTS</h1>
+        <div class="container">
+            <h1>ACCOUNTS</h1>
+            <?php
+            while ($row = mysqli_fetch_assoc($result)) {
+                $userId = $row['users_id'];
+                $firstName = $row['firstName'];
+                $lastName = $row['lastName'];
+                $email = $row['email'];
+                $userType = $row['utype'];
+            ?>
                 <div class="message">
                     <div class="row">
                         <p>UserID</p>
-                        <h6>1</h6>
+                        <h6><?php echo $userId; ?></h6>
                     </div>
                     <div class="row">
                         <p>Username</p>
-                        <h6>Ivoslav</h6>
+                        <h6><?php echo $firstName . ' ' . $lastName; ?></h6>
                     </div>
                     <div class="row">
                         <p>Email</p>
-                        <h6>19223@uktc-bg.com</h6>
+                        <h6><?php echo $email; ?></h6>
                     </div>
                     <div class="row">
                         <p>Type</p>
-                        <h6>User</h6>
+                        <h6><?php echo $userType; ?></h6>
+                    </div>
+                    <div class="row">
+                        <form action="" method="GET">
+                            <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                            <select name="utype">
+                                <option value="admin" <?php echo ($userType === 'admin') ? 'selected' : ''; ?>>Admin</option>
+                                <option value="user" <?php echo ($userType === 'user') ? 'selected' : ''; ?>>User</option>
+                            </select>
+                            <button type="submit" name="update" value="true">Update Type</button>
+                        </form>
+                        <form action="" method="GET">
+                            <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                            <button type="submit" name="delete" value="true">Delete User</button>
+                        </form>
                     </div>
                 </div>
-                <div class="message">
-                    <div class="row">
-                        <p>UserID</p>
-                        <h6>2</h6>
-                    </div>
-                    <div class="row">
-                        <p>Username</p>
-                        <h6>Pepi</h6>
-                    </div>
-                    <div class="row">
-                        <p>Email</p>
-                        <h6>19223@uktc-bg.com</h6>
-                    </div>
-                    <div class="row">
-                        <p>Type</p>
-                        <h6>Admin</h6>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
         </div>
-
+    </div>
         <div class="footer">
             <h5>AutoRental | AdminPanel</h5>
         </div>
