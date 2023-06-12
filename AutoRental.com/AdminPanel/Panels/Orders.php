@@ -10,6 +10,27 @@ if ($_SESSION['utype'] !== 'admin') {
     header('location: ../../Login/EN/Login.html');
     exit();
 }
+
+include '../../Config/config.php';
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM orders";
+$result = mysqli_query($conn, $sql);
+
+if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['order_id'])) {
+    $orderId = $_GET['order_id'];
+    $deleteSql = "DELETE FROM orders WHERE id = '$orderId'";
+    if (mysqli_query($conn, $deleteSql)) {
+        header('location: ../Panels/Orders.php');
+    } else {
+        echo "Error deleting order: " . mysqli_error($conn);
+    }
+}
+
+mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -76,72 +97,95 @@ if ($_SESSION['utype'] !== 'admin') {
             </div>
         </div>
 
-
         <div class="main">
             <div class="container">
-                <h1>ORDERS</h1>
-                <div class="order">
-                    <div class="row">
-                        <p>UserID</p>
-                        <h6>1</h6>
-                    </div>
-                    <div class="row">
-                        <p>placed on</p>
-                        <h6>1</h6>
-                    </div>
-                    <div class="row">
-                        <p>Name</p>
-                        <h6>Ivoslav</h6>
-                    </div>
-                    <div class="row">
-                        <p>Number</p>
-                        <h6>0882029658</h6>
-                    </div>
-                    <div class="row">
-                        <p>email</p>
-                        <h6>19213@uktc-bg.com</h6>
-                    </div>
-                    <div class="row">
-                        <p>Address</p>
-                        <h6>
-                            Димитър Стойчев
-                        </h6>
-                    </div>
-                    <div class="row">
-                        <p>Total products</p>
-                        <h6>
-                            Димитър Стойчев
-                        </h6>
-                    </div>
-                    <div class="row">
-                        <p>Total price</p>
-                        <h6>
-                            Димитър Стойчев
-                        </h6>
-                    </div>
-                    <div class="row">
-                        <p>payment method</p>
-                        <h6>
-                            Димитър Стойчев
-                        </h6>
-                    </div>
-                    <div id="center" class="row">
-                        <select>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                        </select>
-                    </div>
-                    <div id="center" class="row">
-                        <div class="options">
-                            <button>Delete</button>
-                            <button>Update</button>
-                        </div>
-                    </div>
+                <h1>Orders</h1>
 
-                </div>
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $orderId = $row['id'];
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+                    $shippingAddress = $row['shippingAddress'];
+                    $phoneNumber = $row['phoneNumber'];
+                    $email = $row['email'];
+                    $pickupLocation = $row['pickupLocation'];
+                    $city = $row['city'];
+                    $postalCode = $row['postalCode'];
+                    $paymentMethod = $row['paymentMethod'];
+                    $createdAt = $row['createdAt'];
+                    $carId = $row['carId'];
+                    $userId = $row['userId'];
+                ?>
+                            <div class="order">
+            <div class="row">
+                <p>Order ID</p>
+                <h6><?php echo $orderId; ?></h6>
+            </div>
+            <div class="row">
+                <p>Name</p>
+                <h6><?php echo $firstName . ' ' . $lastName; ?></h6>
+            </div>
+            <div class="row">
+                <p>Shipping Address</p>
+                <h6><?php echo $shippingAddress; ?></h6>
+            </div>
+            <div class="row">
+                <p>Phone Number</p>
+                <h6><?php echo $phoneNumber; ?></h6>
+            </div>
+            <div class="row">
+                <p>Email</p>
+                <h6><?php echo $email; ?></h6>
+            </div>
+            <div class="row">
+                <p>Pickup Location</p>
+                <h6><?php echo $pickupLocation; ?></h6>
+            </div>
+            <div class="row">
+                <p>City</p>
+                <h6><?php echo $city; ?></h6>
+            </div>
+            <div class="row">
+                <p>Postal Code</p>
+                <h6><?php echo $postalCode; ?></h6>
+            </div>
+            <div class="row">
+                <p>Payment Method</p>
+                <h6>
+                    <?php
+                    if ($paymentMethod == 0) {
+                        echo 'On Delivery';
+                    } elseif ($paymentMethod == 1) {
+                        echo 'By Card';
+                    }
+                    ?>
+                </h6>
+            </div>
+            <div class="row">
+                <p>Placed on</p>
+                <h6><?php echo $createdAt; ?></h6>
+            </div>
+            <div class="row">
+                <p>Car ID</p>
+                <h6><?php echo $carId; ?></h6>
+            </div>
+            <div class="row">
+                <p>User ID</p>
+                <h6><?php echo $userId; ?></h6>
+            </div>
+            <div class="row">
+                <a class="delete" href="?delete=true&order_id=<?php echo $orderId; ?>">Delete</a>
             </div>
         </div>
+
+                <?php
+                }
+                ?>
+
+            </div>
+        </div>
+
         <div class="footer">
             <h5>AutoRental | AdminPanel</h5>
         </div>

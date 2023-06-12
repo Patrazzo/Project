@@ -16,8 +16,6 @@ $sql = "SELECT * FROM catalog";
 $result = $conn->query($sql);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 

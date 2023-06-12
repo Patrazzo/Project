@@ -31,7 +31,6 @@ if (isset($_GET['update']) && $_GET['update'] == 'true' && isset($_GET['user_id'
     }
 }
 
-// Delete user
 if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['user_id'])) {
     $userId = $_GET['user_id'];
     $deleteSql = "DELETE FROM users WHERE users_id = '$userId'";

@@ -1,4 +1,5 @@
 <?php
+echo 'ivan';
 session_start();
 include '../../Config/config.php';
 $users_id = $_SESSION['users_id'];
@@ -25,10 +26,31 @@ $email = $_POST['email'];
 $pickupLocation = $_POST['pickupLocation'];
 $city = $_POST['city'];
 $postalCode = $_POST['postalCode'];
-$paymentMethod = $_POST['c'];
+
+if ($_POST['paymentMethod'] === 'option1') {
+  $paymentMethod = 'delivery';
+} elseif ($_POST['paymentMethod'] === 'option2') {
+  $paymentMethod = 'card';
+} else {
+  die("Invalid payment option selected.");
+}
 
 $stmt = $conn->prepare("INSERT INTO orders (firstName, lastName, shippingAddress, phoneNumber, email, pickupLocation, city, postalCode, paymentMethod, carId, userId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssssssiii", $firstName, $lastName, $shippingAddress, $phoneNumber, $email, $pickupLocation, $city, $postalCode, $paymentMethod, $carId, $users_id);
+
+// Debug statements
+echo "users_id: " . $users_id . "<br>";
+echo "carId: " . $carId . "<br>";
+echo "firstName: " . $firstName . "<br>";
+echo "lastName: " . $lastName . "<br>";
+echo "shippingAddress: " . $shippingAddress . "<br>";
+echo "phoneNumber: " . $phoneNumber . "<br>";
+echo "email: " . $email . "<br>";
+echo "pickupLocation: " . $pickupLocation . "<br>";
+echo "city: " . $city . "<br>";
+echo "postalCode: " . $postalCode . "<br>";
+echo "paymentMethod: " . $paymentMethod . "<br>";
+
 $stmt->execute();
 
 header('location: ../../Home/EN/HomeU.php');

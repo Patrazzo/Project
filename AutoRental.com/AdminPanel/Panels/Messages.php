@@ -17,15 +17,15 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Fetch messages from the database
 $sql = "SELECT * FROM messages";
 $result = mysqli_query($conn, $sql);
 
-// Delete message
 if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_id'])) {
     $messageId = $_GET['message_id'];
     $deleteSql = "DELETE FROM messages WHERE id = '$messageId'";
     if (mysqli_query($conn, $deleteSql)) {
+        header('location: ../Panels/Messages.php');
+
     } else {
         echo "Error deleting message: " . mysqli_error($conn);
     }

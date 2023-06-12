@@ -1,5 +1,6 @@
 <?php
 session_start();
+include '../../Config/config.php';
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'user') {
@@ -10,7 +11,7 @@ if ($_SESSION['utype'] !== 'user') {
     header('location: ../../Login/EN/Login.html');
     exit();
 }
-$carId = $_GET['carId'];
+
 ?>
 
 <!DOCTYPE html>
@@ -116,12 +117,12 @@ $carId = $_GET['carId'];
               </div>
             </div>
             <div class="txt_field">
-              <select name="c">
-                <option value="" selected>- Начин на плащане -</option>
-                <option value="option1">Наложен платеж</option>
-                <option value="option2">Плащане с карта</option>
-              </select>
-            </div>
+                <select name="paymentMethod">
+                  <option value="" selected>- Начин на плащане -</option>
+                  <option value="option1">Наложен платеж</option>
+                  <option value="option2">Плащане с карта</option>
+                </select>
+            </div>  
               <input type="hidden" name="carId" value="<?php echo $_GET['carId']; ?>">
             <div class="submit">
               <input type="submit" value="ЗАВЪРШИ ПОРЪЧКА" name="submit">
