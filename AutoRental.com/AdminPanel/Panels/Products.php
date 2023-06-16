@@ -36,6 +36,19 @@ if (isset($_POST['update'])) {
     }
 }
 
+if (isset($_POST['add'])) {
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $price = $_POST['price'];
+    $image = $_POST['image'];
+
+    $insertSql = "INSERT INTO catalog (name, description, price, image, created_at, available) VALUES ('$name', '$description', '$price', '$image', NOW(), 1)";
+    if (mysqli_query($conn, $insertSql)) {
+        header('location: ../Panels/Products.php');
+        exit();
+    }
+}
+
 $sql = "SELECT * FROM catalog";
 $result = $conn->query($sql);
 ?>
@@ -108,68 +121,57 @@ $result = $conn->query($sql);
             <div class="container">
                 <h1>Products</h1>
 
-                <?php
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $car_id = $row['car_id'];
-                    $name = $row['name'];
-                    $description = $row['description'];
-                    $price = $row['price'];
-                    $image = $row['image'];
+                <table class="product-table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
 
-                    if (isset($_GET['edit']) && $_GET['edit'] == $car_id) {
-                        echo '<form class="edit-form" method="post">';
-                        echo '<input type="hidden" name="car_id" value="' . $car_id . '">';
-                        echo '<div class="row">';
-                        echo '<p>Name</p>';
-                        echo '<input type="text" name="name" value="' . $name . '">';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<p>Description</p>';
-                        echo '<input type="text" name="description" value="' . $description . '">';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<p>Price</p>';
-                        echo '<input type="text" name="price" value="' . $price . '">';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<p>Image</p>';
-                        echo '<input type="text" name="image" value="' . $image . '">';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<input type="submit" name="update" value="Update">';
-                        echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a>';
-                        echo '</div>';
-                        echo '</form>';
-                    } else {
-                        echo '<div class="message">';
-                        echo '<div class="row">';
-                        echo '<p>Name</p>';
-                        echo '<h6>' . $name . '</h6>';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<p>Description</p>';
-                        echo '<h6>' . $description . '</h6>';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<p>Price</p>';
-                        echo '<h6>' . $price . '</h6>';
-                        echo '</div>';
-                        echo '<div class="row">';
-                        $imagePath = "../../GeneralStyling&Media/Photos/cars/" . $image;
-                        if (file_exists($imagePath)) {
-                            echo '<img width="100" src="' . $imagePath . '" alt="' . $name . '" class="product-image">';
+                    <?php
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $car_id = $row['car_id'];
+                        $name = $row['name'];
+                        $description = $row['description'];
+                        $price = $row['price'];
+                        $image = $row['image'];
+
+                        if (isset($_GET['edit']) && $_GET['edit'] == $car_id) {
+                            echo '<form class="edit-form" method="post">';
+                            echo '<input type="hidden" name="car_id" value="' . $car_id . '">';
+                            echo '<tr>';
+                            echo '<td><input type="text" name="name" value="' . $name . '"></td>';
+                            echo '<td><input type="text" name="description" value="' . $description . '"></td>';
+                            echo '<td><input type="text" name="price" value="' . $price . '"></td>';
+                            echo '<td><input type="text" name="image" value="' . $image . '"></td>';
+                            echo '<td><input type="submit" name="update" value="Update">';
+                            echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a></td>';
+                            echo '</tr>';
+                            echo '</form>';
                         } else {
-                            echo '<p>Image not available</p>';
+                            echo '<tr>';
+                            echo '<td>' . $name . '</td>';
+                            echo '<td>' . $description . '</td>';
+                            echo '<td>' . $price . '</td>';
+                            echo '<td><img width="50" src="../../GeneralStyling&Media/Photos/cars/' . $image . '"></td>';
+                            echo '<td><a href="?edit=' . $car_id . '" class="edit">Edit</a>';
+                            echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a></td>';
+                            echo '</tr>';
                         }
-                        echo '</div>';
-                        echo '<div class="row">';
-                        echo '<a href="?edit=' . $car_id . '" class="edit">Edit</a>';
-                        echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a>';
-                        echo '</div>';
-                        echo '</div>';
                     }
-                }
-                ?>
+                    ?>
+                </table>
+
+                <form class="add-form" method="post">
+                    <h2>Add New Product</h2>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="text" name="description" placeholder="Description" required>
+                    <input type="text" name="price" placeholder="Price" required>
+                    <input type="text" name="image" placeholder="Image" required>
+                    <input type="submit" name="add" value="Add">
+                </form>
             </div>
         </div>
 
