@@ -1,9 +1,10 @@
 <?php
 session_start();
 include '../../Config/config.php';
+
 $utype = $_SESSION['utype'];
 
-if ($_SESSION['utype'] !== 'admin') {
+if ($utype !== 'admin') {
     header('location: ../../Login/EN/Login.html');
     exit();
 } elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
@@ -13,8 +14,8 @@ if ($_SESSION['utype'] !== 'admin') {
 }
 
 if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['id'])) {
-    $id = $_GET['id'];
-    $deleteSql = "DELETE FROM catalog WHERE id = '$id'";
+    $car_id = $_GET['id'];
+    $deleteSql = "DELETE FROM catalog WHERE car_id = '$car_id'";
     if (mysqli_query($conn, $deleteSql)) {
         header('location: ../Panels/Products.php');
         exit();
@@ -22,13 +23,13 @@ if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['id'])) {
 }
 
 if (isset($_POST['update'])) {
-    $id = $_POST['id'];
+    $car_id = $_POST['car_id'];
     $name = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
     $image = $_POST['image'];
 
-    $updateSql = "UPDATE catalog SET name='$name', description='$description', price='$price', image='$image' WHERE id='$id'";
+    $updateSql = "UPDATE catalog SET name='$name', description='$description', price='$price', image='$image' WHERE car_id='$car_id'";
     if (mysqli_query($conn, $updateSql)) {
         header('location: ../Panels/Products.php');
         exit();
@@ -103,22 +104,21 @@ $result = $conn->query($sql);
             </div>
         </div>
 
-
         <div class="main">
             <div class="container">
                 <h1>Products</h1>
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $id = $row['id'];
+                    $car_id = $row['car_id'];
                     $name = $row['name'];
                     $description = $row['description'];
                     $price = $row['price'];
                     $image = $row['image'];
 
-                    if (isset($_GET['edit']) && $_GET['edit'] == $id) {
+                    if (isset($_GET['edit']) && $_GET['edit'] == $car_id) {
                         echo '<form class="edit-form" method="post">';
-                        echo '<input type="hidden" name="id" value="' . $id . '">';
+                        echo '<input type="hidden" name="car_id" value="' . $car_id . '">';
                         echo '<div class="row">';
                         echo '<p>Name</p>';
                         echo '<input type="text" name="name" value="' . $name . '">';
@@ -131,12 +131,13 @@ $result = $conn->query($sql);
                         echo '<p>Price</p>';
                         echo '<input type="text" name="price" value="' . $price . '">';
                         echo '</div>';
+                        echo '<div class="row">';
                         echo '<p>Image</p>';
                         echo '<input type="text" name="image" value="' . $image . '">';
                         echo '</div>';
                         echo '<div class="row">';
                         echo '<input type="submit" name="update" value="Update">';
-                        echo '<a href="?delete=true&id=' . $id . '" class="delete">Delete</a>';
+                        echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a>';
                         echo '</div>';
                         echo '</form>';
                     } else {
@@ -162,8 +163,8 @@ $result = $conn->query($sql);
                         }
                         echo '</div>';
                         echo '<div class="row">';
-                        echo '<a href="?edit=' . $id . '" class="edit">Edit</a>';
-                        echo '<a href="?delete=true&id=' . $id . '" class="delete">Delete</a>';
+                        echo '<a href="?edit=' . $car_id . '" class="edit">Edit</a>';
+                        echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a>';
                         echo '</div>';
                         echo '</div>';
                     }

@@ -6,20 +6,21 @@ CREATE TABLE users (
   pass VARCHAR(100),
   phoneNumber VARCHAR(100) NOT NULL,
   utype VARCHAR(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-CREATE TABLE catalog (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    description TEXT,
-    image VARCHAR(255),
-    price DECIMAL(10, 2),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    available TINYINT(1) DEFAULT 1
 );
 
+CREATE TABLE catalog (
+  car_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name varchar(255) NOT NULL,
+  description varchar(255) NOT NULL,
+  image varchar(255) NOT NULL,
+  price decimal(10, 2) NOT NULL,
+  created_at timestamp DEFAULT CURRENT_TIMESTAMP,
+  available tinyint(1) DEFAULT 1
+);
+
+
 CREATE TABLE orders (
-    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     firstName VARCHAR(100) NOT NULL,
     lastName VARCHAR(100) NOT NULL,
     shippingAddress VARCHAR(255) NOT NULL,
@@ -32,16 +33,15 @@ CREATE TABLE orders (
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     carId INT(11),
     userId INT(11),
-    FOREIGN KEY (carId) REFERENCES catalog(id),
+    FOREIGN KEY (carId) REFERENCES catalog(car_id),
     FOREIGN KEY (userId) REFERENCES users(users_id)
 );
 
 CREATE TABLE messages (
-  id INT NOT NULL AUTO_INCREMENT,
-  firstName VARCHAR(50),
-  lastName VARCHAR(50),
-  topic VARCHAR(100),
-  email VARCHAR(100),
-  body VARCHAR(500),
-  PRIMARY KEY (id)
+  message_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  firstName VARCHAR(50) NOT NULL,
+  lastName VARCHAR(50) NOT NULL,
+  topic VARCHAR(100) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  body VARCHAR(500) NOT NULL
 );
