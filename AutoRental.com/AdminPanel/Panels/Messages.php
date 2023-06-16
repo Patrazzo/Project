@@ -93,10 +93,10 @@ mysqli_close($conn);
             </div>
 
             <div class="links">
-                <a href="../Panels/Products.php">Products</a>
-                <a href="../Panels/Orders.php">Orders</a>
-                <a href="../Panels/Account.php">Users</a>
-                <a id="clicked" href="../Panels/Messages.php">Messages</a>
+                <a href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a href="../Panels/Account.php">USERS</a>
+                <a id="clicked" href="../Panels/Messages.php">MESSAGES</a>
             </div>
 
             <div class="menu-toggle">
@@ -106,11 +106,13 @@ mysqli_close($conn);
             </div>
 
             <div class="menu">
-                <a href="../Panels/Dashboard.html">Dashboard</a>
-                <a href="../Panels/Products.html">Products</a>
-                <a href="../Panels/Orders.html">Orders</a>
-                <a href="../Panels/Account.html">Users</a>
-                <a id="clicked" href="../Panels/Messages.html">Messages</a>
+                <a href="../Panels/Dashboard.php">DASHBOARD</a>
+                <a href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a href="../Panels/Account.php">USERS</a>
+                <a id="clicked" href="../Panels/Messages.php">MESSAGES</a>
+                <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
@@ -132,7 +134,7 @@ mysqli_close($conn);
 
         <div class="main">
             <div class="container">
-                <h1>Messages</h1>
+                <h1>MESSAGES</h1>
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -161,7 +163,7 @@ mysqli_close($conn);
                             <h6><?php echo $body; ?></h6>
                         </div>
                         <div class="row">
-                            <a href="?delete=true&message_id=<?php echo $messageId; ?>" class="delete">Delete</a>
+                            <a id="center" href="?delete=true&message_id=<?php echo $messageId; ?>" class="delete">Delete</a>
                         </div>
                     </div>
                 <?php

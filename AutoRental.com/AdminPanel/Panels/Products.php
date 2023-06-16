@@ -80,10 +80,10 @@ $result = $conn->query($sql);
             </div>
 
             <div class="links">
-                <a id="clicked" href="../Panels/Products.php">Products</a>
-                <a href="../Panels/Orders.php">Orders</a>
-                <a href="../Panels/Account.php">Users</a>
-                <a href="../Panels/Messages.php">Messages</a>
+                <a id="clicked" href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a href="../Panels/Account.php">USERS</a>
+                <a href="../Panels/Messages.php">MESSAGES</a>
             </div>
 
             <div class="menu-toggle">
@@ -93,11 +93,13 @@ $result = $conn->query($sql);
             </div>
 
             <div class="menu">
-                <a href="../Panels/Dashboard.html">Dashboard</a>
-                <a id="clicked" href="../Panels/Products.html">Products</a>
-                <a href="../Panels/Orders.html">Orders</a>
-                <a href="../Panels/Account.html">Users</a>
-                <a href="../Panels/Messages.html">Messages</a>
+                <a href="../Panels/Dashboard.html">DASHBOARD</a>
+                <a id="clicked" href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a href="../Panels/Account.php">USERS</a>
+                <a href="../Panels/Messages.php">MESSAGES</a>
+                <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
@@ -118,10 +120,18 @@ $result = $conn->query($sql);
         </div>
 
         <div class="main">
-            <div class="container">
-                <h1>Products</h1>
+            <form class="add-form" method="post">
+                <h2>ADD NEW PRODUCT</h2>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="description" placeholder="Description" required>
+                <input type="text" name="price" placeholder="Price" required>
+                <input type="text" name="image" placeholder="Image" required>
+                <input id="submit" type="submit" name="add" value="Add">
+            </form>
 
-                <table class="product-table">
+            <div class="listContainer">
+                <table class="listTable">
+                    <h1>PRODUCTS</h1>
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
@@ -142,12 +152,12 @@ $result = $conn->query($sql);
                             echo '<form class="edit-form" method="post">';
                             echo '<input type="hidden" name="car_id" value="' . $car_id . '">';
                             echo '<tr>';
-                            echo '<td><input type="text" name="name" value="' . $name . '"></td>';
-                            echo '<td><input type="text" name="description" value="' . $description . '"></td>';
-                            echo '<td><input type="text" name="price" value="' . $price . '"></td>';
-                            echo '<td><input type="text" name="image" value="' . $image . '"></td>';
-                            echo '<td><input type="submit" name="update" value="Update">';
-                            echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a></td>';
+                            echo '<td><input id="edit" type="text" name="name" value="' . $name . '"></td>';
+                            echo '<td><input id="edit" type="text" name="description" value="' . $description . '"></td>';
+                            echo '<td><input id="edit" type="text" name="price" value="' . $price . '"></td>';
+                            echo '<td><input id="edit" type="text" name="image" value="' . $image . '"></td>';
+                            echo '<td><input id="edit" class="button" type="submit" name="update" value="Update">';
+                            echo '<a href="?delete=true&id=' . $car_id . '" class="button">Delete</a></td>';
                             echo '</tr>';
                             echo '</form>';
                         } else {
@@ -156,23 +166,16 @@ $result = $conn->query($sql);
                             echo '<td>' . $description . '</td>';
                             echo '<td>' . $price . '</td>';
                             echo '<td><img width="50" src="../../GeneralStyling&Media/Photos/cars/' . $image . '"></td>';
-                            echo '<td><a href="?edit=' . $car_id . '" class="edit">Edit</a>';
-                            echo '<a href="?delete=true&id=' . $car_id . '" class="delete">Delete</a></td>';
+                            echo '<td><a href="?edit=' . $car_id . '" class="button">Edit</a>';
+                            echo '<a href="?delete=true&id=' . $car_id . '" class="button">Delete</a></td>';
                             echo '</tr>';
                         }
                     }
                     ?>
                 </table>
-
-                <form class="add-form" method="post">
-                    <h2>Add New Product</h2>
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="text" name="description" placeholder="Description" required>
-                    <input type="text" name="price" placeholder="Price" required>
-                    <input type="text" name="image" placeholder="Image" required>
-                    <input type="submit" name="add" value="Add">
-                </form>
             </div>
+
+
         </div>
 
         <div class="footer">

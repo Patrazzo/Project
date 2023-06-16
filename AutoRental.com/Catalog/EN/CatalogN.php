@@ -94,7 +94,7 @@ $result = $conn->query($sql);
         </div>
         <!-- КОНТЕЙНЕР ЗА SCROLL-TO-TOP СНИМКА -->
         <div class="scroller">
-            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png"></a>
+            <a onclick="scrollToTop(); return false;"><img src="../../GeneralStyling&Media/Photos/Logo.png" width="300"></a>
         </div>
         <!-- КОНТЕЙНЕР ЗА FOOTER -->
         <div class="footer">

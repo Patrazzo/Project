@@ -64,6 +64,7 @@ mysqli_close($conn);
 <body>
     <div class="all">
         <div class="header">
+
             <div class="logo">
                 <a href="../Panels/Dashboard.php"><img id="original-logo"
                         src="../../GeneralStyling&Media/Photos/Logo.png"></a>
@@ -72,10 +73,10 @@ mysqli_close($conn);
             </div>
 
             <div class="links">
-                <a href="../Panels/Products.php">Products</a>
-                <a href="../Panels/Orders.php">Orders</a>
-                <a id="clicked" href="../Panels/Account.php">Users</a>
-                <a href="../Panels/Messages.php">Messages</a>
+                <a href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a id="clicked" href="../Panels/Account.php">USERS</a>
+                <a href="../Panels/Messages.php">MESSAGES</a>
             </div>
 
             <div class="menu-toggle">
@@ -85,11 +86,13 @@ mysqli_close($conn);
             </div>
 
             <div class="menu">
-                <a href="../Panels/Dashboard.html">Dashboard</a>
-                <a href="../Panels/Products.html">Products</a>
-                <a href="../Panels/Orders.html">Orders</a>
-                <a id="clicked" href="../Panels/Account.html">Users</a>
-                <a href="../Panels/Messages.html">Messages</a>
+                <a href="../Panels/Dashboard.php">DASHBOARD</a>
+                <a href="../Panels/Products.php">PRODUCTS</a>
+                <a href="../Panels/Orders.php">ORDERS</a>
+                <a id="clicked" href="../Panels/Account.php">USERS</a>
+                <a href="../Panels/Messages.php">MESSAGES</a>
+                <a href="../../Home/EN/HomeN.php?logout=true">ИЗЛИЗАНЕ</a>
+
             </div>
 
             <script src="../../GeneralStyling&Media/Header/Header.js"></script>
@@ -109,51 +112,58 @@ mysqli_close($conn);
             </div>
         </div>
 
-
         <div class="main">
-        <div class="container">
-            <h1>ACCOUNTS</h1>
-            <?php
-            while ($row = mysqli_fetch_assoc($result)) {
-                $userId = $row['users_id'];
-                $firstName = $row['firstName'];
-                $lastName = $row['lastName'];
-                $email = $row['email'];
-                $userType = $row['utype'];
-            ?>
-                <div class="message">
-                    <div class="row">
-                        <p>Username</p>
-                        <h6><?php echo $firstName . ' ' . $lastName; ?></h6>
+
+            <div class="container">
+                <h1>ACCOUNTS</h1>
+                <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $userId = $row['users_id'];
+                    $firstName = $row['firstName'];
+                    $lastName = $row['lastName'];
+                    $email = $row['email'];
+                    $userType = $row['utype'];
+                    ?>
+                    <div class="user">
+                        <div class="row">
+                            <p>Username</p>
+                            <h6>
+                                <?php echo $firstName . ' ' . $lastName; ?>
+                            </h6>
+                        </div>
+                        <div class="row">
+                            <p>Email</p>
+                            <h6>
+                                <?php echo $email; ?>
+                            </h6>
+                        </div>
+                        <div class="row">
+                            <p>Type</p>
+                            <h6>
+                                <?php echo $userType; ?>
+                            </h6>
+                        </div>
+                        <div class="row">
+                            <form action="" method="GET">
+                                <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                                <select name="utype">
+                                    <option value="admin" <?php echo ($userType === 'admin') ? 'selected' : ''; ?>>Admin
+                                    </option>
+                                    <option value="user" <?php echo ($userType === 'user') ? 'selected' : ''; ?>>User</option>
+                                </select>
+                                <button type="submit" name="update" value="true">Update Type</button>
+                            </form>
+                            <form action="" method="GET">
+                                <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                                <button type="submit" name="delete" value="true">Delete User</button>
+                            </form>
+                        </div>
                     </div>
-                    <div class="row">
-                        <p>Email</p>
-                        <h6><?php echo $email; ?></h6>
-                    </div>
-                    <div class="row">
-                        <p>Type</p>
-                        <h6><?php echo $userType; ?></h6>
-                    </div>
-                    <div class="row">
-                        <form action="" method="GET">
-                            <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
-                            <select name="utype">
-                                <option value="admin" <?php echo ($userType === 'admin') ? 'selected' : ''; ?>>Admin</option>
-                                <option value="user" <?php echo ($userType === 'user') ? 'selected' : ''; ?>>User</option>
-                            </select>
-                            <button type="submit" name="update" value="true">Update Type</button>
-                        </form>
-                        <form action="" method="GET">
-                            <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
-                            <button type="submit" name="delete" value="true">Delete User</button>
-                        </form>
-                    </div>
-                </div>
-            <?php
-            }
-            ?>
+                    <?php
+                }
+                ?>
+            </div>
         </div>
-    </div>
         <div class="footer">
             <h5>AutoRental | AdminPanel</h5>
         </div>

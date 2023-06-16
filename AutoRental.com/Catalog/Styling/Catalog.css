@@ -78,14 +78,13 @@ h6 {
 }
 
 .scroller {
-    width: 100vw;
     display: flex;
+    width: 100vw;
     justify-content: center;
     align-items: center;
 }
 
 .scroller img {
-    width: 300px;
     cursor: pointer;
 }
 
@@ -106,4 +105,12 @@ h6 {
         background-color: var(--accent-color);
         color: black;
     }
+
+}
+
+@media(max-width:650px) {
+    .scroller img {
+        width: 150px;
+    }
+
 }
