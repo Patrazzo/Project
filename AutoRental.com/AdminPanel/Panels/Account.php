@@ -123,10 +123,6 @@ mysqli_close($conn);
             ?>
                 <div class="message">
                     <div class="row">
-                        <p>UserID</p>
-                        <h6><?php echo $userId; ?></h6>
-                    </div>
-                    <div class="row">
                         <p>Username</p>
                         <h6><?php echo $firstName . ' ' . $lastName; ?></h6>
                     </div>
