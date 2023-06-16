@@ -21,8 +21,8 @@ $sql = "SELECT * FROM orders";
 $result = mysqli_query($conn, $sql);
 
 if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['order_id'])) {
-    $orderId = $_GET['order_id'];
-    $deleteSql = "DELETE FROM orders WHERE id = '$orderId'";
+    $order_id = $_GET['order_id'];
+    $deleteSql = "DELETE FROM orders WHERE order_id = '$order_id'";
     if (mysqli_query($conn, $deleteSql)) {
         header('location: ../Panels/Orders.php');
     } else {
@@ -103,7 +103,7 @@ mysqli_close($conn);
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $orderId = $row['id'];
+                    $orderId = $row['order_id'];
                     $firstName = $row['firstName'];
                     $lastName = $row['lastName'];
                     $shippingAddress = $row['shippingAddress'];
@@ -154,9 +154,9 @@ mysqli_close($conn);
                 <p>Payment Method</p>
                 <h6>
                     <?php
-                    if ($paymentMethod == 0) {
+                    if ($paymentMethod == 'delivery') {
                         echo 'On Delivery';
-                    } elseif ($paymentMethod == 1) {
+                    } elseif ($paymentMethod == 'card') {
                         echo 'By Card';
                     }
                     ?>
