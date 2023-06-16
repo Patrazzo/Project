@@ -99,7 +99,7 @@ $result = $conn->query($sql);
                     echo '<p>' . $row["description"] . '</p>';
                     echo '<br>';
                     echo '<h6>' . $row["price"] . '</h6>';
-                    echo '<a href="../../Order/EN/Order.php?carId=' . $row['id'] . '" class="buy">Виж повече</a>';
+                    echo '<a href="../../Order/EN/Order.php?car_id=' . $row['car_id'] . '" class="buy">Виж повече</a>';
                     echo '<br>';
                     echo '</div>';
                 }

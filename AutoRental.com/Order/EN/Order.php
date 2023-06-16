@@ -119,11 +119,11 @@ if ($_SESSION['utype'] !== 'user') {
             <div class="txt_field">
                 <select name="paymentMethod">
                   <option value="" selected>- Начин на плащане -</option>
-                  <option value="option1">Наложен платеж</option>
-                  <option value="option2">Плащане с карта</option>
+                  <option value="delivery">Наложен платеж</option>
+                  <option value="card">Плащане с карта</option>
                 </select>
             </div>  
-              <input type="hidden" name="carId" value="<?php echo $_GET['carId']; ?>">
+              <input type="hidden" name="car_id" value="<?php echo $_GET['car_id']; ?>">
             <div class="submit">
               <input type="submit" value="ЗАВЪРШИ ПОРЪЧКА" name="submit">
             </div>
