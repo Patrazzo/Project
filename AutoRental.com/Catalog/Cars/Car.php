@@ -1,3 +1,30 @@
+<?php
+session_start();
+include '../../Config/config.php';
+$utype = $_SESSION['utype'];
+
+if ($_SESSION['utype'] !== 'user') {
+    header('location: ../../Login/EN/Login.html');
+    exit();
+} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
+    session_destroy();
+    header('location: ../../Login/EN/Login.html');
+    exit();
+}
+
+$car_id = $_GET['car_id'];
+
+$sql = "SELECT * FROM catalog WHERE car_id = $car_id";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    $car = $result->fetch_assoc();
+} else {
+    header('location: ../../Catalog/BG/Catalog.html');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="bg">
 
@@ -66,51 +93,18 @@
         <div class="main">
             <!-- КОНТЕЙНЕР ЗА СЪДЪРЖАНИЕТО -->
             <div class="container">
-                <!-- КОНТЕЙНЕР ЗА СНИМКИТЕ-->
-                <div class="images">
-                    <img src="../../GeneralStyling&Media/Photos/cars/Ferrari/Ferrari.png" alt="" width="500">
-                </div>
-                <!-- КОНТЕЙНЕР ЗА ИНФОРМЦИЯТА-->
-                <div class="info">
-                    <!-- КОНТЕЙНЕР ЗА ТЕКСТА -->
-                    <div class="text">
-                        <h1>Product Name</h1>
-                        <br>
-                        <h3>Product Description</h3>
-                        <br>
-                        <h2>200$</h2>
-                    </div>
-                    <button class="buy">Buy now</button>
-                </div>
+            <div class="images">
+                <img src="../../GeneralStyling&Media/Photos/cars/<?php echo $car['image']; ?>" alt="Car Image" width="500">
             </div>
-            <!-- КОНТЕЙНЕР ЗА ОПИСАНИЕТО -->
-            <div class="description">
-                <p>Това е автомобилът, който съчетава изключителен дизайн, мощност и бързина, и вие можете да го
-                    наемете, за да изживеете незабравимо пътешествие.</p>
-                <br>
-                <p>Ferrari F90 е истинска суперкола, която впечатлява със своите силует, динамични линии и изчистен
-                    дизайн. Всяка детайлна крива е майсторски изработена, създавайки хармония и спортна елегантност.</p>
-                <br>
-                <p>Технически характеристики:</p>
-                <br>
-                <p>
-                <p>
-                Двигател: V8 турбо двигател с обем от 3.9 литра.
-                </p>
-                <p>
-                Мощност: 720 конски сили, позволяващи скоростта на истински състезател.
-                </p>
-                <p>
-                Скорост:   Максимална скорост от над 340 километра в час.
-                </p>
-                <p>Интериор: Елегантно обзавеждане, изпълнено с висококачествени материали и технологии. Навигационна
-                    система, мултимедия и др.</p>
-                <p>Аеродинамика: F90 е оборудван с иновативни системи за управление на въздушния поток, подобряващи
-                    аеродинамика и стабилноста.</p>
-                <br>
-                <p>Наемете Ferrari F90 и усетете мощта и емоцията, която само тaзи икона на автомобилната индустрия може
-                    да ви предложи. Споделете нашата страст към скоростта и превърнете вашето преживяване в незабравимо
-                    приключение.</p>
+            <div class="info">
+                <div class="text">
+                    <h1><?php echo $car['name']; ?></h1>
+                    <br>
+                    <h3><?php echo $car['description']; ?></h3>
+                    <br>
+                    <h2><?php echo $car['price']; ?></h2>
+                </div>
+                    <a class="buy" href="../../Order/EN/Order.php?car_id=<?php echo $car['car_id']; ?>">Buy now</a>
             </div>
         </div>
 
