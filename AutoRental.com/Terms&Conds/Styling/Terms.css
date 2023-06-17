@@ -1,47 +1,54 @@
-/*OVERRIDE-ваме фона на страницата*/
-
-
+/* Настройки на мейн контейнера */
 .main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    background-color: var(--background-color);
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 10px 10px 30px black;
-    justify-content: center;
+    /* Използване на технологията FLEX */
+    display: flex; 
+    /* Центриране на елементита в мейн */
+    justify-content: center; 
     align-items: center;
+    /* Задаване на външно и вътрешно отстояние на мейн */
     margin: 20px 0;
     padding: 30px;
+    /* Задаване на ширана на мейн */
+    width: 95vw;
+    /* Детайли */ 
+    border-radius: 20px; /* Заоблени ъгли */
+    background-color: var(--background-color); /* Цвят */
 }
 
+/* Настройки на контейнера с текста */
 .termsContainer{
+    /* Използване на технологията FLEX */
     display: flex;
+    /* Центриране на елементита в мейн */
     justify-content: center;
     align-items: center;
-    background: var(--secondary-color);
-    border-radius: 20px;
+    /* Задаване на външно и вътрешно отстояние на мейн */
     padding: 50px;
-    color: var(--light-gray);
-    font-size: 20px;
     margin-bottom: 50px;
+    /* Детайли */ 
+    background: var(--secondary-color); /* Цвят */
+    border-radius: 20px; /* Заоблени ъгли */
+    font-size: 20px; /* Размер на шрифта */
 }
 
+/* Настройки на заглавията */
 .termsContainer h3{
-    color: var(--accent-color);
-    font-size: 3vw;
-    text-align: center;
-    margin: 10px;
+    margin: 10px; /* Задаване на външно отстояние */
+    color: var(--accent-color); /* Цвят на шрифта */
+    font-size: 3vw; /* Размер на шрифта */
+    text-align: center; /* Централно подравняване на текста */
 }
 
+/* Настройки на текста*/
 .text{ 
-    width: 65%;
+    width: 65%; /* Ширина на контейнера за текст */
+    color: var(--light-gray); /* Цвят на шрифта */
 }
 
+/* Responsive Part */ 
 @media  screen and (max-width: 1000px) {
     .termsContainer h3{
-        font-size: 5vw;
+        font-size: 5vw; 
     }
     
     .text{
@@ -69,9 +76,5 @@
         padding: 20px;
         font-size: 8vw;
     }
-
-    
-
-    
-    
 }
+

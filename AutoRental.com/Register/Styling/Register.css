@@ -1,137 +1,128 @@
+/* Настройки на мейн */
 .main {
-	margin: 30px 0 50px 0;
-	width: 95vw;
-	height: 100vh;
+	/* Използване на технолофията FLEX */
 	display: flex;
-	align-items: center;
+	/* Правим позиционирането от ред на колона */
 	flex-direction: column;
-	box-shadow: 10px 10px 30px black;
-	background-color: var(--background-color);
-	border-radius: 20px;
-}
-
-.main h2 {
-	text-align: center;
-	color: var(--accent-color);
-	font-size: 40px;
-	margin: 20px 0 70px 0;
-}
-
-.container {
-	width: auto;
+	/* Центриране на елементите */
+	align-items: center;
+	/* Задаваме външно отстояние */
+	margin: 30px 0 50px 0;
+	/* Задаваме размер */
 	height: auto;
-	background-color: var(--secondary-color);
-	border-radius: 20px;
-	box-shadow: 10px 10px 30px black;
-	margin: 0 90px 90px 90px;
-	display: flex;
-	min-width: 350px;
-	justify-content: center;
+	width: 95vw;
+	/* Детайли */
+	border-radius: 20px; /* Заоблени ъгли */
+	box-shadow: 10px 10px 30px black; /* Сянка */
+	background-color: var(--background-color); /* Цвят */
+}
+/* Настройки на заглавието */
+.main h2 {
+	font-size: 40px; /* Размер */
+	color: var(--accent-color); /* Цвят */
+	margin: 20px 0 70px 0; /* Външно отстояние */
+}
+/* Настройки на контейнера за формата */
+.container {
+	min-width: 350px; /* Минимална ширина */
+	margin: 0 90px 90px 90px; /* Външно отстояние */
+	border-radius: 20px; /* Заоблени ъгли */
+	box-shadow: 10px 10px 30px black; /* Сянка */
+	background-color: var(--secondary-color); /* Цвят */
 }
 
+/* Настройки на формата */
 .form-container {
-	width: 100%;
-	padding: 20px;
-
+	width: 100%; /* Ширина */
+	padding: 20px; /* Вътрешно отстояние */
 }
 
-.txt_field input{
-	width: 100%;
-	height: 50px;
-	margin: 5px 0;
-	background: var(--primary-color);
-	border-radius: 15px;
-	padding: 10px;
+/* Настройки на полетата */
+.txt_field input::placeholder {
+	color: var(--light-gray);
+}
+.txt_field input {
+	width: 100%; /* Ширина */
+	height: 50px; /* Височина */
+	margin: 5px 0; /* Външно отстояние */
+	padding: 10px; /* Вътрешно отстояние */
+	color: var(--light-gray); /* Цвят на шрифта */
+	border-radius: 15px; /* Заоблени ъгли */
+	background-color: var(--primary-color); /* Цвят */
+	/* Премахване на външни линии */
+	border: none; 
+	outline: none;
+}
+
+/* Настройки на чекбокс */
+.sure {
+	text-align: center; /* Централно подравняване на текста */
+	margin: 10px; /* Външно отстояние */
+	color: var(--light-gray); /* Цвят на шрифта */
+}
+
+.sure a {
+	text-decoration: none; /* Премахване на подчертаването */
+	color: var(--accent-color); /* Цвят на шрифта */
+}
+
+/* Настройки за SUBMIT бутона */
+.submit input {
+	height: 50px; /* Височина */
+	width: 100%; /* Ширина */
+	/* Премахване на външни линии */
 	border: none;
 	outline: none;
-	color: var(--light-gray);
+	border-radius: 20px;/* Заоблени ъгли */
+	background-color: var(--primary-color); /* Цвят */
+	font-size: 15px; /* Размер на шрифта */
+	color: var(--light-gray); /* Цвят на шрифта */
+	transition: 0.5s; /* Време на анимация */
 }
 
-.txt_field input::placeholder{
-	color: #bbb;
+.submit input:hover {
+	background: var(--accent-color); /* Цвят */
+	color: black; /* Цвят на шрифта */
 }
 
-.submit input{
-	height: 50px;
-	overflow: hidden;
-	width: 100%;
-	border: none;
-	outline: none;
-	border-radius: 20px;
-	background: var(--primary-color);
-	font-size: 15px;
-	transition: 0.5s;
-	color: var(--light-gray);
+/* Нстройки на линка за логин */
+.loginl {
+	text-align: center; /* Центриране на текста */
+	margin: 10px; /* Външно отстояние */
+	color: var(--light-gray); /* Цвят на шрифта */
 }
 
-.submit input:hover{
-	background: var(--accent-color);
-	color: black;
-}
-
-.sure{
-	text-align: center;
-	margin: 10px;
-	color: var(--light-gray);
-}
-
-.sure a{
-	text-decoration: none;
-	color: var(--accent-color);
-}
-
-.loginl{
-	text-align: center;
-	margin: 10px;
-	color: var(--light-gray);
-}
-
-.loginl a{
-	text-decoration: none;
-	color: var(--accent-color);
+.loginl a {
+	text-decoration: none; /* Премахване на подчертаването */
+	color: var(--accent-color); /* Цвят на шрифта */
 }
 
 @media (max-width: 550px) {
-	.main{
+	.main {
 		width: 100vw;
 		margin: 20px 0 40px 0;
-		height: 75vh;
-	}
-	
-	.container {
-		width: 95%;
 	}
 
-	.container {
-		margin: 0;
-	}
-
-	.submit input{
-		background: var(--accent-color);
-		color: black;
-	}
-	
 	.main h2 {
 		font-size: 8vw;
 		margin: 15px;
 	}
 
 	.container {
+		width: 90%;
+		min-width: 100px;
 		flex-direction: column;
-	}
 
-	.map iframe {
-		height: 400px;
 	}
-
-	.sure{
+	
+	.sure {
 		font-size: 15px;
+	}
+
+	.submit input {
+		background: var(--accent-color);
+		color: black;
 	}
 }
 
 
-@media (orientation: landscape) {
-	.main{
-		height: auto;
-	}
-  }
