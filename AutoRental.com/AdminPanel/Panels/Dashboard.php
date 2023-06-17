@@ -7,7 +7,6 @@ if ($_SESSION['utype'] !== 'admin') {
     exit();
 } elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
     session_destroy();
-    header('location: ../../Login/EN/Login.html');
     exit();
 }
 ?>
