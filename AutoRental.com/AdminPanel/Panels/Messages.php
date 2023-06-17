@@ -32,7 +32,6 @@ if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_
 
 mysqli_close($conn);
 ?><?php
-session_start();
 $utype = $_SESSION['utype'];
 
 if ($_SESSION['utype'] !== 'admin') {
@@ -162,7 +161,7 @@ mysqli_close($conn);
                             <h6><?php echo $body; ?></h6>
                         </div>
                         <div class="row">
-                            <a id="center" href="?delete=true&message_id=<?php echo $messageId; ?>" class="delete">Delete</a>
+                            <a href="?delete=true&message_id=<?php echo $messageId; ?>" class="delete">Delete</a>
                         </div>
                     </div>
                 <?php

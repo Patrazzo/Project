@@ -67,7 +67,7 @@ if ($_SESSION['utype'] !== 'user') {
             <!-- КОНТЕЙНЕР ЗА ДРОПДАУН -->
             <div class="menu">
                 <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
-                <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
+                <a id="clicked" href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
                 <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
 
                 <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true'): ?>

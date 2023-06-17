@@ -9,6 +9,8 @@
     padding-top: 30px;
     margin: 20px 0 70px 0;
     background-color: var(--background-color);
+    height: auto;
+    
 }
 
 .message {
@@ -60,7 +62,15 @@
 }
 
 
-
+.carInfo{
+    width: 95%;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 20px;
+    background-color: var(--secondary-color);
+    margin-right: 20px;
+    color: var(--light-gray);
+}
 .scroller {
     width: 100vw;
     display: flex;
@@ -70,7 +80,6 @@
 
 .scroller img {
     cursor: pointer;
-    ;
 }
 
 /*Photo seetings*/

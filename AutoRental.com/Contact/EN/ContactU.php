@@ -56,7 +56,7 @@ if ($_SESSION['utype'] !== 'user') {
 			<div class="menu">
                 <a href="../../Catalog/EN/CatalogU.php">КАТАЛОГ</a>
                 <a href="../../AboutUs/EN/AboutU.php">ЗА НАС</a>
-                <a href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
+                <a id="clicked" href="../../Contact/EN/ContactU.php">КОНТАКТ</a>
                 <?php if (isset($_GET['logout']) && $_GET['logout'] == 'true') : ?>
                     <a href="../../Login/EN/Login.html">ВЛИЗАНЕ</a>
                 <?php else : ?>
