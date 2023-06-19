@@ -29,13 +29,13 @@ $sql = "SELECT * FROM users";
 // Изпълняваме SQL заявка за извличане на всички записи от таблицата "users" и съхраняваме резултата в променливата $result
 $result = mysqli_query($conn, $sql);
 
-// Проверяваме дали параметърът update е зададен като 'true' в URL-а и дали са зададени параметрите user_id и utype
-if (isset($_GET['update']) && $_GET['update'] == 'true' && isset($_GET['user_id']) && isset($_GET['utype'])) {
-    // Взимаме стойностите на параметрите user_id и utype
-    $userId = $_GET['user_id'];
+// Проверяваме дали параметърът update е зададен като 'true' в URL-а и дали са зададени параметрите users_id и utype
+if (isset($_GET['update']) && $_GET['update'] == 'true' && isset($_GET['users_id']) && isset($_GET['utype'])) {
+    // Взимаме стойностите на параметрите users_id и utype
+    $userId = $_GET['users_id'];
     $userType = $_GET['utype'];
     
-    // Изпълняваме SQL заявка за обновяване на типа на определен потребител (user_id)
+    // Изпълняваме SQL заявка за обновяване на типа на определен потребител (users_id)
     $updateSql = "UPDATE users SET utype = '$userType' WHERE users_id = '$userId'";
     if (mysqli_query($conn, $updateSql)) {
         // Ако обновяването е успешно, презареждаме страницата
@@ -46,12 +46,12 @@ if (isset($_GET['update']) && $_GET['update'] == 'true' && isset($_GET['user_id'
     }
 }
 
-// Проверяваме дали параметърът delete е зададен като 'true' в URL-а и дали е зададен параметърът user_id
-if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['user_id'])) {
+// Проверяваме дали параметърът delete е зададен като 'true' в URL-а и дали е зададен параметърът users_id
+if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['users_id'])) {
     // Взимаме стойността на параметъра user_id
-    $userId = $_GET['user_id'];
+    $userId = $_GET['users_id'];
     
-    // Изпълняваме SQL заявка за изтриване на определен потребител (user_id)
+    // Изпълняваме SQL заявка за изтриване на определен потребител (users_id)
     $deleteSql = "DELETE FROM users WHERE users_id = '$userId'";
     if (mysqli_query($conn, $deleteSql)) {
         // Ако изтриването е успешно, презареждаме страницата
@@ -68,7 +68,6 @@ mysqli_close($conn);
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -166,7 +165,7 @@ mysqli_close($conn);
                         </div>
                         <div class="row">
                             <form action="" method="GET">
-                                <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                                <input type="hidden" name="users_id" value="<?php echo $userId; ?>">
                                 <select name="utype">
                                     <option value="admin" <?php echo ($userType === 'admin') ? 'selected' : ''; ?>>Admin
                                     </option>
@@ -175,7 +174,7 @@ mysqli_close($conn);
                                 <button type="submit" name="update" value="true">Update Type</button>
                             </form>
                             <form action="" method="GET">
-                                <input type="hidden" name="user_id" value="<?php echo $userId; ?>">
+                                <input type="hidden" name="users_id" value="<?php echo $userId; ?>">
                                 <button type="submit" name="delete" value="true">Delete User</button>
                             </form>
                         </div>

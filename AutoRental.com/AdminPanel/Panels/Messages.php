@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
 
 if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_id'])) {
     $messageId = $_GET['message_id'];
-    $deleteSql = "DELETE FROM messages WHERE id = '$messageId'";
+    $deleteSql = "DELETE FROM messages WHERE message_id = '$messageId'";
     if (mysqli_query($conn, $deleteSql)) {
         header('location: ../Panels/Messages.php');
 
