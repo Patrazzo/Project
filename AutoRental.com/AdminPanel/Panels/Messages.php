@@ -136,7 +136,7 @@ mysqli_close($conn);
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
-                    $messageId = $row['id'];
+                    $messageId = $row['message_id'];
                     $firstName = $row['firstName'];
                     $lastName = $row['lastName'];
                     $topic = $row['topic'];
