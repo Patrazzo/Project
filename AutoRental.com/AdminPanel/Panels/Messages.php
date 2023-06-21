@@ -31,37 +31,6 @@ if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_
 }
 
 mysqli_close($conn);
-?><?php
-$utype = $_SESSION['utype'];
-
-if ($_SESSION['utype'] !== 'admin') {
-    header('location: ../../Login/EN/Login.html');
-    exit();
-} elseif (isset($_GET['logout']) && $_GET['logout'] == 'true') {
-    session_destroy();
-    header('location: ../../Login/EN/Login.html');
-    exit();
-}
-
-include '../../Config/config.php';
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-$sql = "SELECT * FROM messages";
-$result = mysqli_query($conn, $sql);
-
-if (isset($_GET['delete']) && $_GET['delete'] == 'true' && isset($_GET['message_id'])) {
-    $messageId = $_GET['message_id'];
-    $deleteSql = "DELETE FROM messages WHERE id = '$messageId'";
-    if (mysqli_query($conn, $deleteSql)) {
-        header('location: ../Panels/Messages.php');
-        exit();
-    }
-}
-
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
