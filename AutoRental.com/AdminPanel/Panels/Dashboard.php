@@ -1,6 +1,7 @@
 <?php
 session_start();
 $utype = $_SESSION['utype'];
+$firstName = $_SESSION['firstName'];
 
 if ($_SESSION['utype'] !== 'admin') {
     header('location: ../../Login/EN/Login.html');
@@ -78,39 +79,9 @@ if ($_SESSION['utype'] !== 'admin') {
 
         <div class="main">
             <div class="container">
-                <h1>Dashboard</h1>
-                <div class="total">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="completed">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="orders">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="products">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="users">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="admins">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="accounts">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
-                <div class="messages">
-                    <h2>TEST</h2>
-                    <p>TEST TEXT</p>
-                </div>
+                <h1 id="message">ДОБРЕ ДОШЛИ В АДМИН ПАНЕЛ,
+                    <?php echo $firstName; ?>
+                </h1>
             </div>
         </div>
 

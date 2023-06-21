@@ -13,8 +13,9 @@
 .container{
     display: flex;
     width: 100%;
-    height: auto;
+    height: 80vh;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background-color: var(--background-color);
     padding-bottom: 50px;
