@@ -1,3 +1,50 @@
+<?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+include '../../Config/config.php';
+
+$message = '';
+
+if (isset($_POST['submit'])) {
+
+    $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
+    $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
+    if (!preg_match("/^[a-zA-Zа-яА-Я]{3,}$/u", $firstName) || !preg_match("/^[a-zA-Zа-яА-Я]{3,}$/u", $lastName)) {
+        $message = 'Невалидно име';
+    } else {
+        $pass = $_POST['pass'];
+        $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+        $email = mysqli_real_escape_string($conn, $_POST['email']);
+        $phoneNumber = mysqli_real_escape_string($conn, $_POST['phoneNumber']);
+        $utype = 'user';
+
+        if (!preg_match("/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $pass)) {
+            $message = 'Невалидна парола';
+        } else {
+            if (!preg_match("/^(\\+359|0[8])[0-9]{8,10}$/", $phoneNumber)) {
+            $message = 'Невалиден телефон';
+            } else {
+                $stmt = mysqli_prepare($conn, "SELECT * FROM `users` WHERE email = ?");
+                mysqli_stmt_bind_param($stmt, "s", $email);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+
+                if (mysqli_num_rows($result) > 0) {
+                    $message = 'Вече има такъв потребител';
+                } else {
+                    $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber, utype) VALUES(?, ?, ?, ?, ?, ?)");
+                    mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber, $utype);
+                    mysqli_stmt_execute($stmt);
+                    header('Location: ../../Login/EN/Login.html');
+                    exit;
+                }
+            }
+        }
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +107,10 @@
             <div class="container">
                 <!--ФОРМАТА -->
                 <div class="form-container">
-                    <form action="../Functionality/RegisterEN.php" method="post">
+                    <form action="" method="post">
+                    <?php if (!empty($message)): ?>
+                        <h2 style="margin-bottom: 20px;" class="error-message"><?php echo $message; ?></h2>
+                        <?php endif; ?>
                         <div class="txt_field">
                             <input type="text" id="firstName" name="firstName" placeholder="Име" required>
                         </div>
