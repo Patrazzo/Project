@@ -139,7 +139,7 @@ if ($_SESSION['utype'] !== 'user') {
                 <div class="Row">
                     <!-- КОНТЕЙНЕР ЗА СНИМКА -->
                     <div class="image">
-                        <img src="../../GeneralStyling&Media/Photos/Dealership.jpg">
+                        <img src="../../GeneralStyling&Media/Photos/keys.png">
                     </div>
                     <!-- КОНТЕЙНЕР ЗА ТЕКСТ -->
                     <div class="text">
@@ -188,7 +188,7 @@ if ($_SESSION['utype'] !== 'user') {
                     </div>
                     <!-- КОНТЕЙНЕР ЗА СНИМКА -->
                     <div class="image">
-                        <img src="../../GeneralStyling&Media/Photos/Dealership.jpg">
+                        <img src="../../GeneralStyling&Media/Photos/Back.jpg">
                     </div>
                 </div>
             </div>

@@ -152,7 +152,7 @@ session_start();
                     </div>
                     <!-- КОНТЕЙНЕР ЗА СНИМКА -->
                     <div class="image">
-                        <img src="../../GeneralStyling&Media/Photos/Dealership.jpg">
+                        <img src="../../GeneralStyling&Media/Photos/Back.jpg">
                     </div>
                 </div>
             </div>
