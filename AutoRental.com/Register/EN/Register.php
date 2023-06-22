@@ -11,7 +11,7 @@ if (isset($_POST['submit'])) {
     $firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
     $lastName = mysqli_real_escape_string($conn, $_POST['lastName']);
     if (!preg_match("/^[a-zA-Zа-яА-Я]{3,}$/u", $firstName) || !preg_match("/^[a-zA-Zа-яА-Я]{3,}$/u", $lastName)) {
-        $message = 'Невалидно име';
+        $message = 'невалидно име';
     } else {
         $pass = $_POST['pass'];
         $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
@@ -20,10 +20,10 @@ if (isset($_POST['submit'])) {
         $utype = 'user';
 
         if (!preg_match("/^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $pass)) {
-            $message = 'Невалидна парола';
+            $message = 'невалидна парола';
         } else {
             if (!preg_match("/^(\\+359|0[8])[0-9]{8,10}$/", $phoneNumber)) {
-            $message = 'Невалиден телефон';
+                $message = 'невалиден телефон';
             } else {
                 $stmt = mysqli_prepare($conn, "SELECT * FROM `users` WHERE email = ?");
                 mysqli_stmt_bind_param($stmt, "s", $email);
@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
                 $result = mysqli_stmt_get_result($stmt);
 
                 if (mysqli_num_rows($result) > 0) {
-                    $message = 'Вече има такъв потребител';
+                    $message = 'вече има такъв потребител';
                 } else {
                     $stmt = mysqli_prepare($conn, "INSERT INTO `users`(firstName, lastName, pass, email, phoneNumber, utype) VALUES(?, ?, ?, ?, ?, ?)");
                     mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $hashedPass, $email, $phoneNumber, $utype);
@@ -108,9 +108,7 @@ if (isset($_POST['submit'])) {
                 <!--ФОРМАТА -->
                 <div class="form-container">
                     <form action="" method="post">
-                    <?php if (!empty($message)): ?>
-                        <h2 style="margin-bottom: 20px;" class="error-message"><?php echo $message; ?></h2>
-                        <?php endif; ?>
+
                         <div class="txt_field">
                             <input type="text" id="firstName" name="firstName" placeholder="Име" required>
                         </div>
@@ -132,6 +130,11 @@ if (isset($_POST['submit'])) {
                             <label for="sure">Съгласен съм с <a
                                     href="../../Terms&Conds/EN/Terms&Conds.html">условията.</a></label>
                         </div>
+                        <?php if (!empty($message)): ?>
+                            <h3>
+                                <?php echo $message; ?>
+                            </h3>
+                        <?php endif; ?>
                         <div class="submit">
                             <input type="submit" value="СЪЗДАЙ" name="submit">
                         </div>
