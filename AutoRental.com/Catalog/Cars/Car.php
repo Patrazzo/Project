@@ -128,13 +128,6 @@ if ($result->num_rows > 0) {
                 </div>
             </div>
 
-
-            <div class="container">
-                <div class="carInfo">
-                    Информация за колата извадена от базата данни.
-                </div>
-            </div>
-
         </div>
         <!-- КОНТЕЙНЕР ЗА FOOTER -->
         <div class="footer">
